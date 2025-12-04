@@ -1,0 +1,154 @@
+<!--
+  ~ Copyright (C) 2020 The Android Open Source Project
+  ~
+  ~ Licensed under the Apache License, Version 2.0 (the "License");
+  ~ you may not use this file except in compliance with the License.
+  ~ You may obtain a copy of the License at
+  ~
+  ~      http://www.apache.org/licenses/LICENSE-2.0
+  ~
+  ~ Unless required by applicable law or agreed to in writing, software
+  ~ distributed under the License is distributed on an "AS IS" BASIS,
+  ~ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  ~ See the License for the specific language governing permissions and
+  ~ limitations under the License.
+   -->
+<fonts-modification version="1">
+    <family customizationType="new-named-family" name="miclock">
+        <font weight="400" style="normal" postScriptName="MiClock-Extralight">MiClock.otf</font>
+    </family>
+
+    <family customizationType="new-named-family" name="miclock-thin">
+        <font weight="400" style="normal" postScriptName="MiClock-Thin">MiClockThin.otf</font>
+    </family>
+
+    <family customizationType="new-named-family" name="miclock-mono">
+        <font weight="400" style="normal" postScriptName="MiClockMono-Extralight">MiClockMono.otf</font>
+    </family>
+
+    <family customizationType="new-named-family" name="miclock-time-thin">
+        <font weight="400" style="normal" postScriptName="MiSansC">MiSansC_3.005.ttf
+            <axis tag="wght" stylevalue="224"/>
+        </font>
+    </family>
+
+    <family customizationType="new-named-family" name="miclock-date-thin">
+        <font weight="400" style="normal" postScriptName="MiSansC">MiSansC_3.005.ttf
+            <axis tag="wght" stylevalue="162"/>
+        </font>
+    </family>
+
+    <family customizationType="new-named-family" name="miclock-time">
+        <font weight="400" style="normal" postScriptName="MiSansC">MiSansC_3.005.ttf
+            <axis tag="wght" stylevalue="230"/>
+        </font>
+    </family>
+
+    <family customizationType="new-named-family" name="miclock-date">
+        <font weight="400" style="normal" postScriptName="MiSansC">MiSansC_3.005.ttf
+            <axis tag="wght" stylevalue="182"/>
+        </font>
+    </family>
+
+    <!-- MIUI15 lockscreen fonts start /-->
+    <family customizationType="new-named-family" name="miclock-gulfs-display-extra-expanded-italic">
+        <font weight="400" style="normal" postScriptName="GulfsDisplay-ExtraExpandedItalic">GulfsDisplay-ExtraExpandedItalic.otf</font>
+    </family>
+    <family customizationType="new-named-family" name="miclock-neue-matic-compressed-black">
+        <font weight="900" style="normal" postScriptName="Neumatic Compressed">NeumaticCompressed.otf</font>
+    </family>
+    <family customizationType="new-named-family" name="miclock-qinghe-75w">
+        <font weight="700" style="normal" postScriptName="Qinghe">Qinghe-75W.otf</font>
+    </family>
+    <family customizationType="new-named-family" name="miclock-misansround-medium">
+        <font weight="330" style="normal" postScriptName="MiSansRound-Medium">MiSansRound-Medium.otf</font>
+    </family>
+    <family customizationType="new-named-family" name="miclock-chamberi-display-semibold">
+        <font weight="600" style="normal" postScriptName="ChamberiDisplay-Semibold">ChamberiDisplay-Semibold.ttf</font>
+    </family>
+    <family customizationType="new-named-family" name="miclock-chamberi-display-semibold-italic">
+        <font weight="600" style="normal" postScriptName="ChamberiDisplay-Italic">ChamberiDisplay-Italic.otf</font>
+    </family>
+    <family customizationType="new-named-family" name="miclock-misans-rounded-sc">
+        <font weight="400" style="normal" postScriptName="MiSansRoundedSC-Regular">MiSansRoundedSC.ttf
+            <axis tag="wght" stylevalue="330"/>
+        </font>
+        <font weight="700" style="normal" postScriptName="MiSansRoundedSC-Regular">MiSansRoundedSC.ttf
+            <axis tag="wght" stylevalue="430"/>
+        </font>
+    </family>
+    <family customizationType="new-named-family" name="miclock-misans-rounded-tc">
+        <font weight="400" style="normal" postScriptName="MiSansRoundedTC-Regular">MiSansRoundedTC.ttf
+            <axis tag="wght" stylevalue="330"/>
+        </font>
+    </family>
+    <family customizationType="new-named-family" name="miclock-serif-sc-regular">
+        <font weight="400" style="normal" postScriptName="MiSerifSC-Regular">MiSerifSC-Regular-01.ttf</font>
+    </family>
+    <family customizationType="new-named-family" name="miclock-serif-tc-regular">
+        <font weight="400" style="normal" postScriptName="MiSerifTC-Regular">MiSerifTC-Regular-01.ttf</font>
+    </family>
+    <family customizationType="new-named-family" name="miclock-beihaibei-sc-regular">
+        <font weight="500" style="normal" postScriptName="BeihaibeiSC-Regular">BeihaibeiSC-Regular.ttf</font>
+    </family>
+    <family customizationType="new-named-family" name="miclock-beihaibei-tc-regular">
+        <font weight="500" style="normal" postScriptName="BeihaibeiTC-Regular">BeihaibeiTC-Regular.ttf</font>
+    </family>
+    <family customizationType="new-named-family" name="miclock-inter-scaled-regular">
+        <font weight="400" style="normal" postScriptName="Interscaled-Regular">Interscaled-Regular.otf</font>
+    </family>
+    <family customizationType="new-named-family" name="miclock-inter-scaled-medium">
+        <font weight="500" style="normal" postScriptName="Interscaled">Interscaled-Medium.otf</font>
+    </family>
+    <!-- MIUI15 lockscreen fonts end /-->
+
+    <!-- OS2 artistic fonts start -->
+    <family customizationType="new-named-family" name="miclock-dela-gothic-one">
+        <font weight="400" style="normal" postScriptName="LogoSCUnboundedSans-Regular">DelaGothicOne.otf</font>
+    </family>
+    <alias name="miclock-misans-rounded-sc-medium" to="miclock-misans-rounded-sc" weight="700" />
+    <!-- OS2 artistic fonts end -->
+
+    <!-- OS2 lockscreen fonts start /-->
+    <family customizationType="new-named-family" name="miclock-bebas-neue-mono">
+        <font weight="400" style="normal" postScriptName="BebasNeue-Mono">BebasNeue-Mono.otf</font>
+    </family>
+    <family customizationType="new-named-family" name="miclock-commuters-sans-mono">
+        <font weight="400" style="normal" postScriptName="CommutersSansMono">CommutersSansMono.otf</font>
+    </family>
+    <family customizationType="new-named-family" name="miclock-heading-now-15medium-mono">
+        <font weight="500" style="normal" postScriptName="HeadingNow15Medium-mono">HeadingNow-15Medium-mono.otf</font>
+    </family>
+    <family customizationType="new-named-family" name="miclock-chronicle-display-compressed-semibold">
+        <font weight="600" style="normal" postScriptName="ChronicleDisplayCompressed-Semibold">ChronicleDisplayCompressed-Semibold.otf</font>
+    </family>
+    <family customizationType="new-named-family" name="miclock-heading-now-06bold-mono">
+        <font weight="700" style="normal" postScriptName="HeadingNow-06Bold-mono">HeadingNow-06Bold-mono.otf</font>
+    </family>
+    <family customizationType="new-named-family" name="miclock-miserif-sc-vf">
+        <font weight="430" style="normal" postScriptName="MiSerifSCVF">MiSerifSCVF.ttf</font>
+    </family>
+    <family customizationType="new-named-family" name="miclock-miserif-tc-vf">
+        <font weight="430" style="normal" postScriptName="MiSerifTCVF">MiSerifTCVF.ttf</font>
+    </family>
+    <family customizationType="new-named-family" name="miclock-shadows-into-light-chinese-chn">
+        <font weight="400" style="normal" postScriptName="ShadowsIntoLightchinese-CHN">ShadowsIntoLightchinese-CHN.otf</font>
+    </family>
+    <!-- OS2 lockscreen fonts pad /-->
+    <family customizationType="new-named-family" name="miclock-c800">
+        <font weight="400" style="normal" postScriptName="C800">C800.ttf</font>
+    </family>
+    <family customizationType="new-named-family" name="miclock-dela-gothic-one-hz">
+        <font weight="400" style="normal" postScriptName="DelaGothicOne-HZ">DelaGothicOne-HZ.otf</font>
+    </family>
+    <family customizationType="new-named-family" name="miclock-inter-mono-semi-bold">
+        <font weight="600" style="normal" postScriptName="InterMono-SemiBold">InterMono-SemiBold.otf</font>
+    </family>
+    <family customizationType="new-named-family" name="miclock-michroma-mono">
+        <font weight="400" style="normal" postScriptName="MichromaMono">MichromaMono.otf</font>
+    </family>
+    <family customizationType="new-named-family" name="miclock-silk-serif-regular">
+        <font weight="400" style="normal" postScriptName="SilkSerif-Regular">SilkSerif-Regular.ttf</font>
+    </family>
+    <!-- OS2 lockscreen fonts end /-->
+</fonts-modification>

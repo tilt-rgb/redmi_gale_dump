@@ -1,0 +1,57 @@
+{
+    "title": "东方美学",
+    "cardType": 1,
+    "count": 8,
+    "slideCount": 8,
+    "randomOrder": false,
+    "wallpapers": [
+        {
+            "thumbPath": "./east01.jpg",
+            "originPath": "./east01.jpg",
+            "maskPath": "./east01_mask.jpg",
+            "mattingMode": 2,
+            "type": "wallpaper"
+        },
+        {
+            "thumbPath": "./east02.jpg",
+            "originPath": "./east02.jpg",
+            "maskPath": "./east02_mask.jpg",
+            "mattingMode": 2,
+            "type": "wallpaper"
+        },
+        {
+            "thumbPath": "./east03.jpg",
+            "originPath": "./east03.jpg",
+            "maskPath": "./east03_mask.jpg",
+            "mattingMode": 2,
+            "type": "wallpaper"
+        },
+        {
+            "thumbPath": "./east04.jpg",
+            "originPath": "./east04.jpg",
+            "type": "wallpaper"
+        },
+        {
+            "thumbPath": "./east05.jpg",
+            "originPath": "./east05.jpg",
+            "maskPath": "./east05_mask.jpg",
+            "mattingMode": 2,
+            "type": "wallpaper"
+        },
+        {
+            "thumbPath": "./east06.jpg",
+            "originPath": "./east06.jpg",
+            "type": "wallpaper"
+        },
+        {
+            "thumbPath": "./east07.jpg",
+            "originPath": "./east07.jpg",
+            "type": "wallpaper"
+        },
+        {
+            "thumbPath": "./east08.jpg",
+            "originPath": "./east08.jpg",
+            "type": "wallpaper"
+        }
+    ]
+}

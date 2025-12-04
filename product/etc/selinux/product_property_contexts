@@ -1,0 +1,48 @@
+#line 1 "system/sepolicy/flagging/te_macros"
+####################################
+# is_flag_enabled(flag, rules)
+# SELinux rules which apply only if given feature is turned on
+
+
+####################################
+# is_flag_disabled(flag, rules)
+# SELinux rules which apply only if given feature is turned off
+
+
+####################################
+# starting_at_board_api(api_level, rules)
+#
+# This macro conditionally exposes SELinux rules within system/sepolicy/public,
+# ensuring they are available to vendors only when the board API level is at or
+# above the specified 'api_level'.
+#
+# * Platform sepolicy: Rules are always enabled, regardless of API level.
+# * Vendor sepolicy: Rules are enabled only when the board API level meets or
+#                    exceeds the value provided in 'api_level'.
+#
+# Apply this macro to public types and attributes (in system/sepolicy/public) to
+# restrict vendor access based on board API level.
+
+#line 1 "out_prd/soong/.intermediates/system/sepolicy/contexts/product_property_contexts/android_common/missi/newline"
+
+#line 1 "device/xiaomi/gale/product/sepolicy/private/property_contexts"
+# add for btmac
+ro.ril.oem.btmac                           u:object_r:vendor_btmac_prop:s0
+persist.ro.ril.oem.btmac                   u:object_r:vendor_btmac_prop:s0
+
+# add for wifimac
+ro.ril.oem.wifimac                         u:object_r:vendor_wifimac_prop:s0
+
+# add for factoryid prop
+ro.ril.factory_id                          u:object_r:vendor_factoryid_prop:s0
+
+# add for sar
+vendor.sar.                             u:object_r:exported_dumpstate_prop:s0
+
+# add for disableinbandringing
+persist.bluetooth.disableinbandringing     u:object_r:debug_prop:s0
+
+#audio CID
+vendor.audio.usb_cctoggle                  u:object_r:audio_prop:s0
+#line 1 "out_prd/soong/.intermediates/system/sepolicy/contexts/product_property_contexts/android_common/missi/newline"
+

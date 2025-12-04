@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<config>
+    <!-- 对于一些共包的机型，有的需要上AER需求，有的不需要，我们无法在编译的时候区分-->
+    <!-- 此处用于配置不需要上这个需求的机型列表，用于在运行时解析并动态修改AER的属性，名字是ro.product.name-->
+    <remove-aer-feature-devcie device="gale_p" />  <!--C3UP, MIUIROM-1573896-->
+    <remove-aer-feature-devcie device="gust_p" />  <!--C3UP, MIUIROM-1573896-->
+    <remove-aer-feature-devcie device="rubypro_id" />  <!--M16U, MIUIROM-1651745-->
+    <remove-aer-feature-devcie device="emerald_p" />  <!--N6P, MIUIROM-1805881-->
+    <remove-aer-feature-devcie device="gold_a" />  <!--N17A, HQ-337866-->
+    <remove-aer-feature-devcie device="garnetp" />  <!--N16P, MIUIROM-1558188-->
+    <remove-aer-feature-devcie device="air_p" />  <!--C3VP, HTH-381988-->
+    <remove-aer-feature-devcie device="moon_p" />  <!--N19C, HTH-376735-->
+    <remove-aer-feature-devcie device="dizi_p" />  <!--N83P, MIUIROM-2181071-->
+    <remove-aer-feature-devcie device="ruan_p" />  <!--N83UP, MIUIROM-2181071-->
+    <remove-aer-feature-devcie device="pond_y" />  <!--C3YN, HTH-449346-->
+    <remove-aer-feature-devcie device="lake_p" />  <!--C3NP, HTH-449346-->
+    <remove-aer-feature-devcie device="malachitep" />  <!--O16P, HONGMI-228995-->
+    <remove-aer-feature-devcie device="fire" />  <!--M19A & M19L, PROJFEAT-422638-->
+    <remove-aer-feature-devcie device="tides_r" />  <!--N19AR, HQ-440130-->
+    <remove-aer-feature-devcie device="moon_r_ru" />  <!--N19ER, HQ-443774-->
+    <remove-aer-feature-devcie device="moon_r_id" />  <!--N19ER, HQ-443774-->
+</config>

@@ -1,0 +1,46 @@
+{
+  "title": "柔光",
+  "titleResId": "wallpaper_softlight_title",
+  "subtitle": "George Stoyanov",
+  "cardType": 1,
+  "count": 7,
+  "slideCount": 7,
+  "randomOrder": false,
+  "wallpapers": [
+    {
+      "thumbPath": "./SoftLight01.png",
+      "originPath": "./SoftLight01.png",
+      "type": "wallpaper"
+    },
+    {
+      "thumbPath": "./SoftLight02.png",
+      "originPath": "./SoftLight02.png",
+      "type": "wallpaper"
+    },
+    {
+      "thumbPath": "./SoftLight03.png",
+      "originPath": "./SoftLight03.png",
+      "type": "wallpaper"
+    },
+    {
+      "thumbPath": "./SoftLight04.png",
+      "originPath": "./SoftLight04.png",
+      "type": "wallpaper"
+    },
+    {
+      "thumbPath": "./SoftLight05.png",
+      "originPath": "./SoftLight05.png",
+      "type": "wallpaper"
+    },
+    {
+      "thumbPath": "./SoftLight06.png",
+      "originPath": "./SoftLight06.png",
+      "type": "wallpaper"
+    },
+    {
+      "thumbPath": "./SoftLight07.png",
+      "originPath": "./SoftLight07.png",
+      "type": "wallpaper"
+    }
+  ]
+}
