@@ -1,0 +1,8 @@
+service nfc_hal_service.tms.aidl /vendor/bin/hw/android.hardware.nfc-service-tms
+    class hal
+    user nfc
+    group nfc
+    disabled
+
+on boot && property:ro.boot.hwname=gust
+    start nfc_hal_service.tms.aidl

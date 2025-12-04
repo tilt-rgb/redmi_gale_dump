@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<parameter>
+
+  <project_config name="project_config">
+    <!-- control start service, true is open sar service, false is not open sar service  -->
+    <sar_service_state key="sar_service_state" value="true" />
+    <!-- 听筒场景下,高通和MTK台都配置为 false(sar app不下发 wifi dsi,只显示 wifi sar 的值);当在无听筒且有wifi sar 场景时配置为 true -->
+    <need_wifi_sar key="need_wifi_sar" value="false" />
+    <!-- sensord的数量，正常情况下连个“上sensor，下sensor”，有特殊的上中下-->
+    <sensor_num key="sensor_num" value="2" />
+    <!-- mainState 的默认值,在无 Sensor 或 Sensor 异常时使用;正常时该值由 Sensor 返回 -->
+    <default_sensor_mainstate key="default_sensor_mainstate" value="6" />
+    <!-- dsi 默认值,dsi 和 mainstate 是一一对应关系,每个项目要检查对应关系是否正确 -->
+    <default_dsi key="default_dsi" value="4" />
+
+    <!-- log全部打开 -->
+    <open_all_log key="open_all_log" value="true" />
+  </project_config>
+
+  <dsi_keys name="dsi_keys">
+    <!-- 配合天线，影响dsi的有哪些因素，正常情况下，有两个，听筒状态、sensor值-->
+    <dsi_param value="receiver_state"/>
+    <dsi_param value="sensor_state"/>
+    <!-- <param value="gpio"/> -->
+  </dsi_keys>
+
+    <!-- receiver 场景 dsi -->
+    <receiver_params name="receiver_params">
+        <receiver_dsi key="true" value="1"/>
+    </receiver_params>
+
+    <!-- sensor 场景 dsi -->
+    <sensor_params name="sensor_params">
+        <sensor_dsi key="0" value="2"/>
+        <sensor_dsi key="2" value="3"/>
+        <sensor_dsi key="4" value="4"/>
+        <sensor_dsi key="6" value="4"/>
+    </sensor_params>
+
+</parameter>

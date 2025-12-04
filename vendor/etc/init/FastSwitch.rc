@@ -1,0 +1,5 @@
+service jxnosfastswitch /vendor/bin/jxnosfastswitch
+    class late_start
+    user system
+    group net_admin net_raw system misc
+    capabilities NET_ADMIN NET_RAW

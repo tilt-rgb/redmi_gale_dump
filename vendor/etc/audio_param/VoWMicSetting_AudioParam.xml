@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<AudioParam version="1.0">
+  <ParamTree>
+    <Param path="common" param_id="0"/>
+  </ParamTree>
+  <ParamUnitPool>
+    <ParamUnit param_id="0">
+      <Param name="main_mic" value="0"/>
+      <Param name="ref_mic" value="0"/>
+      <Param name="3rd_mic" value="1"/>
+      <Param name="scp_dmic" value="0"/>
+      <Param name="use_builtin_mic_in_headset_mode" value="0"/>
+      <Param name="dual_ch_transfer" value="0"/>
+      <Param name="headset_record_concurrent" value="0"/>
+      <Param name="wakeup_cmd_delay_ms" value="0"/>
+      <Param name="pcm_callback" value="0"/>
+    </ParamUnit>
+  </ParamUnitPool>
+</AudioParam>

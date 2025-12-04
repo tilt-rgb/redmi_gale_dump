@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<BatteryDatas>
+    <BatteryData>
+        <name>MB_00:</name>
+        <path>/sys/class/power_supply/battery/capacity</path>
+    </BatteryData>
+    <BatteryData>
+        <name>MB_01:</name>
+        <path>/sys/class/power_supply/battery/status</path>
+    </BatteryData>
+    <BatteryData>
+        <name>MB_02:</name>
+        <path>/sys/class/power_supply/battery/battery_id</path>
+    </BatteryData>
+    <BatteryData>
+        <name>MB_03:</name>
+        <path>/sys/class/power_supply/battery/voltage_now</path>
+    </BatteryData>
+    <BatteryData>
+        <name>MB_04:</name>
+        <path>/sys/class/power_supply/battery/current_now</path>
+    </BatteryData>
+    <BatteryData>
+        <name>MB_05:</name>
+        <path>/sys/class/power_supply/battery/temp</path>
+    </BatteryData>
+    <BatteryData>
+        <name>MB_06:</name>
+        <path>/sys/class/power_supply/battery/health</path>
+    </BatteryData>
+    <BatteryData>
+        <name>MB_07:</name>
+        <path>/sys/class/power_supply/battery/charge_control_limit</path>
+    </BatteryData>
+
+    <BatteryData>
+        <name>MU_00:</name>
+        <path>/sys/class/power_supply/usb/real_type</path>
+    </BatteryData>
+    <BatteryData>
+        <name>MU_01:</name>
+        <path>/sys/class/power_supply/usb/typec_mode</path>
+    </BatteryData>
+    <BatteryData>
+        <name>MU_02:</name>
+        <path>/sys/class/power_supply/usb/typec_cc_orientation</path>
+    </BatteryData>
+
+    <BatteryData>
+        <name>MM_00:</name>
+        <path>/sys/class/power_supply/usb/quick_charge_type</path>
+    </BatteryData>
+
+    <BatteryData>
+        <name>MP_00:</name>
+        <path>/sys/class/power_supply/battery/input_suspend</path>
+    </BatteryData>
+
+    <BatteryData>
+        <name>MF_00:</name>
+        <path>/sys/class/power_supply/sc-charger/manufacturer</path>
+    </BatteryData>
+
+    <BatteryData>
+        <name>MU_06:</name>
+        <path>/sys/class/power_supply/usb/voltage_now</path>
+    </BatteryData>
+    <BatteryData>
+        <name>MU_03:</name>
+        <path>/sys/class/power_supply/usb/current_max</path>
+    </BatteryData>
+    <BatteryData>
+        <name>MU_04:</name>
+        <path>/sys/class/power_supply/usb/online</path>
+    </BatteryData>
+    <BatteryData>
+        <name>MU_07:</name>
+        <path>/sys/class/power_supply/battery/battery_id</path>
+    </BatteryData>
+    <BatteryData>
+        <name>MF_02:</name>
+        <path>/sys/class/power_supply/battery/cycle_count</path>
+    </BatteryData>
+    <BatteryData>
+        <name>MF_03:</name>
+        <path>/sys/class/power_supply/battery/charge_full</path>
+    </BatteryData>
+    <BatteryData>
+        <name>MF_04:</name>
+        <path>/sys/class/power_supply/battery/charge_full_design</path>
+    </BatteryData>
+
+    <BatteryData>
+        <name>MM_02:</name>
+        <path>/sys/class/power_supply/usb/voltage_max</path>
+    </BatteryData>
+
+</BatteryDatas>

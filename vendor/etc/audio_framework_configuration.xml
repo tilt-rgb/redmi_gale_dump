@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WHITELIST version="COMMON_1.0">
+    <scenario scenarioName="Ultra_latency">
+        <package packageName="com.xxx.xxx.aaa"/>
+        <package packageName="com.xxx.bbb"/>
+    </scenario>
+    <scenario scenarioName="RecordScreenOff_Irq">
+        <package packageName="com.duowan.mobile"/>
+    </scenario>
+</WHITELIST>

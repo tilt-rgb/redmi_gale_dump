@@ -1,0 +1,8 @@
+service vendor.nfc_hal_service /vendor/bin/hw/android.hardware.nqnfc-service.nxp
+    class hal
+    user nfc
+    group nfc oem_2912
+    disabled
+
+on boot && property:ro.boot.hwname=gust
+    start vendor.nfc_hal_service

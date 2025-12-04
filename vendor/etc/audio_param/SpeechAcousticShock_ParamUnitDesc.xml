@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ParamUnitDesc tab_name="SpeechAcousticShock" version="1.0">
+	<CategoryTypeList>
+		<CategoryType name="SpeechAcousticShock">
+			<Category name="common"/>
+		</CategoryType>
+	</CategoryTypeList>
+	<ParamUnit>
+		<Param name="init_db" type="string"/>
+		<Param name="ramp_time" type="string"/>
+		<Param name="timeout" type="string"/>
+	</ParamUnit>
+</ParamUnitDesc>

@@ -1,0 +1,12 @@
+on post-fs-data
+    mkdir /data/vendor/mbrain 0775 root root
+
+on property:sys.boot_completed=1 && property:ro.vendor.mbrain.mode=mtk
+    setprop vendor.mbrain.ready 1
+    start vendor.mbrain-default
+
+service vendor.mbrain-default /vendor/bin/hw/vendor.mediatek.hardware.mbrain-service.mediatek
+    class hal
+    user root
+    group root readproc system
+    disabled

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ParamUnitDesc version="1.0">
+	<CategoryTypeList>
+		<CategoryType name="Scene" feature_option="VIR_SCENE_CUSTOMIZATION_SUPPORT">
+			<Category name="Default" wording="Default"/>
+			<Category name="App1" wording="Application1" visible="false"/>
+			<Category name="App2" wording="Application2" visible="false"/>
+			<Category name="HDR_RECORD" feature_option="HDR_RECORD_SUPPORT"/>
+		</CategoryType>
+		<CategoryType name="Application">
+			<Category name="SndRecNormal" wording="Sound recording"/>
+			<Category name="SndRecLecture" wording="Lecture" visible="false"/>
+			<Category name="SndRecMeeting" wording="Meeting" visible="false"/>
+			<Category name="CamRecNormal" wording="Camera recording"/>
+			<Category name="CamRecMeeting" wording="Meeting" visible="false"/>
+			<Category name="ASR" wording="ASR improvement" visible="false"/>
+			<Category name="VR" wording="Voice recognition" />
+			<Category name="VoiceUnLk" visible="false" />
+			<Category name="Customization2" visible="false"/>
+			<Category name="FastRecord" visible="false"/>
+			<Category name="Unprocessed" visible="false"/>
+			<Category name="IncallRecord" visible="false"/>
+			<Category name="VoicePerformance" wording="Voice performance recording"/>
+			<Category name="KTV" wording="In Ear Monitor"/>
+		</CategoryType>
+		<CategoryType name="Profile" wording="Device">
+			<Category name="Handset"/>
+			<CategoryGroup name="Headset">
+				<Category name="4-pole HS" wording="4-pole headset"/>
+				<Category name="5-pole HS" wording="5-pole headset(ANC OFF)" feature_option="5_POLE_HS_SUPPORT"/>
+				<Category name="5-pole HS+ANC" wording="5-pole headset(ANC ON)" feature_option="MTK_HEADSET_ACTIVE_NOISE_CANCELLATION"/>
+			</CategoryGroup>
+			<Category name="BT earphone" wording="Bluetooth"/>
+			<Category name="USB" wording="USB" feature_option="MTK_AURISYS_FRAMEWORK_SUPPORT"/>
+		</CategoryType>
+	</CategoryTypeList>
+	<ParamUnit>
+		<Param name="Gain param" type="short_array"/>
+	</ParamUnit>
+</ParamUnitDesc>

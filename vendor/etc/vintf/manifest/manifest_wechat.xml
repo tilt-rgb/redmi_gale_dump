@@ -1,0 +1,11 @@
+<!--
+    Input:
+        vendor/mediatek/proprietary/trustzone/microtrust/source/common/interfaces/soter/1.0/default/manifest_wechat.xml
+-->
+<manifest version="8.0" type="device">
+    <hal format="hidl">
+        <name>vendor.microtrust.hardware.soter</name>
+        <transport>hwbinder</transport>
+        <fqname>@1.0::ISoter/default</fqname>
+    </hal>
+</manifest>

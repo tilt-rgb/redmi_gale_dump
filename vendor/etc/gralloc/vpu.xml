@@ -1,0 +1,19 @@
+<capabilities version="0.3">
+    <ip_capabilities ip="VPU">
+        <feature name="FORMAT_R10G10B10A2" permission="NO" />
+        <feature name="FORMAT_R16G16B16A16_FLOAT" permission="NO" />
+        <feature name="AFBC_16X16" permission="NO" />
+        <feature name="AFBC_32X8" permission="NO" />
+        <feature name="AFBC_YUV" permission="NO" />
+        <feature name="AFBC_BLOCK_SPLIT" permission="NO" />
+        <feature name="AFBC_TILED_HEADERS" permission="NO" />
+        <feature name="AFBC_64X4" permission="NO" />
+        <feature name="AFBC_DOUBLE_BODY" permission="NO" />
+        <feature name="AFBC_FORMAT_R16G16B16A16_FLOAT" permission="NO" />
+        <feature name="AFBC_WRITE_NON_SPARSE" permission="NO" />
+        <feature name="AFRC_ROT_LAYOUT" permission="NO" />
+        <feature name="AFRC_SCAN_LAYOUT" permission="NO" />
+        <feature name="YUV_BL_8" permission="NO" />
+        <feature name="YUV_BL_10" permission="NO" />
+    </ip_capabilities>
+</capabilities>

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WHITELIST>
+<!--scence id 1 means the core application and activity  -->
+    <Scene id='1'>
+        <Package name="com.tencent.mm">
+            <Activity name="Common">
+            </Activity>
+        </Package>
+        <Package name="com.ss.android.ugc.aweme">
+            <Activity name="Common">
+            </Activity>
+        </Package>
+        <Package name="com.tencent.mobileqq">
+            <Activity name="Common">
+            </Activity>
+        </Package>
+        <Package name="com.ss.android.article.news">
+            <Activity name="Common">
+            </Activity>
+        </Package>
+        <Package name="com.tencent.qqlive">
+            <Activity name="Common">
+            </Activity>
+        </Package>
+        <Package name="com.xunmeng.pinduoduo">
+            <Activity name="Common">
+            </Activity>
+        </Package>
+        <Package name="com.UCMobile">
+            <Activity name="Common">
+            </Activity>
+        </Package>
+        <Package name="com.dragon.read">
+            <Activity name="Common">
+            </Activity>
+        </Package>
+        <Package name="com.sina.weibo">
+            <Activity name="Common">
+            </Activity>
+        </Package>
+    </Scene>
+</WHITELIST>

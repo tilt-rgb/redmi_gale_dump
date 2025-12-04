@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+    <PQ_Flags>
+        <Platform PlatformID="mt6893" IRValue="0" DLValue="0">
+        </Platform>
+        <Platform PlatformID="mt6853" IRValue="0" DLValue="0">
+        </Platform>
+        <Platform PlatformID="mt6983" IRValue="0" DLValue="0">
+        </Platform>
+        <Platform PlatformID="mt6895" IRValue="0" DLValue="0">
+        </Platform>
+        <Platform PlatformID="mt6886" IRValue="0" DLValue="0">
+        </Platform>
+        <Platform PlatformID="mt6879" IRValue="0" DLValue="0">
+        </Platform>
+        <Platform PlatformID="mt6855" IRValue="0" DLValue="0">
+        </Platform>
+        <Platform PlatformID="mt6985" IRValue="0" DLValue="0">
+        </Platform>
+        <Platform PlatformID="mt6897" IRValue="0" DLValue="0">
+        </Platform>
+        <Platform PlatformID="mt6989" IRValue="0" DLValue="0">
+        </Platform>
+        <Platform PlatformID="mt6991" IRValue="0" DLValue="0">
+        </Platform>
+        <Platform PlatformID="mt6899" IRValue="1" DLValue="0">
+        </Platform>
+    </PQ_Flags>
+</root>

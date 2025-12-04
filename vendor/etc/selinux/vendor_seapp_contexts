@@ -1,0 +1,3 @@
+user=_app seinfo=platform name=com.trustonic.tuiservice domain=mobicore_app type=app_data_file levelFrom=user
+user=system seinfo=platform name=com.longcheertel.cit.sensor domain=sensors_test_app type=system_app_data_file levelFrom=none
+user=system seinfo=platform name=com.silead.fingerprint domain=silead_manager_app type=system_app_data_file

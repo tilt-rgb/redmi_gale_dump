@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ParamUnitDesc tab_name="VoWCompatibilityCode" version="1.0">
+	<CategoryTypeList>
+		<CategoryType name="VoWCompatibilityCode">
+			<Category name="common"/>
+		</CategoryType>
+	</CategoryTypeList>
+	<ParamUnit>
+		<Param name="training" type="string"/>
+		<Param name="testing" type="string"/>
+	</ParamUnit>
+</ParamUnitDesc>

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ParamUnitDesc version="1.0">
+	<CategoryTypeList>
+		<CategoryType name="Scene" feature_option="VIR_SCENE_CUSTOMIZATION_SUPPORT">
+			<Category name="Default" wording="Default"/>
+			<Category name="App1" wording="Application1" visible="false"/>
+			<Category name="App2" wording="Application2" visible="false"/>
+			<Category name="VxWifi_NB"/>
+	                <Category name="VxWifi_WB"/>
+	                <Category name="VxWifi_SWB"/>
+	                <Category name="3GVT"/>
+		</CategoryType>
+		<CategoryType name="Profile" wording="Device">
+			<CategoryGroup name="Handset">
+				<Category name="Normal" wording="Handset"/>
+				<Category name="HAC"/>
+			</CategoryGroup>
+			<CategoryGroup name="Headset">
+				<Category name="3_pole_Headset"/>
+				<Category name="4_pole_Headset"/>
+				<Category name="5_pole_Headset" wording="5-pole headset(ANC OFF)" feature_option="5_POLE_HS_SUPPORT"/>
+				<Category name="5_pole_Headset+ANC" wording="5-pole headset(ANC ON)" feature_option="MTK_HEADSET_ACTIVE_NOISE_CANCELLATION"/>
+			</CategoryGroup>
+			<CategoryGroup name="Hands-free">
+				<Category name="Handsfree" wording="Hands-free(1-mic NR)"/>
+				<Category name="MagiConference" wording="Hands-free(2-mic NR)"/>
+			</CategoryGroup>
+			<CategoryGroup name="BT Device" wording="Bluetooth">
+				<Category name="BT_Earphone" wording="BT_NREC_On"/>
+				<Category name="BT_NREC_Off"/>
+			</CategoryGroup>
+			<CategoryGroup name="USB Device">
+				<Category name="Usb_Headset" wording="USB Headset" feature_option="VIR_MTK_USB_PHONECALL"/>
+				<Category name="Usb_Headphone" wording="USB Headphone" feature_option="VIR_MTK_USB_PHONECALL"/>
+			</CategoryGroup>
+		</CategoryType>
+	</CategoryTypeList>
+	<ParamUnit>
+		<Param name="Gain param" type="short_array"/>
+	</ParamUnit>
+</ParamUnitDesc>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ParamUnitDesc tab_name="VoWCommonSetting" version="1.0">
+	<CategoryTypeList>
+		<CategoryType name="VoWCommonSetting">
+			<Category name="common"/>
+		</CategoryType>
+	</CategoryTypeList>
+	<ParamUnit>
+		<Param name="speaker_number" type="int"/>
+	</ParamUnit>
+</ParamUnitDesc>

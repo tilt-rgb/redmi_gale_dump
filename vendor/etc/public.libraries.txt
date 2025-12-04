@@ -1,0 +1,13 @@
+libOpenCL.so
+libmialgoengine.so 64
+libmialgoengine2.so 64
+libcom.xiaomi.pluginutils.so
+libmpbase.so 64
+libc++_shared.so 64
+libanc_single_bokeh.so 64
+libanc_single_bokeh_rear.so 64
+libanc_night.so 64
+libTrueSight.so 64
+libmorpho_ImageRefiner.so 64
+libmorpho_ImageRefinerLite.so 64
+

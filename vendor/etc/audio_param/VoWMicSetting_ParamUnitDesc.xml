@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ParamUnitDesc tab_name="VoWMicSetting" version="1.0">
+	<CategoryTypeList>
+		<CategoryType name="VoWMicSetting">
+			<Category name="common"/>
+		</CategoryType>
+	</CategoryTypeList>
+	<ParamUnit>
+		<Param name="main_mic" type="int"/>
+		<Param name="ref_mic" type="int"/>
+		<Param name="3rd_mic" type="int"/>
+		<Param name="scp_dmic" type="int"/>
+		<Param name="use_builtin_mic_in_headset_mode" type="int"/>
+		<Param name="dual_ch_transfer" type="int"/>
+		<Param name="headset_record_concurrent" type="int"/>
+		<Param name="wakeup_cmd_delay_ms" type="int"/>
+		<Param name="pcm_callback" type="int"/>
+	</ParamUnit>
+</ParamUnitDesc>

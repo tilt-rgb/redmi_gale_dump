@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ParamUnitDesc version="1.0">
+	<CategoryTypeList>
+		<CategoryType name="Power">
+			<Category name="Common"/>
+			<Category name="MT6989"/>
+		</CategoryType>
+	</CategoryTypeList>
+	<ParamUnit>
+		<Param name="power_enable" type="int"/>
+		<Param name="SPK" type="short_array"/>
+		<Param name="RCV" type="short_array"/>
+		<Param name="HP" type="short_array"/>
+		<Param name="MIC" type="short_array"/>
+		<Param name="MIC_2CH" type="short_array"/>
+		<Param name="MIC_HDR" type="short_array"/>
+	</ParamUnit>
+</ParamUnitDesc>

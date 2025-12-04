@@ -1,0 +1,8 @@
+on boot
+    chmod 0644 /data/vendor/charge_logger/charge_logger_a.csv
+    chown system system /data/vendor/charge_logger/charge_logger_a.csv
+
+on post-fs-data
+    # Permission for cit sarsensor
+    chmod 0666 /sys/devices/platform/sar_hub_s/sar_trace
+    

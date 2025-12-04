@@ -1,0 +1,27 @@
+service lc_wifi_sar_server /vendor/bin/lc_wifi_sar_server
+	user root
+	group root inet wifi sdcard_rw media_rw diag
+	disabled
+
+# Tx Power returns to normal
+service lc_wifi_sar_client_dsi0 /vendor/bin/lc_wifi_sar_client 0
+	user root
+	group root inet wifi sdcard_rw media_rw diag
+	disabled
+	oneshot
+
+# Tx Power reduced to DSI1
+service lc_wifi_sar_client_dsi1 /vendor/bin/lc_wifi_sar_client 1
+	user root
+	group system root inet wifi sdcard_rw media_rw diag
+	disabled
+	oneshot
+
+on property:sys.boot_completed=1
+	start lc_wifi_sar_server
+
+on property:vendor.audio.voice.receiver.status=on && property:vendor.lc_wifi_sar_server.ready=true
+	start lc_wifi_sar_client_dsi1
+
+on property:vendor.audio.voice.receiver.status=off && property:vendor.lc_wifi_sar_server.ready=true
+	start lc_wifi_sar_client_dsi0

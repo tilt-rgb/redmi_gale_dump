@@ -1,0 +1,25 @@
+# Copyright (C) 2023 Tsingteng MicroSystem
+#
+# All rights are reserved. Reproduction in whole or in part is
+# prohibited without the written consent of the copyright owner.
+#
+# Tsingteng reserves the right to make changes without notice at any time.
+#
+# Tsingteng makes no warranty, expressed, implied or statutory, including but
+# not limited to any implied warranty of merchantability or fitness for any
+# particular purpose, or that the use will not infringe any third party patent,
+# copyright or trademark. Tsingteng must not be liable for any loss or damage
+# arising from its use.
+
+on post-fs
+    insmod /vendor/lib/modules/tms_device_modules.ko
+
+on boot
+    mkdir /data/vendor/nfc_socket 0770 nfc nfc
+    mkdir /data/vendor 0777 nfc nfc
+    mkdir /data/vendor/nfc 0777 nfc nfc
+    mkdir /data/vendor/nfc/param 0777 nfc nfc
+    wait /sys/nfc/chip_name
+    chmod 0660 /dev/tms_nfc
+    chown nfc nfc /dev/tms_nfc
+    chown nfc nfc /sys/nfc/chip_name

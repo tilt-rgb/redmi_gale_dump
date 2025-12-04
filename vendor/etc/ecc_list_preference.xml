@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<EccPrefTable>
+    <!--
+        The attribute definition for tag GsmOnly, GsmPref, CdmaPref:
+        - Operator: OM or OPXX
+        - EccList: the preferred ECC list
+    -->
+    <GsmOnly Operator="460" EccList="112" />
+    <GsmPref Operator="460" EccList="000,08,118,911,999" />
+</EccPrefTable>

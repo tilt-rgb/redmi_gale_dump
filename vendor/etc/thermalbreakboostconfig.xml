@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    one config element represents an element in hashmap, the key include hint id、current temperature、current power mode,
+    the value is frequency info
+    1、Cluster:L11 include cpu0、cpu4、cpu7
+    2、default scence id is 0
+    3、 target0 represents performance mode，target1 represents balanced mode，target2 represents power mode
+    4、hint include launch、camera、mfp、scroll
+-->
+<BreakConfigs>
+    <LaunchBreak>
+        <Freqinfo
+        Target0="boost:1 cpu0:1800000 cpu6:2000000 cpumask:ff"
+        Target1="boost:1 cpu0:1800000 cpu6:2000000 cpumask:ff"
+        Target2="boost:1 cpu0:1800000 cpu6:2000000 cpumask:ff"/>
+    </LaunchBreak>
+    <CameraBreak>
+        <Freqinfo
+        Target0="boost:1 cpu0:1800000 cpu6:2000000 cpumask:ff"
+        Target1="boost:1 cpu0:1800000 cpu6:2000000 cpumask:ff"
+        Target2="boost:1 cpu0:1800000 cpu6:2000000 cpumask:ff"/>
+    </CameraBreak>
+    <MfpBreak>
+        <Freqinfo
+        Target0="boost:0"
+        Target1="boost:0"
+        Target2="boost:0"/>
+    </MfpBreak>
+    <MiuiboosterBreak>
+        <Freqinfo
+        Target0="boost:1 cpu0:1800000 cpu6:2000000 cpumask:ff"
+        Target1="boost:1 cpu0:1800000 cpu6:2000000 cpumask:ff"
+        Target2="boost:1 cpu0:1800000 cpu6:2000000 cpumask:ff"/>
+    </MiuiboosterBreak>
+    <ScrollBreak>
+        <Scene id="0">
+                <Freqinfo Trig="25000"
+                Target0="boost:0"
+                Target1="boost:0"
+                Target2="boost:0"/>
+                <Freqinfo Trig="35000"
+                Target0="boost:0"
+                Target1="boost:0"
+                Target2="boost:0"/>
+                <Freqinfo Trig="39000"
+                Target0="boost:0"
+                Target1="boost:0"
+                Target2="boost:0"/>
+                <Freqinfo Trig="41000"
+                Target0="boost:0"
+                Target1="boost:0"
+                Target2="boost:0"/>
+                <Freqinfo Trig="45000"
+                Target0="boost:0"
+                Target1="boost:0"
+                Target2="boost:0"/>
+        </Scene>
+        <Scene id="1">
+                <Freqinfo Trig="25000"
+                Target0="boost:0"
+                Target1="boost:0"
+                Target2="boost:0"/>
+                <Freqinfo Trig="35000"
+                Target0="boost:0"
+                Target1="boost:0"
+                Target2="boost:0"/>
+                <Freqinfo Trig="39000"
+                Target0="boost:0"
+                Target1="boost:0"
+                Target2="boost:0"/>
+                <Freqinfo Trig="41000"
+                Target0="boost:0"
+                Target1="boost:0"
+                Target2="boost:0"/>
+                <Freqinfo Trig="45000"
+                Target0="boost:0"
+                Target1="boost:0"
+                Target2="boost:0"/>
+        </Scene>
+    </ScrollBreak>
+</BreakConfigs>

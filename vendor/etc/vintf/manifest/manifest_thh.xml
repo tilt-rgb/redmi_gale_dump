@@ -1,0 +1,11 @@
+<!--
+    Input:
+        vendor/mediatek/proprietary/trustzone/microtrust/source/common/interfaces/thh/2.0/default/manifest_thh.xml
+-->
+<manifest version="8.0" type="device">
+    <hal format="hidl">
+        <name>vendor.microtrust.hardware.thh</name>
+        <transport>hwbinder</transport>
+        <fqname>@2.0::IThhDevice/default</fqname>
+    </hal>
+</manifest>

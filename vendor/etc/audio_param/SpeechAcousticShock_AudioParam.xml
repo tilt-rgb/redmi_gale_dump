@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<AudioParam version="1.0">
+  <ParamTree>
+    <Param path="common" param_id="0"/>
+  </ParamTree>
+  <ParamUnitPool>
+    <ParamUnit param_id="0">
+      <Param name="init_db" value="114"/>
+      <Param name="ramp_time" value="3.5"/>
+      <Param name="timeout" value="6"/>
+    </ParamUnit>
+  </ParamUnitPool>
+</AudioParam>

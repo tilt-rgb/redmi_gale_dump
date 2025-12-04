@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<AudioParam version="1.0">
+  <ParamTree>
+    <Param path="Common" param_id="0"/>
+    <Param path="MT6989" param_id="1"/>
+  </ParamTree>
+  <ParamUnitPool>
+    <ParamUnit param_id="0">
+      <Param name="hwgain_enable" value="0"/>
+      <Param name="dl_hwgain" value="3"/>
+    </ParamUnit>
+    <ParamUnit param_id="1">
+      <Param name="hwgain_enable" value="1"/>
+      <Param name="dl_hwgain" value="3"/>
+    </ParamUnit>
+  </ParamUnitPool>
+</AudioParam>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<AudioParam version="1.0">
+  <ParamTree>
+    <Param path="common" param_id="0"/>
+  </ParamTree>
+  <ParamUnitPool>
+    <ParamUnit param_id="0">
+      <Param name="speaker_number" value="1"/>
+    </ParamUnit>
+  </ParamUnitPool>
+</AudioParam>

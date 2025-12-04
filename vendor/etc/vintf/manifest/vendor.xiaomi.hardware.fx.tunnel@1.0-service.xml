@@ -1,0 +1,11 @@
+<!--
+    Input:
+        vendor/mediatek/proprietary/fingerprints/fingerprintextension/mfp_extension/tunnel/1.0/vendor.xiaomi.hardware.fx.tunnel@1.0-service.xml
+-->
+<manifest version="8.0" type="device">
+    <hal format="hidl">
+        <name>vendor.xiaomi.hardware.fx.tunnel</name>
+        <transport>hwbinder</transport>
+        <fqname>@1.0::IMiFxTunnel/default</fqname>
+    </hal>
+</manifest>
