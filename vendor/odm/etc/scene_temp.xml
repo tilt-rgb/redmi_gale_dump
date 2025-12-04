@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<scene>
+    <sceneid id="-1">
+        <name>default</name>
+        <temp>48000</temp>
+    </sceneid>
+    <sceneid id="10">
+        <name>nolimits</name>
+        <temp>53000</temp>
+    </sceneid>
+    <sceneid id="12">
+        <name>camera</name>
+        <temp>49000</temp>
+    </sceneid>
+    <sceneid id="9">
+        <name>tgame</name>
+        <temp>48000</temp>
+    </sceneid>
+    <sceneid id="20">
+        <name>mgame</name>
+        <temp>48000</temp>
+    </sceneid>
+    <ntc name="xo-therm" temp="78000"/>
+    <ntc name="default" temp="95000"/>
+    <ntc name="quiet_therm" temp="70000"/>
+</scene>

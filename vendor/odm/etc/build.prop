@@ -1,0 +1,35 @@
+#  start
+####################################
+# from generate-common-build-props
+# These properties identify this partition image.
+####################################
+ro.product.odm.brand=alps
+ro.product.odm.device=gale
+ro.product.odm.manufacturer=Xiaomi
+ro.product.odm.model=gale
+ro.product.odm.name=vnd_gale
+ro.odm.product.cpu.abilist=arm64-v8a,armeabi-v7a,armeabi
+ro.odm.product.cpu.abilist32=armeabi-v7a,armeabi
+ro.odm.product.cpu.abilist64=arm64-v8a
+ro.odm.build.date=Mon Nov  3 03:31:08 UTC 2025
+ro.odm.build.date.utc=1762140668
+ro.odm.build.fingerprint=alps/vnd_gale/gale:15/AP3A.240905.015.A2/OS2.0.204.0.VGPMIXM:user/release-keys
+ro.odm.build.id=AP3A.240905.015.A2
+ro.odm.build.tags=release-keys
+ro.odm.build.type=user
+ro.odm.build.version.incremental=OS2.0.204.0.VGPMIXM
+ro.odm.build.version.release=15
+ro.odm.build.version.release_or_codename=15
+ro.odm.build.version.sdk=35
+####################################
+# from variable ADDITIONAL_ODM_PROPERTIES
+####################################
+####################################
+# from variable PRODUCT_ODM_PROPERTIES
+####################################
+persist.vendor.tracking.dfs=true
+# end of file
+import /vendor/odm/etc/build_${ro.boot.product.hardware.sku}.prop
+#  end
+
+
