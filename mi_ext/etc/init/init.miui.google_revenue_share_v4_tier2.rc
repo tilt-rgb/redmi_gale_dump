@@ -1,0 +1,15 @@
+# Use the default value for new product.
+on property:ro.miui.customized_clientid=2
+    setprop ro.com.miui.rsa.search tier2
+    setprop ro.com.miui.rsa.feature tier2
+    setprop ro.com.google.clientidbase android-xiaomi
+    setprop ro.com.google.clientidbase.ms android-xiaomi-terr1-rso2
+    setprop ro.com.google.clientidbase.vs android-xiaomi-terr1-rso2
+    setprop ro.com.google.clientidbase.tx android-xiaomi-terr1-rso2
+    setprop ro.com.google.clientidbase.pg android-xiaomi-deo2
+
+# 实现按地区不植入Search Tier
+#on property:persist.com.miui.rsa_region=ph && property:ro.miui.customized_clientid=2 && property:ro.miui.build.region=global && property:ro.miui.customized.region=
+#    setprop ro.com.miui.rsa.search tier0
+#    setprop ro.com.miui.rsa.feature tier2
+#    setprop ro.com.google.clientidbase.pg android-xiaomi-deo2

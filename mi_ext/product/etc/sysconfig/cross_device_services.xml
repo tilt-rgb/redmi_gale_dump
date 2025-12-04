@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<config>
+
+    <!-- To receive Google Play Store updates for Cross Device Services -->
+    <feature name="com.google.ambient.streaming" />
+
+    <!-- Allow background operation in battery saver mode for Cross Device Services-->
+    <allow-in-power-save package="com.google.ambient.streaming" />
+
+</config>
+

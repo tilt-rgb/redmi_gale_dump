@@ -1,0 +1,5 @@
+# 记录同应用不同包名名单，切换地区时禁止安装两个不同包名的同款应用（安装卸载后也不可以再安装）
+# tiktok
+com.zhiliaoapp.musically,com.ss.android.ugc.trill
+# shopee
+com.shopee.br,com.shopee.id,com.shopee.ph,com.shopee.vn,com.shopee.th,com.shopee.my,com.shopee.sg

@@ -1,0 +1,9 @@
+<?xml version="1.0" ?>
+<permissions>
+    <privapp-permissions package="com.miui.home">
+        <permission name="android.permission.ACCESS_CONTEXTUAL_SEARCH"/>
+    </privapp-permissions>
+    <privapp-permissions package="com.mi.android.globallauncher">
+        <permission name="android.permission.ACCESS_CONTEXTUAL_SEARCH"/>
+    </privapp-permissions>
+</permissions>

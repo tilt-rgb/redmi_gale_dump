@@ -1,0 +1,11 @@
+ro.miui.business.version=gale.mi.1.1.0244
+ro.zalo.tracking=/cust/etc/zalo_appchannel.in
+ro.booking.channel.path=/cust/etc/.booking.data.aid
+ro.netflix.channel=004ee050-1a17-11e9-bb61-6f1da27fb55b
+ro.netflix.signup=1
+ro.microsoft.onedrive_partner_code=/cust/etc/onedrive_token.txt
+ro.wps.prop.channel.path=/cust/etc/wps.prop
+ro.trackingId.com.lzd.appid=/cust/etc/lazadaconfiginfo
+ro.csc.spotify.music.referrerid=xiaomi_mobile
+ro.csc.spotify.music.partnerid=xiaomi_mobile
+

@@ -1,0 +1,14 @@
+kernel=kernel
+ramdisk=ramdisk
+page_size=4096
+kernel_size=14478006
+ramdisk_size=2630619
+base_addr=0x00000000
+kernel_offset=0x00008000
+ramdisk_offset=
+tags_offset=
+dtbo_offset=0x00000000
+os_version=15.0.0
+os_patch_level=2025:11
+cmd_line='000000 000000 000000 000000 000000 000000 000000 000000 kernel ramdisk.packed'
+board=""

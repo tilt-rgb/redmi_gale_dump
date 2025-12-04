@@ -1,0 +1,9 @@
+    mount overlay overlay system_ext/app lowerdir=/mnt/vendor/mi_ext/system_ext/app:system_ext/app
+    mount overlay overlay system_ext/priv-app lowerdir=/mnt/vendor/mi_ext/system_ext/priv-app:system_ext/priv-app
+on property:persist.sys.cota.carrier=EN
+    setprop ro.facebook.partnerid entel:8b460038-4f80-7a56-bde1-570b3410efe4
+    setprop ro.netflix.channel bd708d30-9b02-11e8-a47d-6d03b1dd4cf8
+
+on property:persist.sys.cota.carrier=XM
+    setprop ro.facebook.partnerid xiaomi:d3120e97-318f-0810-4666-a1b0610476f4
+    setprop ro.netflix.channel 004ee050-1a17-11e9-bb61-6f1da27fb55b

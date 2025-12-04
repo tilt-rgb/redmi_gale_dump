@@ -1,0 +1,9 @@
+<permissions>
+    <privapp-permissions package="com.miui.cotaservice">
+        <permission name="android.permission.MANAGE_USERS" />
+        <permission name="android.permission.DELETE_PACKAGES" />
+        <permission name="android.permission.WRITE_SETTINGS" />
+        <permission name="android.permission.READ_PRIVILEGED_PHONE_STATE" />
+        <permission name="android.permission.CHANGE_COMPONENT_ENABLED_STATE" />
+    </privapp-permissions>
+</permissions>

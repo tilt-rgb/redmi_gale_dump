@@ -1,0 +1,27 @@
+<string-array name="removable_apk_list">
+    <item>cn.wps.xiaomi.abroad.lite</item>
+    <item>com.android.soundrecorder</item>
+    <item>com.mi.global.bbs</item>
+    <item>com.mi.global.pocobbs</item>
+    <item>com.mi.global.shop</item>
+    <item>com.miui.compass</item>
+    <item>com.miui.huanji</item>
+    <item>com.miui.virtualsim</item>
+    <item>com.xiaomi.midrop</item>
+    <item>com.xiaomi.scanner</item>
+    <item>com.xiaomi.smarthome</item>
+</string-array>
+
+<string-array name="removable_apk_path_list">
+    <item>/product/data-app/GlobalWPSLITE/GlobalWPSLITE.apk</item>
+    <item>/product/data-app/MIUISoundRecorderTargetSdk30Global/MIUISoundRecorderTargetSdk30Global.apk</item>
+    <item>/product/data-app/MICOMMUNITY_OVERSEA/MICOMMUNITY_OVERSEA.apk</item>
+    <item>/product/data-app/POCOCOMMUNITY_OVERSEA/POCOCOMMUNITY_OVERSEA.apk</item>
+    <item>/product/data-app/MISTORE_OVERSEA/MISTORE_OVERSEA.apk</item>
+    <item>/product/data-app/MIUICompassGlobal/MIUICompassGlobal.apk</item>
+    <item>/product/data-app/MIUIHuanjiGlobal/MIUIHuanjiGlobal.apk</item>
+    <item>/product/data-app/MIUIVirtualSim/MIUIVirtualSim.apk</item>
+    <item>/product/data-app/MIDrop/MIDrop.apk</item>
+    <item>/product/data-app/MiuiScanner/MiuiScanner.apk</item>
+    <item>/product/data-app/SmartHome/SmartHome.apk</item>
+</string-array>

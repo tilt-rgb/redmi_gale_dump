@@ -1,0 +1,20 @@
+## missi-user 15 AP3A.240905.015.A2 OS2.0.204.0.VGPMIXM release-keys
+- Manufacturer: xiaomi
+- Platform: mt6768
+- Codename: gale
+- Brand: Redmi
+- Flavor: missi-user
+- Release Version: 15
+- Kernel Version: 6.6.30
+- Id: AP3A.240905.015.A2
+- Incremental: OS2.0.204.0.VGPMIXM
+- Tags: release-keys
+- CPU Abilist: arm64-v8a,armeabi-v7a,armeabi
+- A/B Device: true
+- Treble Device: true
+- Locale: en-GB
+- Screen Density: undefined
+- Fingerprint: Redmi/gale_global/gale:15/AP3A.240905.015.A2/OS2.0.204.0.VGPMIXM:user/release-keys
+- OTA version: 
+- Branch: missi-user-15-AP3A.240905.015.A2-OS2.0.204.0.VGPMIXM-release-keys
+- Repo: redmi_gale_dump

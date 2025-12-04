@@ -1,0 +1,7 @@
+<?xml version="1.0" ?>
+<permissions>
+    <privapp-permissions package="com.google.android.as.oss">
+        <permission name="android.permission.READ_RESTRICTED_STATS"/>
+        <permission name="android.permission.READ_SYSTEM_GRAMMATICAL_GENDER"/>
+    </privapp-permissions>
+</permissions>
