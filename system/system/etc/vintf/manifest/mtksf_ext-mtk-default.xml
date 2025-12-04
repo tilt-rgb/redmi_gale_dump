@@ -1,0 +1,11 @@
+<!--
+    Input:
+        frameworks/native/services/surfaceflinger/mediatek/aidl/mtksf_ext-mtk-default.xml
+-->
+<manifest version="8.0" type="framework">
+    <hal format="aidl">
+        <name>vendor.mediatek.framework.mtksf_ext</name>
+        <version>4</version>
+        <fqname>IMtkSF_ext/default</fqname>
+    </hal>
+</manifest>
