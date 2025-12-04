@@ -1,0 +1,286 @@
+{
+  "packageName": "cn.etouch.ecalendar",
+  "forceDark": true,
+  "mainRule": 128,
+  "forceDarkActivityConfigList": [
+    {
+      "activityName": "cn.etouch.ecalendar.module.main.ui.MainActivity",
+      "forceDark": true,
+      "forceDarkViewConfigList": [
+        {
+          "viewName": "android.support.constraint.ConstraintLayout",
+          "forceDark": false,
+          "conditions": [
+            {
+              "parent": 0,
+              "viewName": "android.widget.LinearLayout",
+              "index": -1
+            },
+            {
+              "parent": 3,
+              "viewName": "cn.etouch.ecalendar.tools.almanac.AlmanacView",
+              "index": -1,
+              "id": "almanac_view"
+            }
+          ]
+        },
+        {
+          "viewName": "android.widget.LinearLayout",
+          "forceDark": false,
+          "id": "ll_bg_2",
+          "conditions": [
+            {
+              "parent": 0,
+              "viewName": "android.widget.LinearLayout",
+              "index": -1
+            },
+            {
+              "parent": 2,
+              "viewName": "cn.etouch.ecalendar.tools.almanac.AlmanacView",
+              "index": -1,
+              "id": "almanac_view"
+            },
+            {
+              "parent": 4,
+              "viewName": "cn.etouch.ecalendar.tools.astro.ObservableScrollView",
+              "index": -1,
+              "id": "scroll_view"
+            }
+          ]
+        },
+        {
+          "viewName": "android.support.constraint.ConstraintLayout",
+          "id": "weather_content_sec_layout",
+          "forceDark": false,
+          "conditions": [
+            {
+              "parent": 0,
+              "viewName": "cn.etouch.ecalendar.tools.life.ETADLayout",
+              "index": -1
+            },
+            {
+              "parent": 1,
+              "viewName": "cn.etouch.ecalendar.module.weather.component.widget.WeatherMainCardView",
+              "index": -1
+            },
+            {
+              "parent": 2,
+              "viewName": "cn.etouch.ecalendar.OuterListView",
+              "index": -1
+            }
+          ]
+        },
+        {
+          "viewName": "android.widget.RelativeLayout",
+          "id": "mine_vip_layout",
+          "forceDark": false,
+          "conditions": [
+            {
+              "parent": 0,
+              "viewName": "android.support.constraint.ConstraintLayout",
+              "index": -1,
+              "id": "mine_header_parent_layout"
+            },
+            {
+              "parent": 1,
+              "viewName": "cn.etouch.ecalendar.tools.find.component.widget.MineHeaderView",
+              "index": -1
+            },
+            {
+              "parent": 3,
+              "viewName": "android.support.v7.widget.RecyclerView",
+              "index": -1,
+              "id": "refresh_recycler_view"
+            }
+          ]
+        },
+        {
+          "viewName": "android.widget.TextView",
+          "id": "fortune_score_title_txt",
+          "forceDark": false,
+          "conditions": [
+            {
+              "parent": 0,
+              "viewName": "androidx.constraintlayout.widget.ConstraintLayout",
+              "index": -1,
+              "id": "fortune_score_layout"
+            },
+            {
+              "parent": 1,
+              "viewName": "androidx.constraintlayout.widget.ConstraintLayout",
+              "index": -1,
+              "id": "weather_content_sec_layout"
+            },
+            {
+              "parent": 3,
+              "viewName": "cn.etouch.ecalendar.module.weather.component.widget.WeatherMainCardView",
+              "index": -1
+            }
+          ]
+        },
+        {
+          "viewName": "android.widget.TextView",
+          "id": "weather_city_sec_txt",
+          "forceDark": false,
+          "conditions": [
+            {
+              "parent": 0,
+              "viewName": "androidx.constraintlayout.widget.ConstraintLayout",
+              "index": -1,
+              "id": "weather_content_sec_layout"
+            },
+            {
+              "parent": 2,
+              "viewName": "cn.etouch.ecalendar.module.weather.component.widget.WeatherMainCardView",
+              "index": -1
+            },
+            {
+              "parent": 3,
+              "viewName": "cn.etouch.ecalendar.OuterListView",
+              "index": -1
+            }
+          ]
+        },
+        {
+          "viewName": "android.widget.TextView",
+          "id": "weather_type_sec_txt",
+          "forceDark": false,
+          "conditions": [
+            {
+              "parent": 0,
+              "viewName": "androidx.constraintlayout.widget.ConstraintLayout",
+              "index": -1,
+              "id": "weather_content_sec_layout"
+            },
+            {
+              "parent": 2,
+              "viewName": "cn.etouch.ecalendar.module.weather.component.widget.WeatherMainCardView",
+              "index": -1
+            },
+            {
+              "parent": 3,
+              "viewName": "cn.etouch.ecalendar.OuterListView",
+              "index": -1
+            }
+          ]
+        },
+        {
+          "viewName": "android.widget.TextView",
+          "id": "today_number_txt",
+          "forceDark": false,
+          "conditions": [
+            {
+              "parent": 0,
+              "viewName": "android.widget.LinearLayout",
+              "index": -1,
+              "id": "limit_today_rl"
+            },
+            {
+              "parent": 1,
+              "viewName": "androidx.constraintlayout.widget.ConstraintLayout",
+              "index": -1,
+              "id": "limit_parent_cl"
+            },
+            {
+              "parent": 2,
+              "viewName": "cn.etouch.ecalendar.module.calendar.component.widget.calendarcard.CalendarTrafficLimitCard",
+              "index": -1
+            }
+          ]
+        },
+        {
+          "viewName": "android.widget.TextView",
+          "id": "tomorrow_number_txt",
+          "forceDark": false,
+          "conditions": [
+            {
+              "parent": 0,
+              "viewName": "android.widget.LinearLayout",
+              "index": -1,
+              "id": "limit_tomorrow_rl"
+            },
+            {
+              "parent": 1,
+              "viewName": "androidx.constraintlayout.widget.ConstraintLayout",
+              "index": -1,
+              "id": "limit_parent_cl"
+            },
+            {
+              "parent": 2,
+              "viewName": "cn.etouch.ecalendar.module.calendar.component.widget.calendarcard.CalendarTrafficLimitCard",
+              "index": -1
+            }
+          ]
+        },
+        {
+          "viewName": "android.widget.TextView",
+          "id": "mine_vip_guide_title_txt",
+          "forceDark": false,
+          "conditions": [
+            {
+              "parent": 0,
+              "viewName": "android.widget.RelativeLayout",
+              "index": -1,
+              "id": "mine_vip_layout"
+            },
+            {
+              "parent": 1,
+              "viewName": "androidx.constraintlayout.widget.ConstraintLayout",
+              "index": -1,
+              "id": "mine_header_parent_layout"
+            },
+            {
+              "parent": 2,
+              "viewName": "cn.etouch.ecalendar.tools.find.component.widget.MineHeaderView",
+              "index": -1
+            }
+          ]
+        },
+        {
+          "viewName": "android.widget.TextView",
+          "forceDark": false,
+          "conditions": [
+            {
+              "parent": 0,
+              "viewName": "android.widget.LinearLayout",
+              "index": -1
+            },
+            {
+              "parent": 1,
+              "viewName": "android.widget.RelativeLayout",
+              "index": -1,
+              "id": "mine_vip_layout"
+            },
+            {
+              "parent": 2,
+              "viewName": "androidx.constraintlayout.widget.ConstraintLayout",
+              "index": -1,
+              "id": "mine_header_parent_layout"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "activityName": "cn.etouch.ecalendar.module.life.ui.HealthCodeActivity",
+      "forceDark": true,
+      "forceDarkViewConfigList": [
+        {
+          "viewName": "android.support.constraint.ConstraintLayout",
+          "id": "health_code_layout",
+          "forceDark": false
+        },
+        {
+          "viewName": "android.support.constraint.ConstraintLayout",
+          "id": "gov_service_layout",
+          "forceDark": false
+        },
+        {
+          "viewName": "android.support.constraint.ConstraintLayout",
+          "id": "communication_route_layout",
+          "forceDark": false
+        }
+      ]
+    }
+  ]
+}

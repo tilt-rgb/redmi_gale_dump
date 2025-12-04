@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<settings>
+  <if condition="getPlatform();!=mt6765,mt6762,mt6761,mt6739,mt6768,mt6769,mt6771,mt6779,mt6781,mt6783,mt6785,mt6789,mt6883,mt6885,mt6889,mt6893,mt6891,mt6873,mt6875,mt6853,mt6833,mt6877,mt6855"/>
+  <ui>
+    <lifecycle>
+      <action type="onCreate">
+        <if condition="getModemVersion();&gt;NR16">
+          <cmd name="get_TA-SAR_support" cmd_type="at_cmd">AT+XRFTASARENABLE=?;+XRFTASARENABLE:support_ta_sar</cmd>
+          <cmd name="get_FBO-SAR_support" cmd_type="at_cmd">AT+ERFIDX=?;+ERFIDX:support_fbo_sar</cmd>
+          <cmd name="get_FR2_support" cmd_type="at_cmd">AT+XRFTAPDENABLE=?;+XRFTAPDENABLE:support_fr2</cmd>
+          <cmd name="get_ta-sar" cmd_type="at_cmd">AT+XRFTASARENABLE?;+XRFTASARENABLE:sub6g_mode</cmd>
+          <cmd name="get_idx" cmd_type="at_cmd">AT+ERFIDX?;+ERFIDX:,sub6g_eci,,</cmd>
+          <cmd name="get_ta-pd" cmd_type="at_cmd">AT+XRFTAPDENABLE?;+XRFTAPDENABLE:fr2_mode</cmd>
+          <cmd name="get_ta-idx" cmd_type="at_cmd">AT+XRFTAERFIDX?;+XRFTAERFIDX:fr2_eci</cmd>
+        </if>
+        <else>
+          <cmd name="get_TA-SAR_support" cmd_type="at_cmd">AT+ERFTASARENABLE=?;+ERFTASARENABLE:support_ta_sar</cmd>
+          <cmd name="get_FBO-SAR_support" cmd_type="at_cmd">AT+ERFIDX=?;+ERFIDX:support_fbo_sar</cmd>
+          <cmd name="get_FR2_support" cmd_type="at_cmd">AT+ERFTAPDENABLE=?;+ERFTAPDENABLE:support_fr2</cmd>
+          <cmd name="get_ta-sar" cmd_type="at_cmd">AT+ERFTASARENABLE?;+ERFTASARENABLE:sub6g_mode</cmd>
+          <cmd name="get_idx" cmd_type="at_cmd">AT+ERFIDX?;+ERFIDX:,sub6g_eci,,</cmd>
+          <cmd name="get_ta-pd" cmd_type="at_cmd">AT+ERFTAPDENABLE?;+ERFTAPDENABLE:fr2_mode</cmd>
+          <cmd name="get_ta-idx" cmd_type="at_cmd">AT+ERFTAIDX?;+ERFTAIDX:fr2_eci</cmd>
+        </else>
+      </action>
+    </lifecycle>
+    <element ui_type="Spinner" label="Sub6g Mode">
+      <field>sub6g_mode</field>
+      <slave_id>sub6g_mode</slave_id>
+      <default>0</default>
+      <options>
+        <option index="0" label="OFF" value="-1" />
+        <option index="1" label="FBO-SAR" value="0" condition="support_fbo_sar=1" />
+        <option index="2" label="TA-SAR" value="1" condition="support_ta_sar=1" />
+      </options>
+      <dependence master="sub6g_eci" slave_attr="value">
+        <if sub6g_eci="255">-1</if>
+      </dependence>
+    </element>
+    <element ui_type="Spinner" label="FR2_Mode">
+      <if condition="support_fr2=1"/>
+      <field>fr2_mode</field>
+      <default>0</default>
+      <options>
+        <option index="0" label="OFF" value="0" />
+        <option index="1" label="PD" value="1" />
+      </options>
+    </element>
+    <element ui_type="EditText" label="Sub6g ECI">
+      <field>sub6g_eci</field>
+      <range>0~255</range>
+      <slave>sub6g_mode</slave>
+    </element>
+    <element ui_type="EditText" label="FR2 ECI">
+      <if condition="support_fr2=1"/>
+      <field>fr2_eci</field>
+      <range>0~255</range>
+    </element>
+    <element ui_type="GroupView">
+      <sub_element column="2"/>
+      <element ui_type="Button" label="Set">
+        <action>
+          <if condition="support_fbo_sar=1|support_ta_sar=1">
+            <if condition="sub6g_mode=-1"><!-- sub6g off -->
+              <if condition="getModemVersion();&gt;NR16">
+                <cmd name="set_ta-sar" cmd_type="at_cmd">AT+XRFTASARENABLE=0</cmd>
+              </if>
+              <else>
+                <cmd name="set_ta-sar" cmd_type="at_cmd">AT+ERFTASARENABLE=0</cmd>
+              </else>
+              <cmd name="set_idx" cmd_type="at_cmd">AT+ERFIDX=1,-1</cmd>
+            </if>
+            <elif condition="sub6g_mode=0"><!--FBO-SAR -->
+              <if condition="getModemVersion();&gt;NR16">
+                <cmd name="set_ta-sar" cmd_type="at_cmd">AT+XRFTASARENABLE=0</cmd>
+              </if>
+              <else>
+                <cmd name="set_ta-sar" cmd_type="at_cmd">AT+ERFTASARENABLE=0</cmd>
+              </else>
+              <cmd name="set_idx" cmd_type="at_cmd">AT+ERFIDX=1,sub6g_eci</cmd>
+            </elif>
+            <else> <!--TA-SAR, condition="sub6g_mode=1" -->
+              <if condition="getModemVersion();&gt;NR16">
+                <cmd name="set_ta-sar" cmd_type="at_cmd">AT+XRFTASARENABLE=1</cmd>
+              </if>
+              <else>
+                <cmd name="set_ta-sar" cmd_type="at_cmd">AT+ERFTASARENABLE=1</cmd>
+              </else>
+              <cmd name="set_idx" cmd_type="at_cmd">AT+ERFIDX=1,sub6g_eci</cmd>
+            </else>
+            <if condition="support_fr2=1">
+              <if condition="fr2_mode=0"><!-- PD off -->
+                <if condition="getModemVersion();&gt;NR16">
+                  <cmd name="set_ta-pd" cmd_type="at_cmd">AT+XRFTAPDENABLE=0</cmd>
+                </if>
+                <else>
+                  <cmd name="set_ta-pd" cmd_type="at_cmd">AT+ERFTAPDENABLE=0</cmd>
+                </else>
+              </if>
+              <else><!--PD on, condition="fr2_mode=1"-->
+                <if condition="sub6g_mode=0|sub6g_mode=1">
+                  <if condition="getModemVersion();&gt;NR16">
+                    <cmd name="set_ta-pd" cmd_type="at_cmd">AT+XRFTAPDENABLE=1</cmd>
+                    <cmd name="set_ta-idx" cmd_type="at_cmd">AT+XRFTAERFIDX=1,fr2_eci</cmd>
+                  </if>
+                  <else>
+                    <cmd name="set_ta-pd" cmd_type="at_cmd">AT+ERFTAPDENABLE=1</cmd>
+                    <cmd name="set_ta-idx" cmd_type="at_cmd">AT+ERFTAIDX=1,fr2_eci</cmd>
+                  </else>
+                </if>
+                <else>
+                  <cmd name="set_mode_waining1" cmd_type="show_dialog">The selection is not support</cmd>
+                </else>
+              </else>
+            </if>
+          </if>
+          <else>
+            <cmd name="set_mode_waining2" cmd_type="show_dialog">The feature is not support</cmd>
+          </else>
+        </action>
+      </element>
+      <element ui_type="Button" label="Get">
+        <action>
+          <if condition="support_fbo_sar=1|support_ta_sar=1">
+            <if condition="getModemVersion();&gt;NR16">
+              <cmd name="get_ta-sar" cmd_type="at_cmd">AT+XRFTASARENABLE?;+XRFTASARENABLE:sub6g_mode</cmd>
+              <cmd name="get_idx" cmd_type="at_cmd">AT+ERFIDX?;+ERFIDX:,sub6g_eci,,</cmd>
+              <if condition="support_fr2=1">
+                <cmd name="get_ta-pd" cmd_type="at_cmd">AT+XRFTAPDENABLE?;+XRFTAPDENABLE:fr2_mode</cmd>
+                <cmd name="get_ta-idx" cmd_type="at_cmd">AT+XRFTAERFIDX?;+XRFTAERFIDX:fr2_eci</cmd>
+              </if>
+            </if>
+            <else>
+              <cmd name="get_ta-sar" cmd_type="at_cmd">AT+ERFTASARENABLE?;+ERFTASARENABLE:sub6g_mode</cmd>
+              <cmd name="get_idx" cmd_type="at_cmd">AT+ERFIDX?;+ERFIDX:,sub6g_eci,,</cmd>
+              <if condition="support_fr2=1">
+                <cmd name="get_ta-pd" cmd_type="at_cmd">AT+ERFTAPDENABLE?;+ERFTAPDENABLE:fr2_mode</cmd>
+                <cmd name="get_ta-idx" cmd_type="at_cmd">AT+ERFTAIDX?;+ERFTAIDX:fr2_eci</cmd>
+              </if>
+            </else>
+          </if>
+          <else>
+            <cmd name="get_mode_waining" cmd_type="show_dialog">The feature is not support</cmd>
+          </else>
+        </action>
+      </element>
+    </element>
+  </ui>
+</settings>

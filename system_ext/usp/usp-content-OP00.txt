@@ -1,0 +1,7 @@
+[Package-start]
+[Package-end]
+[Property-start]
+persist.vendor.operator.optr=
+persist.vendor.operator.spec=
+persist.vendor.operator.seg=
+[Property-end]

@@ -1,0 +1,11 @@
+persist.sys.timezone=Indian/Reunion
+ro.product.locale.language=re
+ro.product.locale.region=RE
+ro.miui.region=RE
+ro.miui.mcc=6647
+ro.miui.mnc=9999
+ro.miui.cust_variant=re
+ro.vendor.miui.region=RE
+ro.vendor.miui.mcc=6647
+ro.vendor.miui.mnc=9999
+ro.vendor.miui.cust_variant=re

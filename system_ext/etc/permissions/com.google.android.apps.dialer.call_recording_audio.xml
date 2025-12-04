@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- MIUI ADD: Audio_CallRecording -->
+<!-- call_recording_audio Feature Flag -->
+<permissions>
+<feature name="com.google.android.apps.dialer.call_recording_audio" />
+</permissions>
+<!-- END Audio_CallRecording -->

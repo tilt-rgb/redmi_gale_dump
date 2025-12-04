@@ -1,0 +1,386 @@
+{
+  "packageName": "cmb.pb",
+  "forceDark": true,
+  "mainRule": 16,
+  "secondaryRule": 32,
+  "forceDarkActivityConfigList": [
+    {
+      "activityName": "cmb.pb.app.allmenu.ui.AllFunctionActivity",
+      "forceDark": true,
+      "forceDarkViewConfigList": [
+        {
+          "viewName": "com.pb.infrastructrue.ui.cmbwidget.RecyclingImageView",
+          "id": "ivFuncIcon",
+          "forceDark": true,
+          "usage": 103,
+          "backgroundUsage": 103,
+          "conditions": [
+            {
+              "parent": 0,
+              "viewName": "android.widget.LinearLayout",
+              "index": -1
+            },
+            {
+              "parent": 1,
+              "viewName": "android.widget.FrameLayout",
+              "index": -1,
+              "id": "menu_container"
+            },
+            {
+              "parent": 2,
+              "viewName": "cmb.pb.app.allmenu.view.AllMenuRecyclerView",
+              "index": -1,
+              "id": "recycle_view"
+            }
+          ]
+        },
+        {
+          "viewName": "cmb.pb.app.favorite.view.GuideImageView",
+          "id": "maskView",
+          "forceDark": false,
+          "usage": 1,
+          "backgroundUsage": -1,
+          "conditions": [
+            {
+              "parent": 0,
+              "viewName": "android.widget.FrameLayout",
+              "index": -1
+            },
+            {
+              "parent": 1,
+              "viewName": "android.widget.FrameLayout",
+              "index": -1,
+              "id": "fl_guideview_container"
+            },
+            {
+              "parent": 2,
+              "viewName": "android.widget.FrameLayout",
+              "index": -1,
+              "id": "rootView"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "activityName": "cmb.pb.app.setting.androidx.SettingActivity",
+      "forceDark": true,
+      "forceDarkViewConfigList": [
+        {
+          "viewName": "com.pb.infrastructrue.ui.cmbwidget.RecyclingImageView",
+          "forceDark": true,
+          "usage": 103,
+          "conditions": [
+            {
+              "parent": 0,
+              "viewName": "android.widget.LinearLayout",
+              "index": -1
+            },
+            {
+              "parent": 1,
+              "viewName": "android.widget.FrameLayout",
+              "index": -1,
+              "id": "menu_container"
+            },
+            {
+              "parent": 2,
+              "viewName": "cmb.pb.app.ui.cmbgridviewpager.CmbGridView",
+              "index": -1
+            }
+          ]
+        },
+        {
+          "viewName": "com.pb.infrastructrue.ui.cmbwidget.RecyclingImageView",
+          "forceDark": true,
+          "usage": 103,
+          "conditions": [
+            {
+              "parent": 0,
+              "viewName": "android.widget.FrameLayout",
+              "index": -1
+            },
+            {
+              "parent": 1,
+              "viewName": "android.widget.LinearLayout",
+              "index": -1,
+              "id": "lrButtonArea"
+            },
+            {
+              "parent": 2,
+              "viewName": "com.pb.titlebar.view.ButtonView",
+              "index": -1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "activityName": "cmb.pb.app.h5container.webviewcontainer.PBWebContainerActivity",
+      "forceDark": true,
+      "forceDarkViewConfigList": [
+        {
+          "viewName": "com.pb.infrastructrue.ui.cmbwidget.RecyclingImageView",
+          "id": "lrImageView",
+          "forceDark": true,
+          "usage": 103,
+          "backgroundUsage": 103,
+          "conditions": [
+            {
+              "parent": 0,
+              "viewName": "android.widget.FrameLayout",
+              "index": -1
+            },
+            {
+              "parent": 1,
+              "viewName": "android.widget.LinearLayout",
+              "index": -1,
+              "id": "lrButtonArea"
+            },
+            {
+              "parent": 2,
+              "viewName": "com.pb.titlebar.view.ButtonView",
+              "index": -1,
+              "id": "rightButtonArea"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "activityName": "com.pb.tpstore.PBAppletWebViewActivity",
+      "forceDark": false
+    },
+    {
+      "activityName": "cmb.pb.app.mainframe.container.PBMainActivity",
+      "forceDark": true,
+      "forceDarkViewConfigList": [
+        {
+          "forceDark": false,
+          "blackMask": true,
+          "viewName": "LinearLayout",
+          "id": "ll_remind_platform"
+        },
+        {
+          "forceDark": false,
+          "blackMask": true,
+          "viewName": "ImageView",
+          "id": "ivTopImage"
+        },
+        {
+          "forceDark": true,
+          "viewName": "ImageView",
+          "usage": 103,
+          "conditions": [
+            {
+              "viewName": "RelativeLayout",
+              "parent": 0,
+              "index": -1
+            }
+          ]
+        },
+        {
+          "forceDark": true,
+          "viewName": "RecyclingImageView",
+          "id": "ivFuncIcon",
+          "usage": 103,
+          "backgroundUsage": 103
+        },
+        {
+          "viewName": "android.widget.ImageView",
+          "id": "common_mine_bg_iv",
+          "forceDark": true,
+          "usage": 105,
+          "conditions": [
+            {
+              "parent": 0,
+              "viewName": "android.widget.FrameLayout",
+              "index": -1,
+              "id": "common_mine_bg"
+            },
+            {
+              "parent": 1,
+              "viewName": "android.widget.RelativeLayout",
+              "index": -1,
+              "id": "lPullContent"
+            },
+            {
+              "parent": 2,
+              "viewName": "android.widget.FrameLayout",
+              "index": -1,
+              "id": "vPullDownRefreshLayout"
+            }
+          ]
+        },
+        {
+          "viewName": "com.pb.infrastructrue.ui.cmbwidget.font.UncommonFontTextView",
+          "id": "tv_remind_content",
+          "forceDark": false,
+          "conditions": [
+            {
+              "parent": 0,
+              "viewName": "android.widget.LinearLayout",
+              "index": -1,
+              "id": "ll_remind_bubble"
+            },
+            {
+              "parent": 1,
+              "viewName": "android.widget.LinearLayout",
+              "index": -1,
+              "id": "ll_remind"
+            },
+            {
+              "parent": 2,
+              "viewName": "android.widget.LinearLayout",
+              "index": -1,
+              "id": "ll_remind_platform"
+            }
+          ]
+        },
+        {
+          "viewName": "android.widget.RelativeLayout",
+          "id": "user_hierarchy_member",
+          "forceDark": false,
+          "conditions": [
+            {
+              "parent": 0,
+              "viewName": "android.widget.FrameLayout",
+              "index": -1,
+              "id": "fl_user_hierarychy"
+            },
+            {
+              "parent": 1,
+              "viewName": "android.widget.RelativeLayout",
+              "index": -1,
+              "id": "head_layout_login"
+            },
+            {
+              "parent": 2,
+              "viewName": "android.widget.LinearLayout",
+              "index": -1,
+              "id": "ll_mine_top"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "activityName": "cmb.pb.app.allmenu.FunctionGroupActivity",
+      "forceDark": true,
+      "forceDarkViewConfigList": [
+        {
+          "forceDark": true,
+          "viewName": "RecyclingImage",
+          "usage": 103,
+          "id": "ivFuncIcon",
+          "conditions": [
+            {
+              "viewName": "LinearLayout",
+              "parent": 0,
+              "index": -1
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "forceDarkViewGlobalConfigList": [
+    {
+      "viewName": "android.widget.TextView",
+      "id": "tv_Func",
+      "forceDark": false,
+      "conditions": [
+        {
+          "parent": 0,
+          "viewName": "android.widget.LinearLayout",
+          "index": -1,
+          "id": "ll_func_direct"
+        },
+        {
+          "parent": 1,
+          "viewName": "android.widget.LinearLayout",
+          "index": -1,
+          "id": "main_layout"
+        },
+        {
+          "parent": 2,
+          "viewName": "android.widget.LinearLayout",
+          "index": -1,
+          "id": "shadowLayout"
+        }
+      ]
+    },
+    {
+      "viewName": "com.pb.infrastructrue.ui.cmbwidget.RecyclingImageView",
+      "id": "btn_close",
+      "forceDark": false,
+      "conditions": [
+        {
+          "parent": 0,
+          "viewName": "android.widget.LinearLayout",
+          "index": -1
+        },
+        {
+          "parent": 1,
+          "viewName": "android.widget.LinearLayout",
+          "index": -1,
+          "id": "main_layout"
+        },
+        {
+          "parent": 2,
+          "viewName": "android.widget.LinearLayout",
+          "index": -1,
+          "id": "shadowLayout"
+        }
+      ]
+    },
+    {
+      "viewName": "android.widget.TextView",
+      "id": "tv_Favorite",
+      "forceDark": false,
+      "conditions": [
+        {
+          "parent": 0,
+          "viewName": "android.widget.LinearLayout",
+          "index": -1,
+          "id": "ll_favorite_center"
+        },
+        {
+          "parent": 1,
+          "viewName": "android.widget.LinearLayout",
+          "index": -1,
+          "id": "main_layout"
+        },
+        {
+          "parent": 2,
+          "viewName": "android.widget.LinearLayout",
+          "index": -1,
+          "id": "shadowLayout"
+        }
+      ]
+    },
+    {
+      "viewName": "android.widget.TextView",
+      "id": "tv_Collection",
+      "forceDark": false,
+      "conditions": [
+        {
+          "parent": 0,
+          "viewName": "android.widget.LinearLayout",
+          "index": -1
+        },
+        {
+          "parent": 1,
+          "viewName": "android.widget.LinearLayout",
+          "index": -1,
+          "id": "layout_collection"
+        },
+        {
+          "parent": 3,
+          "viewName": "android.widget.LinearLayout",
+          "index": -1,
+          "id": "ll_favorite_center"
+        }
+      ]
+    }
+  ]
+}

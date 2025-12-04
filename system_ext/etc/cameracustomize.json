@@ -1,0 +1,31 @@
+/*
+注释:
+    配置说明:
+        目前三方定制化框架支持两个功能：第一种：应用客制化，第二种：功能开/关客制化
+    应用客制化（CUSTOMIZABLE_APK）:
+        ApkFunctionType:客制化功能名，如：扫一扫白名单
+        Mode:0代表应用包名客制化，1代表activity客制化
+        ApkTable:使用此客制化功能的包名/activity名列表
+    功能客制化（FEATURE_SWITCH）:
+        FeatureType:功能名，如：此项目open相机时是否关闭NFC，避免硬件上的干扰
+        State:功能开关状态，0代表关，1代表开
+*/
+{
+    "CUSTOMIZABLE_APK":[
+        {
+            "ApkFunctionType":"None",
+            "Mode": 0,
+            "ApkTable" :[""]
+        }
+    ],
+    "FEATURE_SWITCH":[
+        {
+            "FeatureType":"DisableNFC",
+            "State": 0
+        },
+        {
+            "FeatureType":"FrontDisableNFC",
+            "State": 0
+        }
+    ]
+}

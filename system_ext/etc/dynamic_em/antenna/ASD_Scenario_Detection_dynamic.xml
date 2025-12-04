@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8"?>
+<settings>
+  <ui>
+    <lifecycle>
+      <action type="onCreate">
+        <cmd name="onCreate" cmd_type="api" next_step="run_in_background|exit_activity"></cmd>
+      </action>
+      <action type="onBackPressed">
+        <cmd name="exit_activity" cmd_type="exit" next_step="none">exit</cmd>
+      </action>
+      <action type="onDestroy">
+        <cmd name="stop_eci_urc" cmd_type="at_cmd">AT+ERFIDX=1,,0;+ERFIDX:</cmd>
+        <cmd name="stop_dmf_urc" cmd_type="at_cmd">AT+EDMFAPP=8,0,0</cmd>
+        <cmd name="unregister" cmd_type="urc">unregisterUrc</cmd>
+        <cmd name="exit_background" cmd_type="api">runInBackground(false,ASD Scenario Detection)</cmd>
+      </action>
+    </lifecycle>
+    <element ui_type="GroupView">
+      <sub_element column="2"/>
+      <element ui_type="Button" label="Start">
+        <action>
+          <cmd name="run_in_background" cmd_type="api" fail_action="stop">runInBackground(true,ASD Scenario Detection)</cmd>
+          <cmd name="registerUrc" cmd_type="urc">registerUrc();+EDMFAPP:8,0,1,lte_tx0_ant,lte_pcc_tx_freq,lte_tx1_ant,lte_scc_tx_freq;+EDMFAPP:8,0,2,nr_tx0_ant,nr_pcc_tx_freq,nr_tx1_ant,nr_scc_tx_freq;+ERFIDX:,,,,eci</cmd>
+          <cmd name="allow_urc" cmd_type="at_cmd">AT+EURCALLOW="+ERFIDX:"</cmd>
+          <cmd name="request_dmf_urc" cmd_type="at_cmd">AT+EDMFAPP=8,0,1</cmd>
+          <cmd name="request_eci_urc" cmd_type="at_cmd" next_step="stop_eci_urc|unregister">AT+ERFIDX=1,,1;+ERFIDX:,,,,eci</cmd>
+        </action>
+      </element>
+      <element ui_type="Button" label="Stop">
+        <action>
+          <cmd name="stop_eci_urc" cmd_type="at_cmd">AT+ERFIDX=1,,0</cmd>
+          <cmd name="stop_dmf_urc" cmd_type="at_cmd" next_step="run_in_background|exit_activity">AT+EDMFAPP=8,0,0</cmd>
+          <cmd name="unregister" cmd_type="urc">unregisterUrc</cmd>
+          <cmd name="exit_background" cmd_type="api" next_step="run_in_background|exit_activity">runInBackground(false,ASD Scenario Detection)</cmd>
+        </action>
+      </element>
+    </element>
+    <element ui_type="GroupView">
+      <field>lte_tx0_ant</field>
+      <slave>lte_tx0</slave>
+    </element>
+    <element ui_type="GroupView">
+      <field>lte_tx1_ant</field>
+      <slave>lte_tx1</slave>
+    </element>
+    <element ui_type="GroupView">
+      <field>nr_tx0_ant</field>
+      <slave>nr_tx0</slave>
+    </element>
+    <element ui_type="GroupView">
+      <field>nr_tx1_ant</field>
+      <slave>nr_tx1</slave>
+    </element>
+    <element ui_type="GroupView" label="LTE Tx ANT">
+      <sub_element column="2"/>
+      <grid>outside</grid>
+      <element ui_type="TextView" label="Tx0:">
+        <slave_id>lte_tx0</slave_id>
+        <dependence master="lte_tx0_ant" slave_attr="default">
+          <if lte_tx0_ant="0">ANT0</if>
+          <if lte_tx0_ant="1">ANT1</if>
+          <if lte_tx0_ant="2">ANT2</if>
+          <if lte_tx0_ant="3">ANT3</if>
+          <if lte_tx0_ant="4">ANT4</if>
+          <if lte_tx0_ant="5">ANT5</if>
+          <if lte_tx0_ant="6">ANT6</if>
+          <if lte_tx0_ant="7">ANT7</if>
+          <if lte_tx0_ant="8">ANT8</if>
+          <if lte_tx0_ant="9">ANT9</if>
+          <if lte_tx0_ant="10">ANT10</if>
+          <if lte_tx0_ant="11">ANT11</if>
+          <if lte_tx0_ant="others">Invalid</if>
+        </dependence>
+      </element>
+      <element ui_type="TextView" label="Tx1:">
+        <slave_id>lte_tx1</slave_id>
+        <dependence master="lte_tx1_ant" slave_attr="default">
+          <if lte_tx1_ant="0">ANT0</if>
+          <if lte_tx1_ant="1">ANT1</if>
+          <if lte_tx1_ant="2">ANT2</if>
+          <if lte_tx1_ant="3">ANT3</if>
+          <if lte_tx1_ant="4">ANT4</if>
+          <if lte_tx1_ant="5">ANT5</if>
+          <if lte_tx1_ant="6">ANT6</if>
+          <if lte_tx1_ant="7">ANT7</if>
+          <if lte_tx1_ant="8">ANT8</if>
+          <if lte_tx1_ant="9">ANT9</if>
+          <if lte_tx1_ant="10">ANT10</if>
+          <if lte_tx1_ant="11">ANT11</if>
+          <if lte_tx1_ant="others">Invalid</if>
+        </dependence>
+      </element>
+      <element ui_type="TextView" label="LTE Tx Frequency(MHz)"/>
+      <element ui_type="TextView"/>
+      <element ui_type="TextView" label="PCC:">
+        <field>lte_pcc_tx_freq</field>
+      </element>
+      <element ui_type="TextView" label="SCC:">
+        <field>lte_scc_tx_freq</field>
+      </element>
+    </element>
+    <element ui_type="GroupView" label="NR Tx ANT">
+      <sub_element column="2"/>
+      <grid>outside</grid>
+      <element ui_type="TextView" label="Tx0:">
+        <slave_id>nr_tx0</slave_id>
+        <dependence master="nr_tx0_ant" slave_attr="default">
+          <if nr_tx0_ant="0">ANT0</if>
+          <if nr_tx0_ant="1">ANT1</if>
+          <if nr_tx0_ant="2">ANT2</if>
+          <if nr_tx0_ant="3">ANT3</if>
+          <if nr_tx0_ant="4">ANT4</if>
+          <if nr_tx0_ant="5">ANT5</if>
+          <if nr_tx0_ant="6">ANT6</if>
+          <if nr_tx0_ant="7">ANT7</if>
+          <if nr_tx0_ant="8">ANT8</if>
+          <if nr_tx0_ant="9">ANT9</if>
+          <if nr_tx0_ant="10">ANT10</if>
+          <if nr_tx0_ant="11">ANT11</if>
+          <if nr_tx0_ant="others">Invalid</if>
+        </dependence>
+      </element>
+      <element ui_type="TextView" label="Tx1:">
+        <slave_id>nr_tx1</slave_id>
+        <dependence master="nr_tx1_ant" slave_attr="default">
+          <if nr_tx1_ant="0">ANT0</if>
+          <if nr_tx1_ant="1">ANT1</if>
+          <if nr_tx1_ant="2">ANT2</if>
+          <if nr_tx1_ant="3">ANT3</if>
+          <if nr_tx1_ant="4">ANT4</if>
+          <if nr_tx1_ant="5">ANT5</if>
+          <if nr_tx1_ant="6">ANT6</if>
+          <if nr_tx1_ant="7">ANT7</if>
+          <if nr_tx1_ant="8">ANT8</if>
+          <if nr_tx1_ant="9">ANT9</if>
+          <if nr_tx1_ant="10">ANT10</if>
+          <if nr_tx1_ant="11">ANT11</if>
+          <if nr_tx1_ant="others">Invalid</if>
+        </dependence>
+      </element>
+      <element ui_type="TextView" label="NR Tx Frequency(MHz)"/>
+      <element ui_type="TextView"/>
+      <element ui_type="TextView" label="PCC:">
+        <field>nr_pcc_tx_freq</field>
+      </element>
+      <element ui_type="TextView" label="SCC:">
+        <field>nr_scc_tx_freq</field>
+      </element>
+    </element>
+    <element ui_type="TextView">
+      <default>
+      </default>
+    </element>
+    <element ui_type="TextView">
+      <default>Final ECI:</default>
+    </element>
+    <element ui_type="GroupView">
+      <grid>outside</grid>
+      <element ui_type="TextView">
+        <field>eci</field>
+      </element>
+      <element ui_type="TextView">
+        <default>
+
+
+        </default>
+      </element>
+    </element>
+  </ui>
+</settings>

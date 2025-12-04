@@ -1,0 +1,10 @@
+<!--
+    Input:
+        vendor/mediatek/proprietary/frameworks/base/services/mbrainlocalservice/mtk-mbrainj-default.xml
+-->
+<manifest version="8.0" type="framework">
+    <hal format="aidl">
+        <name>vendor.mediatek.hardware.mbrainj</name>
+        <fqname>IMBrainJava/default</fqname>
+    </hal>
+</manifest>

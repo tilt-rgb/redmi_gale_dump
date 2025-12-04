@@ -1,0 +1,11 @@
+persist.sys.timezone=America/Guadeloupe
+ro.product.locale.language=gp
+ro.product.locale.region=GP
+ro.miui.region=GP
+ro.miui.mcc=3340
+ro.miui.mnc=9999
+ro.miui.cust_variant=gp
+ro.vendor.miui.region=GP
+ro.vendor.miui.mcc=3340
+ro.vendor.miui.mnc=9999
+ro.vendor.miui.cust_variant=gp

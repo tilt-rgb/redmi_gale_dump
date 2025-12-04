@@ -1,0 +1,628 @@
+{
+  "version": 1,
+  "apps": [
+    {
+      "packageName": "com.tencent.mtt",
+      "enabledViewConfigList": [
+        {
+          "activityName": "com.tencent.mtt.MainActivity",
+          "config": [
+            {
+              "className": "*",
+              "idResourceName": "id/search_frame_input_bar",
+              "autoHandwritingEnabled": true,
+              "comment": "QQ浏览器首页搜索框，默认不能书写，强制加白"
+            }
+          ]
+        }
+      ],
+      "disabledUndoRedoConfigList": [
+        {
+          "activityName": "com.tencent.mtt.MainActivity",
+          "config": [
+            {
+              "className": "*",
+              "idResourceName": "id/search_frame_input_bar",
+              "comment": "QQ浏览器首页搜索框，撤销重做无效，加黑/BUGOS2-349296"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "packageName": "com.mipay.wallet",
+      "enabledViewConfigList": [
+        {
+          "activityName": "*",
+          "config": [
+            {
+              "className": "*",
+              "idResourceName": "*",
+              "autoHandwritingEnabled": false,
+              "comment": "小米钱包应用不支持书写，强制加黑，BUGOS2-82355"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "packageName": "com.xiaomi.mirror",
+      "enabledViewConfigList": [
+        {
+          "activityName": "*",
+          "config": [
+            {
+              "className": "*",
+              "idResourceName": "*",
+              "autoHandwritingEnabled": false,
+              "comment": "互联互通投屏不支持书写，强制加黑，BUGOS2-173292"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "packageName": "com.gotokeep.keep",
+      "enabledViewConfigList": [
+        {
+          "activityName": "com.gotokeep.keep.fd.business.account.login.VerificationCodeLoginActivity",
+          "config": [
+            {
+              "className": "*",
+              "idResourceName": "*",
+              "autoHandwritingEnabled": false,
+              "comment": "keep验证码输入页输入区域范围和UI不一致，强制加黑，BUGOS2-349162"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "packageName": "com.miui.calculator",
+      "enabledViewConfigList": [
+        {
+          "activityName": "*",
+          "config": [
+            {
+              "className": "*",
+              "idResourceName": "*",
+              "autoHandwritingEnabled": false,
+              "comment": "小米计算器应用不支持书写，强制加黑，BUGOS2-192832"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "packageName": "com.baidu.BaiduMap",
+      "enabledViewConfigList": [
+        {
+          "activityName": "com.baidu.baidumaps.MapsActivity",
+          "config": [
+            {
+              "className": "*",
+              "idResourceName": "id/name_input",
+              "autoHandwritingEnabled": false,
+              "comment": "百度地图视频评论区是假框无法书写，强制加黑，BUGOS2-475602"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "packageName": "com.qiyi.video",
+      "expandViewConfigList": [
+        {
+          "activityName": "org.qiyi.android.search.view.PhoneSearchActivity",
+          "config": [
+            {
+              "idResourceName": "id/unused_res_a",
+              "className": "EditText",
+              "expandViewInfoList": [
+                {
+                  "idResourceName": "id/unused_res_a",
+                  "className": "ImageView",
+                  "level": 1
+                }
+              ],
+              "comment": "爱奇艺首页搜索框，实际区域过小，需要扩大"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "packageName": "com.ximalaya.ting.android",
+      "expandViewConfigList": [
+        {
+          "activityName": "com.ximalaya.ting.android.host.activity.MainActivity",
+          "config": [
+            {
+              "idResourceName": "id/search_search_et",
+              "className": "EditText",
+              "expandViewInfoList": [
+                {
+                  "idResourceName": "id/search_v_input",
+                  "className": "FrameLayout",
+                  "level": 1
+                }
+              ],
+              "comment": "喜马拉雅首页搜索框，实际区域过小，需要扩大"
+            },
+            {
+              "idResourceName": "id/main_et_input",
+              "className": "HighlightSpanEditText",
+              "expandViewInfoList": [
+                {
+                  "idResourceName": "id/main_rl_input",
+                  "className": "ConstraintLayout",
+                  "level": 1
+                }
+              ],
+              "comment": "喜马拉雅评论区，实际区域过小，需要扩大"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "packageName": "com.fiistudio.fiinote",
+      "enabledViewConfigList": [
+        {
+          "activityName": "com.fiistudio.fiinote.editor.FiiNote",
+          "config": [
+            {
+              "className": "Editor",
+              "idResourceName": "id/editor",
+              "autoHandwritingEnabled": false,
+              "comment": "随手写首页整个页面，因为随手写功能和应用功能完全冲突/BUGOS2-32612"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "packageName": "com.baidu.tieba",
+      "enabledViewConfigList": [
+        {
+          "activityName": "com.baidu.tbadk.browser.TBWebContainerActivity",
+          "config": [
+            {
+              "className": "*",
+              "idResourceName": "*",
+              "autoHandwritingEnabled": false,
+              "comment": "百度贴吧，首页搜索框webview无法书写，加黑处理/BUGOS2-32612"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "packageName": "com.taobao.taobao",
+      "enabledViewConfigList": [
+        {
+          "activityName": "com.taobao.taolive.room.TaoLiveVideoActivity",
+          "config": [
+            {
+              "className": "*",
+              "idResourceName": "*",
+              "autoHandwritingEnabled": false,
+              "comment": "淘宝直播间整个页面，因为手写笔点击无法唤出输入框/BUGOS2-32712"
+            }
+          ]
+        },
+        {
+          "activityName": "com.taobao.tao.welcome.Welcome",
+          "config": [
+            {
+              "className": "*",
+              "idResourceName": "*",
+              "autoHandwritingEnabled": false,
+              "comment": "淘宝评论区，强制加黑，BUGOS2-54981"
+            }
+          ]
+        },
+        {
+          "activityName": "com.taobao.android.detail2.core.framework.NewDetailActivity",
+          "config": [
+            {
+              "className": "*",
+              "idResourceName": "*",
+              "autoHandwritingEnabled": false,
+              "comment": "淘宝评论区，强制加黑，BUGOS2-54981"
+            }
+          ]
+        },
+        {
+          "activityName": "com.taobao.detail.rate.VividRateListActivity",
+          "config": [
+            {
+              "className": "*",
+              "idResourceName": "*",
+              "autoHandwritingEnabled": false,
+              "comment": "淘宝评论区，强制加黑，BUGOS2-54981"
+            }
+          ]
+        },
+        {
+          "activityName": "com.taobao.android.layoutmanager.container.CommonContainerActivity",
+          "config": [
+            {
+              "className": "*",
+              "idResourceName": "*",
+              "autoHandwritingEnabled": false,
+              "comment": "淘宝评论区，强制加黑，BUGOS2-54981"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "packageName": "com.baidu.newapp",
+      "enabledViewConfigList": [
+        {
+          "activityName": "com.baidu.sapi2.activity.LoginActivity",
+          "config": [
+            {
+              "className": "SapiWebView",
+              "idResourceName": "*",
+              "autoHandwritingEnabled": false,
+              "comment": "文心一言，验证码输入页面，是webview，而且支持笔势，加黑防止笔袋出现/BUGOS2-26853"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "packageName": "cn.canva.editor",
+      "enabledViewConfigList": [
+        {
+          "activityName": "com.canva.crossplatform.editor.feature.v2.EditorXV2Activity",
+          "config": [
+            {
+              "className": "WebXSystemWebView",
+              "idResourceName": "*",
+              "autoHandwritingEnabled": false,
+              "comment": "Canva可画编辑页面，插入文本框之后无法无法书写，加黑防止笔袋出现/BUGOS2-27429"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "packageName": "com.yuque.mobile.android.app",
+      "enabledViewConfigList": [
+        {
+          "activityName": "com.yuque.mobile.android.app.rn.activity.ReactNativeMainActivity",
+          "config": [
+            {
+              "className": "*",
+              "idResourceName": "*",
+              "autoHandwritingEnabled": false,
+              "comment": "语雀编辑页面，无法正常书写，加黑防止笔袋出现/BUGOS2-24339"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "packageName": "com.xt.retouch",
+      "enabledViewConfigList": [
+        {
+          "activityName": "com.xt.retouch.lynx.impl.common.container.LynxCommonTransparentActivity",
+          "config": [
+            {
+              "className": "LynxEditText",
+              "idResourceName": "*",
+              "autoHandwritingEnabled": false,
+              "comment": "醒图验证码无法书写，整个页面加黑，可能影响其它页面，只能这么处理/BUGOS2-24333"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "packageName": "com.fenbi.android.zenglish",
+      "enabledViewConfigList": [
+        {
+          "activityName": "com.fenbi.android.zebraenglish.authlogin.activity.LoginGuideActivity",
+          "config": [
+            {
+              "className": "EditText",
+              "idResourceName": "id/input",
+              "autoHandwritingEnabled": false,
+              "comment": "斑马AI验证码书写区域为空，验证码输入框加黑处理/BUGOS2-183881"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "packageName": "com.qiyi.video.pad",
+      "expandViewConfigList": [
+        {
+          "activityName": "org.qiyi.android.video.MainActivity",
+          "config": [
+            {
+              "idResourceName": "id/unused_res_a",
+              "className": "EditText",
+              "expandViewInfoList": [
+                {
+                  "idResourceName": "id/unused_res_a",
+                  "className": "ImageView",
+                  "level": 1
+                }
+              ],
+              "comment": "爱奇艺PAD首页搜索框，实际区域过小，需要扩大/BUGOS2-32691"
+            }
+          ]
+        },
+        {
+          "activityName": "org.qiyi.android.search.view.PhoneSearchActivity",
+          "config": [
+            {
+              "idResourceName": "id/unused_res_a",
+              "className": "EditText",
+              "expandViewInfoList": [
+                {
+                  "idResourceName": "id/unused_res_a",
+                  "className": "ImageView",
+                  "level": 1
+                }
+              ],
+              "comment": "爱奇艺PAD首页搜索框，实际区域过小，需要扩大/BUGOS2-32691"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "packageName": "com.ss.android.ugc.aweme",
+      "disabledGestureConfigList": [
+        {
+          "activityName": "com.ss.android.ugc.aweme.main.MainActivity",
+          "config": [
+            {
+              "idResourceName": "*",
+              "className": "CommentMentionEditText",
+              "disabledGestures": 128,
+              "comment": "抖音评论区，插入笔势存在兼容性问题，加黑/BUGOS2-29597"
+            }
+          ]
+        },
+        {
+          "activityName": "com.ss.android.ugc.gamora.editor.text.TextEditingActivity",
+          "config": [
+            {
+              "idResourceName": "*",
+              "className": "SSWebView",
+              "disabledGestures": 2,
+              "comment": "抖音文本发布页webview，换行符表现异常吃字，加黑处理/BUGOS2-349186"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "packageName": "com.ss.android.ugc.aweme.lite",
+      "disabledGestureConfigList": [
+        {
+          "activityName": "com.ss.android.ugc.aweme.main.MainActivity",
+          "config": [
+            {
+              "idResourceName": "*",
+              "className": "CommentMentionEditText",
+              "disabledGestures": 128,
+              "comment": "抖音极速版评论区，插入笔势存在兼容性问题，加黑/BUGOS2-100290"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "packageName": "com.ss.android.ugc.live",
+      "disabledGestureConfigList": [
+        {
+          "activityName": "com.ss.android.ugc.aweme.main.MainActivity",
+          "config": [
+            {
+              "idResourceName": "*",
+              "className": "CommentMentionEditText",
+              "disabledGestures": 128,
+              "comment": "抖音火山版评论区，插入笔势存在兼容性问题，加黑/BUGOS2-100290"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "packageName": "com.miui.notes",
+      "disabledUndoRedoConfigList": [
+        {
+          "activityName": "com.miui.notes.ui.NotesListActivity",
+          "config": [
+            {
+              "idResourceName": "id/web_view",
+              "className": "RichEditorWebView",
+              "comment": "笔记富文本编辑框，使用webview实现，不支持撤销重做笔势，加黑处理/BUGOS2-22076"
+            }
+          ]
+        }
+      ],
+      "disabledGestureConfigList": [
+        {
+          "activityName": "com.miui.notes.ui.NotesListActivity",
+          "config": [
+            {
+              "idResourceName": "id/web_view",
+              "className": "RichEditorWebView",
+              "disabledGestures": 250,
+              "comment": "笔记富文本编辑框，仅支持选择和删除笔势，其他笔势加黑处理/BUGOS2-91697"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "packageName": "com.xingin.xhs",
+      "disabledUndoRedoConfigList": [
+        {
+          "activityName": "com.xingin.reactnative.ui.XhsReactActivity",
+          "config": [
+            {
+              "idResourceName": "*",
+              "className": "*",
+              "comment": "小红书，商品客服页面的输入框，不支持撤销重做笔势，加黑处理/BUGOS2-47405"
+            }
+          ]
+        }
+      ],
+      "enabledViewConfigList": [
+        {
+            "activityName": "com.xingin.capa.v2.feature.entrance.view.activity.edittabv2.Capa2TabEditV2Activity",
+            "config": [
+              {
+                "className": "UnderLineRichEdit",
+                "idResourceName": "*",
+                "autoHandwritingEnabled": false,
+                "comment": "小红书，一句话生成图片页面输入法调起前是TextView，若调起随手写无法书写，加黑处理/BUGOS2-349359"
+              }
+             ]
+        }
+    ]
+    },
+    {
+      "packageName": "com.shanbay.kaoyan",
+      "disabledGestureConfigList": [
+        {
+          "activityName": "com.shanbay.biz.account.user.bayuser.login.BayLoginActivity",
+          "config": [
+            {
+              "idResourceName": "id/et_phone_number",
+              "className": "*",
+              "disabledGestures": 128,
+              "comment": "扇贝考研，登录页面的输入框触发插入笔势异常提前退出，联系谷歌修复，目前加黑/BUGOS2-30131"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "packageName": "com.ss.android.lark",
+      "disabledGestureConfigList": [
+        {
+          "activityName": "com.ss.lark.android.passport.biz.feature.login_input.LoginInputActivity",
+          "config": [
+            {
+              "idResourceName": "id/phone_number_edit",
+              "className": "*",
+              "disabledGestures": 128,
+              "comment": "飞书，登录页面的输入框触发插入笔势异常提前退出，联系谷歌修复，目前加黑/BUGOS2-30131"
+            }
+          ]
+        },
+        {
+          "activityName": "com.bytedance.ee.bear.document.DocExpandActivity",
+          "config": [
+            {
+              "idResourceName": "*",
+              "className": "*",
+              "disabledGestures": 2,
+              "comment": "飞书，在线文档webview换行笔势效果异常，目前加黑/BUGOS2-349186"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "packageName": "com.jingdong.app.mall",
+      "disabledGestureConfigList": [
+        {
+          "activityName": "com.jd.lib.login.LoginActivity",
+          "config": [
+            {
+              "idResourceName": "id/jh",
+              "className": "EditText",
+              "disabledGestures": 128,
+              "comment": "京东，登录页面的输入框触发插入笔势异常提前退出，联系谷歌修复，目前加黑/BUGOS2-30131"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "packageName": "com.yinxiang",
+      "disabledGestureConfigList": [
+        {
+          "activityName": "com.evernote.note.composer.NoteActivity",
+          "config": [
+            {
+              "idResourceName": "id/common_editor",
+              "className": "*",
+              "disabledGestures": 4,
+              "comment": "印象笔记，思维导图页webview删除位置异常，加黑处理/BUGOS2-349240"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "packageName": "com.netease.cloudmusic",
+      "disabledGestureConfigList": [
+        {
+          "activityName": "com.netease.cloudmusic.module.login.LoginActivity",
+          "config": [
+            {
+              "idResourceName": "id/cellphone",
+              "className": "*",
+              "disabledGestures": 128,
+              "comment": "网易云音乐，登录页面的输入框触发插入笔势异常提前退出，联系谷歌修复，目前加黑/BUGOS2-30131"
+            }
+          ]
+        }
+      ],
+      "disabledUndoRedoConfigList": [
+        {
+          "activityName": "com.netease.cloudmusic.module.login.LoginActivity",
+          "config": [
+            {
+              "idResourceName": "id/cellphone",
+              "className": "*",
+              "comment": "网易云音乐，登录页面，不支持撤销重做笔势，加黑处理/BUGOS2-78016"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "packageName": "com.duokan.reader",
+      "disabledUndoRedoConfigList": [
+        {
+          "activityName": "com.duokan.reader.DkMainActivity",
+          "config": [
+            {
+              "idResourceName": "id/store__store_search_root_view__edittext",
+              "className": "*",
+              "comment": "多看，首页搜索框，不支持撤销重做笔势，加黑处理/BUGOS2-56539"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "packageName": "com.tencent.news",
+      "disabledUndoRedoConfigList": [
+        {
+          "activityName": "com.tencent.news.ui.NewsDetailActivity",
+          "config": [
+            {
+              "idResourceName": "*",
+              "className": "PublishEditText",
+              "comment": "腾讯新闻，文章评论区，不支持撤销重做笔势，加黑处理/BUGOS2-349548"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

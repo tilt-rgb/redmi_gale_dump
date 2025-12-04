@@ -1,0 +1,90 @@
+{
+  "packageName": "com.job.android",
+  "forceDark": true,
+  "mainRule": 128,
+  "secondaryRule": 0,
+  "forceDarkActivityConfigList": [
+    {
+      "activityName": "com.job.android.pages.apphome.AppHomeActivity",
+      "forceDark": true,
+      "forceDarkViewConfigList": [
+        {
+          "viewName": "androidx.appcompat.widget.AppCompatImageView",
+          "forceDark": true,
+          "usage": 105,
+          "backgroundUsage": 105,
+          "conditions": [
+            {
+              "parent": 0,
+              "viewName": "android.widget.FrameLayout",
+              "index": -1
+            },
+            {
+              "parent": 1,
+              "viewName": "com.job.android.pages.jobrecommend.NoAutoScrollView",
+              "index": -1,
+              "id": "scroll_view"
+            },
+            {
+              "parent": 2,
+              "viewName": "com.job.base.view.OriginSwipeRefreshLayout",
+              "index": -1,
+              "id": "refresh_layout"
+            }
+          ]
+        },
+        {
+          "viewName": "androidx.appcompat.widget.AppCompatImageView",
+          "id": "bg_content",
+          "forceDark": true,
+          "usage": 105,
+          "backgroundUsage": 105,
+          "conditions": [
+            {
+              "parent": 0,
+              "viewName": "android.widget.FrameLayout",
+              "index": -1,
+              "id": "fl_bg"
+            },
+            {
+              "parent": 3,
+              "viewName": "androidx.viewpager2.widget.ViewPager2$RecyclerViewImpl",
+              "index": -1
+            },
+            {
+              "parent": 4,
+              "viewName": "androidx.viewpager2.widget.ViewPager2",
+              "index": -1,
+              "id": "home_viewpager"
+            }
+          ]
+        },
+        {
+          "viewName": "com.jobs.widget.textview.MediumBoldTextView",
+          "id": "tv_title",
+          "forceDark": false,
+          "conditions": [
+            {
+              "parent": 0,
+              "viewName": "androidx.constraintlayout.widget.ConstraintLayout",
+              "index": -1,
+              "id": "guide"
+            },
+            {
+              "parent": 1,
+              "viewName": "android.widget.LinearLayout",
+              "index": -1,
+              "id": "scroll_judge_header"
+            },
+            {
+              "parent": 2,
+              "viewName": "com.jobs.databindingrecyclerview.recycler.DataBindingRecyclerView",
+              "index": -1,
+              "id": "recyclerView"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

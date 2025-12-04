@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<settings>
+  <ui>
+    <lifecycle>
+      <action type="onCreate">
+        <cmd name="get_scenario" cmd_type="at_cmd">AT+ERFIDX?;+ERFIDX:dat_index</cmd>
+      </action>
+    </lifecycle>
+    <element ui_type="Spinner" label="DAT index">
+      <field>dat_index</field>
+      <default>0</default>
+      <options batch_range="0~15">
+        <option index="16" label="Disable" value="-1" />
+      </options>
+    </element>
+    <element ui_type="GroupView">
+      <sub_element column="2"/>
+      <element ui_type="Button" label="Read" >
+        <action>
+          <cmd name="get_scenario" cmd_type="at_cmd">AT+ERFIDX?;+ERFIDX:dat_index</cmd>
+        </action>
+      </element>
+      <element ui_type="Button" label="Write" >
+        <action>
+          <cmd name="set_scenario" cmd_type="at_cmd">AT+ERFIDX=0,dat_index</cmd>
+        </action>
+      </element>
+    </element>
+  </ui>
+</settings>

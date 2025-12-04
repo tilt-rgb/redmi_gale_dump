@@ -1,0 +1,5 @@
+service mbrain_client /system/bin/mbrain_client
+    user system
+    oneshot
+    group system
+    shutdown critical

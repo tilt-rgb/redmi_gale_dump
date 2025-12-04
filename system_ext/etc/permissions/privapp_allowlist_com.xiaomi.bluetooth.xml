@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright (C) 2024, Xiaomi Inc. All rights reserved. -->
+
+<permissions>
+    <privapp-permissions package="com.xiaomi.bluetooth">
+        <permission name="android.permission.STATUS_BAR" />
+        <permission name="android.permission.CHANGE_DEVICE_IDLE_TEMP_WHITELIST"/>
+    </privapp-permissions>
+</permissions>

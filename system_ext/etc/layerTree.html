@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        ul {
+            list-style-type: none;
+        }
+        .toggle-label:before {
+            content: '+';
+            cursor: pointer;
+            padding-right: 8px;
+        }
+        .toggle-input:checked+.toggle-label:before {
+            content: '-';
+            padding-right: 8px;
+        }
+        li:not(:has(> .toggle-input)):not(:has(> .toggle-label))::before {
+            content: '- ';
+            padding-right: 8px;
+        }
+        li input {
+            display: none;
+        }
+        li input:checked+.toggle-label+ol>li {
+            display: block;
+        }
+        li input+.toggle-label+ol>li {
+            display: none;
+        }
+        li {
+            font-family: Roboto Mono, monospace;
+            font-weight: bold;
+            letter-spacing: 1px;
+        }
+        label {
+            font-family: Roboto Mono, monospace;
+            cursor: pointer
+        }
+        label:hover {
+            color: #5154db;
+        }
+    </style>
+</head>
+<body>
+    <h1>SurfaceFlinger Layer viewer</h1>
+    <h2>点击Layer名称查看其子Layer. (所有后继Layer数量; 直接子Layer数量)</h2>
+    <ul>

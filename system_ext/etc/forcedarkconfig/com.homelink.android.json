@@ -1,0 +1,2037 @@
+{
+  "packageName": "com.homelink.android",
+  "forceDark": true,
+  "mainRule": 1024,
+  "secondaryRule": 0,
+  "forceDarkActivityConfigList": [
+    {
+      "activityName": "com.lianjia.plugin.lianjiaim.ui.CommonAndGroupConvChatActivity",
+      "forceDark": true,
+      "forceDarkViewConfigList": [
+        {
+          "viewName": "android.widget.ImageView",
+          "id": "chatui_top_image_bg",
+          "forceDark": true,
+          "usage": 105,
+          "backgroundUsage": 105,
+          "conditions": [
+            {
+              "parent": 0,
+              "viewName": "androidx.constraintlayout.widget.ConstraintLayout",
+              "index": -1,
+              "id": "fragment_chat_main"
+            },
+            {
+              "parent": 1,
+              "viewName": "android.widget.FrameLayout",
+              "index": -1,
+              "id": "chatui_fragment_container"
+            },
+            {
+              "parent": 2,
+              "viewName": "android.widget.FrameLayout",
+              "index": -1,
+              "id": "content"
+            }
+          ]
+        },
+        {
+          "viewName": "android.widget.ImageButton",
+          "id": "base_title_right_image_btn1",
+          "forceDark": true,
+          "usage": 103,
+          "backgroundUsage": 103,
+          "conditions": [
+            {
+              "parent": 0,
+              "viewName": "android.widget.RelativeLayout",
+              "index": -1,
+              "id": "base_title_right_container"
+            },
+            {
+              "parent": 1,
+              "viewName": "android.widget.RelativeLayout",
+              "index": -1,
+              "id": "base_title_action_bar"
+            },
+            {
+              "parent": 2,
+              "viewName": "android.widget.LinearLayout",
+              "index": -1,
+              "id": "base_title_action_bar_container"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "activityName": "com.homelink.suggest.android.common.search.SearchHouseSuggestActivity",
+      "forceDark": true,
+      "forceDarkViewConfigList": [
+        {
+          "viewName": "android.widget.EditText",
+          "id": "ev_nav_center_search_text",
+          "forceDark": false,
+          "conditions": [
+            {
+              "parent": 0,
+              "viewName": "android.widget.LinearLayout",
+              "index": -1,
+              "id": "ll_input_content"
+            },
+            {
+              "parent": 1,
+              "viewName": "android.widget.LinearLayout",
+              "index": -1,
+              "id": "ll_ev_nav_center_container"
+            },
+            {
+              "parent": 2,
+              "viewName": "android.widget.LinearLayout",
+              "index": -1,
+              "id": "ll_nav_center_container"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "activityName": "com.second.homepage.activity.SHHomePageActivity",
+      "forceDark": true,
+      "forceDarkViewConfigList": [
+        {
+          "viewName": "androidx.appcompat.widget.AppCompatImageView",
+          "id": "iv_m_market_bg_image",
+          "forceDark": true,
+          "usage": 105,
+          "backgroundUsage": 105,
+          "conditions": [
+            {
+              "parent": 0,
+              "viewName": "com.ke.bmui.view.roundview.BMUIRoundConstraintLayout",
+              "index": -1,
+              "id": "cl_m_market_layout"
+            },
+            {
+              "parent": 1,
+              "viewName": "androidx.appcompat.widget.LinearLayoutCompat",
+              "index": -1
+            },
+            {
+              "parent": 2,
+              "viewName": "com.second.homepage.view.HPParentRecyclerView",
+              "index": -1,
+              "id": "rl_refresh_layout"
+            }
+          ]
+        },
+        {
+          "viewName": "android.widget.ImageView",
+          "id": "iv_header_bg",
+          "forceDark": true,
+          "usage": 105,
+          "backgroundUsage": 105,
+          "conditions": [
+            {
+              "parent": 0,
+              "viewName": "com.bk.uilib.view.MonitorConstraintLayout",
+              "index": -1,
+              "id": "cl_homepage_layout"
+            },
+            {
+              "parent": 1,
+              "viewName": "android.widget.LinearLayout",
+              "index": -1,
+              "id": "ll_content_container"
+            },
+            {
+              "parent": 3,
+              "viewName": "android.widget.FrameLayout",
+              "index": -1,
+              "id": "content"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "activityName": "com.ljplugin.map.MapShowHouseActivity",
+      "forceDark": true,
+      "forceDarkViewConfigList": [
+        {
+          "viewName": "android.widget.ImageView",
+          "id": "iv_icon",
+          "forceDark": true,
+          "usage": 103,
+          "backgroundUsage": 103,
+          "conditions": [
+            {
+              "parent": 0,
+              "viewName": "android.widget.LinearLayout",
+              "index": -1
+            },
+            {
+              "parent": 4,
+              "viewName": "com.ljplugin.map.view.MapRightTopFloatMenuView",
+              "index": -1
+            },
+            {
+              "parent": 5,
+              "viewName": "android.widget.RelativeLayout",
+              "index": -1,
+              "id": "rl_topbtn_container"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "activityName": "com.lianjia.jinggong.sdk.activity.main.MainActivity",
+      "forceDark": true,
+      "forceDarkViewConfigList": [
+        {
+          "viewName": "androidx.appcompat.widget.AppCompatImageView",
+          "id": "iv_icon",
+          "forceDark": true,
+          "usage": 103,
+          "backgroundUsage": 103,
+          "conditions": [
+            {
+              "parent": 0,
+              "viewName": "android.widget.LinearLayout",
+              "index": -1
+            },
+            {
+              "parent": 1,
+              "viewName": "com.lianjia.jinggong.sdk.activity.main.home.homev3.view.ModuleViewV3",
+              "index": -1
+            },
+            {
+              "parent": 2,
+              "viewName": "android.widget.LinearLayout",
+              "index": -1,
+              "id": "ll_module"
+            }
+          ]
+        },
+        {
+          "viewName": "androidx.appcompat.widget.AppCompatTextView",
+          "id": "tv_des",
+          "forceDark": false,
+          "conditions": [
+            {
+              "parent": 0,
+              "viewName": "androidx.constraintlayout.widget.ConstraintLayout",
+              "index": -1
+            },
+            {
+              "parent": 1,
+              "viewName": "androidx.recyclerview.widget.RecyclerView",
+              "index": -1,
+              "id": "rv_des"
+            },
+            {
+              "parent": 3,
+              "viewName": "com.bk.uilib.view.ParentRecyclerView",
+              "index": -1,
+              "id": "rv_design_my_home"
+            }
+          ]
+        },
+        {
+          "viewName": "androidx.appcompat.widget.AppCompatTextView",
+          "id": "tv_tip",
+          "forceDark": false,
+          "conditions": [
+            {
+              "parent": 0,
+              "viewName": "androidx.constraintlayout.widget.ConstraintLayout",
+              "index": -1
+            },
+            {
+              "parent": 1,
+              "viewName": "androidx.recyclerview.widget.RecyclerView",
+              "index": -1,
+              "id": "rv_des"
+            },
+            {
+              "parent": 3,
+              "viewName": "com.bk.uilib.view.ParentRecyclerView",
+              "index": -1,
+              "id": "rv_design_my_home"
+            }
+          ]
+        },
+        {
+          "viewName": "androidx.appcompat.widget.AppCompatTextView",
+          "id": "tv_title",
+          "forceDark": false,
+          "conditions": [
+            {
+              "parent": 0,
+              "viewName": "com.bk.uilib.view.rounder.RoundedCornerRelativeLayout",
+              "index": -1,
+              "id": "rl_root_container"
+            },
+            {
+              "parent": 1,
+              "viewName": "com.ke.jzcore.base.horcard.JZHorizontalRecyclerView",
+              "index": -1,
+              "id": "single_card_hor_group_view"
+            },
+            {
+              "parent": 2,
+              "viewName": "android.widget.LinearLayout",
+              "index": -1,
+              "id": "ll_inner_content"
+            }
+          ]
+        },
+        {
+          "viewName": "androidx.appcompat.widget.AppCompatTextView",
+          "id": "tv_price",
+          "forceDark": false,
+          "conditions": [
+            {
+              "parent": 0,
+              "viewName": "com.bk.uilib.view.rounder.RoundedCornerRelativeLayout",
+              "index": -1,
+              "id": "rl_root_container"
+            },
+            {
+              "parent": 1,
+              "viewName": "com.ke.jzcore.base.horcard.JZHorizontalRecyclerView",
+              "index": -1,
+              "id": "single_card_hor_group_view"
+            },
+            {
+              "parent": 2,
+              "viewName": "android.widget.LinearLayout",
+              "index": -1,
+              "id": "ll_inner_content"
+            }
+          ]
+        },
+        {
+          "viewName": "androidx.appcompat.widget.AppCompatTextView",
+          "id": "tv_price_desc",
+          "forceDark": false,
+          "conditions": [
+            {
+              "parent": 0,
+              "viewName": "com.bk.uilib.view.rounder.RoundedCornerRelativeLayout",
+              "index": -1,
+              "id": "rl_root_container"
+            },
+            {
+              "parent": 1,
+              "viewName": "com.ke.jzcore.base.horcard.JZHorizontalRecyclerView",
+              "index": -1,
+              "id": "single_card_hor_group_view"
+            },
+            {
+              "parent": 2,
+              "viewName": "android.widget.LinearLayout",
+              "index": -1,
+              "id": "ll_inner_content"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "activityName": "com.matrix.houseplugin.newsearch.NewSearchHouseActivity",
+      "forceDark": true,
+      "forceDarkViewConfigList": [
+        {
+          "viewName": "androidx.constraintlayout.widget.ConstraintLayout",
+          "forceDark": true,
+          "usage": 105,
+          "backgroundUsage": 105,
+          "conditions": [
+            {
+              "parent": 0,
+              "viewName": "android.widget.LinearLayout",
+              "index": -1,
+              "id": "card_search_page_map_ll_container"
+            },
+            {
+              "parent": 2,
+              "viewName": "android.widget.LinearLayout",
+              "index": -1,
+              "id": "new_house_search_ll_content_container"
+            },
+            {
+              "parent": 3,
+              "viewName": "androidx.core.widget.NestedScrollView",
+              "index": -1
+            }
+          ]
+        },
+        {
+          "viewName": "com.rentplat.midlib.view.rounder.RoundedCornerImageView",
+          "id": "card_house_list_special_card_new_iv_bg",
+          "forceDark": true,
+          "usage": 105,
+          "backgroundUsage": 105,
+          "conditions": [
+            {
+              "parent": 0,
+              "viewName": "androidx.constraintlayout.widget.ConstraintLayout",
+              "index": -1
+            },
+            {
+              "parent": 1,
+              "viewName": "android.widget.LinearLayout",
+              "index": -1,
+              "id": "new_house_search_ll_content_container"
+            },
+            {
+              "parent": 2,
+              "viewName": "androidx.core.widget.NestedScrollView",
+              "index": -1
+            }
+          ]
+        },
+        {
+          "viewName": "android.widget.ImageView",
+          "id": "card_house_list_special_card_new_iv_view_more",
+          "forceDark": true,
+          "usage": 103,
+          "backgroundUsage": 103,
+          "conditions": [
+            {
+              "parent": 0,
+              "viewName": "android.widget.LinearLayout",
+              "index": -1,
+              "id": "card_house_list_special_card_new_ll_view_more_container"
+            },
+            {
+              "parent": 2,
+              "viewName": "android.widget.LinearLayout",
+              "index": -1,
+              "id": "new_house_search_ll_content_container"
+            },
+            {
+              "parent": 3,
+              "viewName": "androidx.core.widget.NestedScrollView",
+              "index": -1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "activityName": "com.matrix.houseplugin.houselist.activity.RentHouseListContainerActivity",
+      "forceDark": true,
+      "forceDarkViewConfigList": [
+        {
+          "viewName": "com.rentplat.midlib.view.rounder.RoundedCornerImageView",
+          "id": "card_house_list_special_card_new_iv_bg",
+          "forceDark": true,
+          "usage": 105,
+          "backgroundUsage": 105,
+          "conditions": [
+            {
+              "parent": 0,
+              "viewName": "androidx.constraintlayout.widget.ConstraintLayout",
+              "index": -1
+            },
+            {
+              "parent": 1,
+              "viewName": "androidx.recyclerview.widget.RecyclerView",
+              "index": -1,
+              "id": "rvHouseList"
+            },
+            {
+              "parent": 2,
+              "viewName": "com.lianjia.pullview.LJPaginationWrappedPullRecyclerView",
+              "index": -1,
+              "id": "rvHouseList"
+            }
+          ]
+        },
+        {
+          "viewName": "com.rentplat.midlib.view.KeTextView",
+          "id": "filter_more_sub_tv_title",
+          "forceDark": false,
+          "conditions": [
+            {
+              "parent": 0,
+              "viewName": "android.widget.LinearLayout",
+              "index": -1,
+              "id": "filter_more_ll_special_item"
+            },
+            {
+              "parent": 2,
+              "viewName": "androidx.recyclerview.widget.RecyclerView",
+              "index": -1,
+              "id": "filter_more_top_rv_container"
+            },
+            {
+              "parent": 4,
+              "viewName": "androidx.recyclerview.widget.RecyclerView",
+              "index": -1,
+              "id": "filter_more_rv_content"
+            }
+          ]
+        },
+        {
+          "viewName": "com.rentplat.midlib.view.KeTextView",
+          "id": "filter_more_sub_tv_desc",
+          "forceDark": false,
+          "conditions": [
+            {
+              "parent": 0,
+              "viewName": "android.widget.LinearLayout",
+              "index": -1,
+              "id": "filter_more_ll_special_item"
+            },
+            {
+              "parent": 2,
+              "viewName": "androidx.recyclerview.widget.RecyclerView",
+              "index": -1,
+              "id": "filter_more_top_rv_container"
+            },
+            {
+              "parent": 4,
+              "viewName": "androidx.recyclerview.widget.RecyclerView",
+              "index": -1,
+              "id": "filter_more_rv_content"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "activityName": "com.lianjia.plugin.lianjiaim.ui.KeConversationListActivity",
+      "forceDark": true,
+      "forceDarkViewConfigList": [
+        {
+          "viewName": "android.widget.LinearLayout",
+          "id": "titlebar_container",
+          "forceDark": true,
+          "usage": 105,
+          "backgroundUsage": 105,
+          "conditions": [
+            {
+              "parent": 0,
+              "viewName": "android.widget.LinearLayout",
+              "index": -1,
+              "id": "fragment_chat_main"
+            },
+            {
+              "parent": 1,
+              "viewName": "android.widget.LinearLayout",
+              "index": -1,
+              "id": "ll_message_container"
+            },
+            {
+              "parent": 2,
+              "viewName": "android.widget.FrameLayout",
+              "index": -1,
+              "id": "content"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "activityName": "com.second.community.activity.CommunityDetailActivity",
+      "forceDark": true,
+      "forceDarkViewConfigList": [
+        {
+          "viewName": "android.widget.TextView",
+          "id": "tv_agent_name",
+          "forceDark": false,
+          "conditions": [
+            {
+              "parent": 0,
+              "viewName": "android.widget.LinearLayout",
+              "index": -1,
+              "id": "ll_agent"
+            },
+            {
+              "parent": 1,
+              "viewName": "androidx.constraintlayout.widget.ConstraintLayout",
+              "index": -1,
+              "id": "cl_container"
+            },
+            {
+              "parent": 2,
+              "viewName": "com.second.community.view.CDBottomAgentButtonView",
+              "index": -1,
+              "id": "cd_bottom_button"
+            }
+          ]
+        },
+        {
+          "viewName": "android.widget.TextView",
+          "id": "tv_sale_num",
+          "forceDark": false,
+          "conditions": [
+            {
+              "parent": 0,
+              "viewName": "androidx.constraintlayout.widget.ConstraintLayout",
+              "index": -1
+            },
+            {
+              "parent": 1,
+              "viewName": "androidx.constraintlayout.widget.ConstraintLayout",
+              "index": -1,
+              "id": "cl_more_house"
+            },
+            {
+              "parent": 2,
+              "viewName": "android.widget.LinearLayout",
+              "index": -1,
+              "id": "ll_button_group"
+            }
+          ]
+        },
+        {
+          "viewName": "android.widget.TextView",
+          "id": "tv_sale_desc",
+          "forceDark": false,
+          "conditions": [
+            {
+              "parent": 0,
+              "viewName": "androidx.constraintlayout.widget.ConstraintLayout",
+              "index": -1
+            },
+            {
+              "parent": 1,
+              "viewName": "androidx.constraintlayout.widget.ConstraintLayout",
+              "index": -1,
+              "id": "cl_more_house"
+            },
+            {
+              "parent": 2,
+              "viewName": "android.widget.LinearLayout",
+              "index": -1,
+              "id": "ll_button_group"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "activityName": "com.lianjia.platform.sellhouse.activity.SellHouseRevisionActivity",
+      "forceDark": true,
+      "forceDarkViewConfigList": [
+        {
+          "viewName": "android.widget.TextView",
+          "forceDark": false,
+          "conditions": [
+            {
+              "parent": 0,
+              "viewName": "androidx.constraintlayout.widget.ConstraintLayout",
+              "index": -1
+            },
+            {
+              "parent": 1,
+              "viewName": "com.lianjia.platform.sellhouse.view.SellHouseHeaderCardView",
+              "index": -1,
+              "id": "head_card_view"
+            },
+            {
+              "parent": 2,
+              "viewName": "android.widget.FrameLayout",
+              "index": -1,
+              "id": "fl_head_card_view"
+            }
+          ]
+        },
+        {
+          "viewName": "android.widget.ImageView",
+          "id": "iv_icon_im",
+          "forceDark": true,
+          "usage": 103,
+          "backgroundUsage": 103
+        },
+        {
+          "viewName": "android.widget.ImageView",
+          "id": "iv_icon_call",
+          "forceDark": true,
+          "usage": 103,
+          "backgroundUsage": 103
+        }
+      ]
+    },
+    {
+      "activityName": "com.matrix.houseplugin.centralizedetail.activity.CentralizeLayoutDetailActivity",
+      "forceDark": true,
+      "forceDarkViewConfigList": [
+        {
+          "viewName": "android.widget.TextView",
+          "id": "card_special_bar_tv_normal_price",
+          "forceDark": false,
+          "conditions": [
+            {
+              "parent": 0,
+              "viewName": "android.widget.LinearLayout",
+              "index": -1,
+              "id": "card_special_bar_ll_container_normal_price"
+            },
+            {
+              "parent": 2,
+              "viewName": "android.widget.FrameLayout",
+              "index": -1
+            },
+            {
+              "parent": 3,
+              "viewName": "android.widget.LinearLayout",
+              "index": -1,
+              "id": "centralized_basic_detail_ll_container"
+            }
+          ]
+        },
+        {
+          "viewName": "android.widget.TextView",
+          "id": "tv_start_name",
+          "forceDark": false,
+          "conditions": [
+            {
+              "parent": 0,
+              "viewName": "android.widget.RelativeLayout",
+              "index": -1,
+              "id": "rl_start"
+            },
+            {
+              "parent": 2,
+              "viewName": "android.widget.LinearLayout",
+              "index": -1,
+              "id": "centralized_basic_detail_ll_container"
+            },
+            {
+              "parent": 4,
+              "viewName": "com.rentplat.midlib.view.ObservableNestedScrollView",
+              "index": -1,
+              "id": "centralized_basic_detail_sv_container"
+            }
+          ]
+        },
+        {
+          "viewName": "android.widget.TextView",
+          "id": "tv_surround",
+          "forceDark": false,
+          "conditions": [
+            {
+              "parent": 0,
+              "viewName": "android.widget.RelativeLayout",
+              "index": -1,
+              "id": "rl_start"
+            },
+            {
+              "parent": 2,
+              "viewName": "android.widget.LinearLayout",
+              "index": -1,
+              "id": "centralized_basic_detail_ll_container"
+            },
+            {
+              "parent": 4,
+              "viewName": "com.rentplat.midlib.view.ObservableNestedScrollView",
+              "index": -1,
+              "id": "centralized_basic_detail_sv_container"
+            }
+          ]
+        },
+        {
+          "viewName": "com.rentplat.midlib.view.KeTextView",
+          "id": "centralize_special_coupons_tv_desc",
+          "forceDark": false,
+          "conditions": [
+            {
+              "parent": 0,
+              "viewName": "androidx.constraintlayout.widget.ConstraintLayout",
+              "index": -1
+            },
+            {
+              "parent": 1,
+              "viewName": "android.widget.LinearLayout",
+              "index": -1,
+              "id": "centralized_basic_detail_ll_container"
+            },
+            {
+              "parent": 3,
+              "viewName": "com.rentplat.midlib.view.ObservableNestedScrollView",
+              "index": -1,
+              "id": "centralized_basic_detail_sv_container"
+            }
+          ]
+        },
+        {
+          "viewName": "com.rentplat.midlib.view.KeTextView",
+          "id": "centralize_special_coupons_tv_action",
+          "forceDark": false,
+          "conditions": [
+            {
+              "parent": 0,
+              "viewName": "androidx.constraintlayout.widget.ConstraintLayout",
+              "index": -1
+            },
+            {
+              "parent": 1,
+              "viewName": "android.widget.LinearLayout",
+              "index": -1,
+              "id": "centralized_basic_detail_ll_container"
+            },
+            {
+              "parent": 3,
+              "viewName": "com.rentplat.midlib.view.ObservableNestedScrollView",
+              "index": -1,
+              "id": "centralized_basic_detail_sv_container"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "activityName": "com.lianjia.platform.activity.DemandCardDetailActivityV2",
+      "forceDark": true,
+      "forceDarkViewConfigList": [
+        {
+          "viewName": "android.widget.RelativeLayout",
+          "id": "rl_header",
+          "forceDark": true,
+          "usage": 105,
+          "backgroundUsage": 105,
+          "conditions": [
+            {
+              "parent": 0,
+              "viewName": "com.bk.uilib.view.ParentRecyclerView",
+              "index": -1,
+              "id": "base_recycleview"
+            },
+            {
+              "parent": 2,
+              "viewName": "com.lianjia.platform.view.PullToRefreshParentRecycleView",
+              "index": -1,
+              "id": "base_recycleview"
+            },
+            {
+              "parent": 3,
+              "viewName": "android.widget.FrameLayout",
+              "index": -1,
+              "id": "house_container"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "activityName": "com.matrix.houseplugin.commutesxz.activity.CommuteSxzFilterActivity",
+      "forceDark": true,
+      "forceDarkViewConfigList": [
+        {
+          "viewName": "android.widget.ImageView",
+          "id": "commute_sxz_filter_iv_address_icon",
+          "forceDark": false
+        },
+        {
+          "viewName": "com.rentplat.midlib.view.KeTextView",
+          "id": "commute_sxz_filter_tv_address_name",
+          "forceDark": false
+        }
+      ]
+    },
+    {
+      "activityName": "com.homelink.android.MainActivity",
+      "forceDark": true,
+      "forceDarkViewConfigList": [
+        {
+          "viewName": "android.widget.TextView",
+          "id": "tv_name",
+          "forceDark": false,
+          "conditions": [
+            {
+              "parent": 0,
+              "viewName": "com.bk.uilib.view.rounder.RoundedCornerConstraintLayout",
+              "index": -1
+            },
+            {
+              "parent": 1,
+              "viewName": "com.ke.jzcore.base.horcard.JZHorizontalRecyclerView",
+              "index": -1,
+              "id": "single_card_hor_group_view"
+            },
+            {
+              "parent": 3,
+              "viewName": "com.bk.base.commonview.SafeRecyclerView",
+              "index": -1,
+              "id": "base_recyclerview"
+            }
+          ]
+        },
+        {
+          "viewName": "com.bk.uilib.view.rounder.RoundedCornerRelativeLayout",
+          "id": "rl_single_card",
+          "forceDark": false,
+          "conditions": [
+            {
+              "parent": 0,
+              "viewName": "com.homelink.content.home.newHome.view.HpSituationSingleCardView",
+              "index": -1,
+              "id": "situation_view"
+            },
+            {
+              "parent": 2,
+              "viewName": "com.bk.uilib.view.ParentRecyclerView",
+              "index": -1,
+              "id": "recyclerview"
+            },
+            {
+              "parent": 3,
+              "viewName": "com.homelink.content.home.view.SuperSwipeRefreshLayout",
+              "index": -1,
+              "id": "swipeRefresh"
+            }
+          ]
+        },
+        {
+          "viewName": "android.widget.ImageView",
+          "forceDark": false,
+          "conditions": [
+            {
+              "parent": 0,
+              "viewName": "androidx.constraintlayout.widget.ConstraintLayout",
+              "index": -1
+            },
+            {
+              "parent": 1,
+              "viewName": "android.widget.FrameLayout",
+              "index": -1,
+              "id": "ll_rootview"
+            },
+            {
+              "parent": 2,
+              "viewName": "android.widget.FrameLayout",
+              "index": -1,
+              "id": "content"
+            }
+          ]
+        },
+        {
+          "viewName": "android.widget.TextView",
+          "forceDark": false,
+          "conditions": [
+            {
+              "parent": 0,
+              "viewName": "android.widget.LinearLayout",
+              "index": -1,
+              "id": "ll_top"
+            },
+            {
+              "parent": 2,
+              "viewName": "android.widget.FrameLayout",
+              "index": -1,
+              "id": "ll_rootview"
+            },
+            {
+              "parent": 3,
+              "viewName": "android.widget.FrameLayout",
+              "index": -1,
+              "id": "content"
+            }
+          ]
+        },
+        {
+          "viewName": "FrameLayout",
+          "forceDark": false,
+          "conditions": [
+            {
+              "viewName": "LinearLayout",
+              "parent": 0,
+              "index": -1
+            },
+            {
+              "viewName": "ParentRecyclerView",
+              "parent": 1,
+              "index": -1
+            }
+          ]
+        },
+        {
+          "viewName": "FrameLayout",
+          "forceDark": false,
+          "conditions": [
+            {
+              "viewName": "RelativeLayout",
+              "parent": 0,
+              "index": -1
+            },
+            {
+              "viewName": "LinearLayout",
+              "parent": 1,
+              "index": -1
+            },
+            {
+              "viewName": "ParentRecyclerView",
+              "parent": 2,
+              "index": -1
+            }
+          ]
+        },
+        {
+          "viewName": "LinearLayout",
+          "forceDark": true,
+          "backgroundUsage": 103,
+          "conditions": [
+            {
+              "viewName": "LinearLayout",
+              "parent": 0,
+              "index": -1
+            },
+            {
+              "viewName": "FrameLayout",
+              "parent": 2,
+              "index": -1
+            },
+            {
+              "viewName": "MyFragmentTabHost",
+              "parent": 4,
+              "index": -1
+            }
+          ]
+        },
+        {
+          "viewName": "DynamicView",
+          "forceDark": true,
+          "usage": 103,
+          "backgroundUsage": 103,
+          "conditions": [
+            {
+              "viewName": "FrameLayout",
+              "parent": 0,
+              "index": -1
+            },
+            {
+              "viewName": "ChildRecyclerView",
+              "parent": 1,
+              "index": -1
+            },
+            {
+              "viewName": "FrameLayout",
+              "parent": 2,
+              "index": -1
+            }
+          ]
+        },
+        {
+          "viewName": "ImageView",
+          "forceDark": true,
+          "usage": 103,
+          "backgroundUsage": 103,
+          "id": "iv_function",
+          "conditions": [
+            {
+              "viewName": "LinearLayout",
+              "parent": 0,
+              "index": -1
+            },
+            {
+              "viewName": "androidx.recyclerview.widget.RecyclerView",
+              "id": "rv_user_other_service_list",
+              "parent": 1,
+              "index": -1
+            }
+          ]
+        },
+        {
+          "viewName": "ImageView",
+          "forceDark": true,
+          "usage": 103,
+          "backgroundUsage": 103,
+          "id": "img_icon",
+          "conditions": [
+            {
+              "viewName": "RelativeLayout",
+              "id": "lyt_tab_icon",
+              "parent": 0,
+              "index": -1
+            },
+            {
+              "viewName": "LinearLayout",
+              "parent": 1,
+              "index": -1
+            }
+          ]
+        },
+        {
+          "viewName": "android.widget.TextView",
+          "forceDark": false,
+          "conditions": [
+            {
+              "parent": 0,
+              "viewName": "androidx.constraintlayout.widget.ConstraintLayout",
+              "index": -1,
+              "id": "rootView"
+            },
+            {
+              "parent": 1,
+              "viewName": "com.homelink.modulecustomer.p_mine.view.ProfileSellHouseCard",
+              "index": -1,
+              "id": "view_no_login_sell_house"
+            },
+            {
+              "parent": 2,
+              "viewName": "android.widget.LinearLayout",
+              "index": -1
+            }
+          ]
+        },
+        {
+          "viewName": "android.widget.TextView",
+          "id": "tv_top_banner_text",
+          "forceDark": false,
+          "conditions": [
+            {
+              "parent": 0,
+              "viewName": "androidx.constraintlayout.widget.ConstraintLayout",
+              "index": -1
+            },
+            {
+              "parent": 1,
+              "viewName": "com.beike.biz.myhome.view.NoPropertyV2HolderB",
+              "index": -1
+            },
+            {
+              "parent": 2,
+              "viewName": "android.widget.FrameLayout",
+              "index": -1,
+              "id": "container_no_property_v2"
+            }
+          ]
+        },
+        {
+          "viewName": "android.widget.TextView",
+          "id": "tv_text",
+          "forceDark": false,
+          "conditions": [
+            {
+              "parent": 0,
+              "viewName": "android.widget.LinearLayout",
+              "index": -1
+            },
+            {
+              "parent": 1,
+              "viewName": "android.widget.LinearLayout",
+              "index": -1,
+              "id": "ll_middle_banner"
+            },
+            {
+              "parent": 2,
+              "viewName": "androidx.constraintlayout.widget.ConstraintLayout",
+              "index": -1
+            }
+          ]
+        },
+        {
+          "viewName": "android.widget.LinearLayout",
+          "id": "titlebar_container",
+          "forceDark": true,
+          "usage": 105,
+          "backgroundUsage": 105,
+          "conditions": [
+            {
+              "parent": 0,
+              "viewName": "android.widget.LinearLayout",
+              "index": -1,
+              "id": "fragment_chat_main"
+            },
+            {
+              "parent": 1,
+              "viewName": "android.widget.FrameLayout",
+              "index": -1,
+              "id": "simple_fragment"
+            },
+            {
+              "parent": 3,
+              "viewName": "android.widget.FrameLayout",
+              "index": -1,
+              "id": "realtabcontent"
+            }
+          ]
+        },
+        {
+          "viewName": "android.widget.TextView",
+          "id": "tv_desc",
+          "forceDark": false,
+          "conditions": [
+            {
+              "parent": 0,
+              "viewName": "android.widget.LinearLayout",
+              "index": -1,
+              "id": "ll_content"
+            },
+            {
+              "parent": 1,
+              "viewName": "com.bk.uilib.view.rounder.RoundedCornerConstraintLayout",
+              "index": -1,
+              "id": "cl_container"
+            },
+            {
+              "parent": 2,
+              "viewName": "com.bk.uilib.view.HpDecorCaseContentV3View",
+              "index": -1,
+              "id": "view_case_v3"
+            }
+          ]
+        },
+        {
+          "viewName": "android.widget.ImageView",
+          "id": "img_youuan_text",
+          "forceDark": false
+        },
+        {
+          "viewName": "android.widget.TextView",
+          "id": "tv_select_city_item",
+          "forceDark": true,
+          "usage": 103,
+          "backgroundUsage": 103
+        }
+      ]
+    },
+    {
+      "activityName": "com.homelink.android.homepage.view.activity.SelectCityActivity",
+      "forceDark": true,
+      "forceDarkViewConfigList": [
+        {
+          "viewName": "IndexBar",
+          "forceDark": true,
+          "usage": 103,
+          "backgroundUsage": 103,
+          "id": "indexBar",
+          "conditions": [
+            {
+              "viewName": "RecyclerView",
+              "parent": 0,
+              "index": -1
+            },
+            {
+              "viewName": "FrameLayout",
+              "parent": 1,
+              "index": -1
+            }
+          ]
+        },
+        {
+          "viewName": "RecyclerView",
+          "forceDark": true,
+          "usage": 103,
+          "backgroundUsage": 103,
+          "conditions": [
+            {
+              "viewName": "FrameLayout",
+              "parent": 0,
+              "index": -1
+            },
+            {
+              "viewName": "LinearLayout",
+              "parent": 1,
+              "index": -1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "activityName": "com.homelink.android.secondhouse.activity.SecondHandHouseHomePageActivity",
+      "forceDark": true,
+      "forceDarkViewConfigList": [
+        {
+          "viewName": "RelativeLayout",
+          "forceDark": false,
+          "id": "rl_container"
+        }
+      ]
+    },
+    {
+      "activityName": "com.homelink.android.newhouse.house.home.NewHouseMainActivity",
+      "forceDark": true,
+      "forceDarkViewConfigList": [
+        {
+          "viewName": "ImageView",
+          "forceDark": true,
+          "usage": 103,
+          "id": "iv_icon",
+          "conditions": [
+            {
+              "viewName": "ConstraintLayout",
+              "parent": 0,
+              "index": -1
+            }
+          ]
+        },
+        {
+          "viewName": "RoundTextView",
+          "forceDark": true,
+          "usage": 103,
+          "conditions": [
+            {
+              "viewName": "com.homelink.android.newhouse.libcore.business.loupancard.HouseTagView",
+              "id": "tv_house_tag_layout",
+              "parent": 0,
+              "index": -1
+            }
+          ]
+        },
+        {
+          "viewName": "com.ke.bmui.view.roundview.BMUIRoundImageView",
+          "id": "iv_bg_without_banner",
+          "forceDark": true,
+          "usage": 105,
+          "backgroundUsage": 105,
+          "conditions": [
+            {
+              "parent": 0,
+              "viewName": "androidx.constraintlayout.widget.ConstraintLayout",
+              "index": -1
+            },
+            {
+              "parent": 1,
+              "viewName": "com.homelink.android.newhouse.libcore.recyclerView.HPParentRecyclerView",
+              "index": -1,
+              "id": "parent_recyclerview"
+            },
+            {
+              "parent": 2,
+              "viewName": "com.homelink.android.newhouse.libcore.view.SuperSwipeRefreshLayout",
+              "index": -1,
+              "id": "swipe_refresh_layout"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "activityName": "com.matrix.houseplugin.entrance.RentMainActivity",
+      "forceDark": true,
+      "forceDarkViewConfigList": [
+        {
+          "viewName": "LinearLayout",
+          "forceDark": true,
+          "usage": 103,
+          "conditions": [
+            {
+              "viewName": "FrameLayout",
+              "parent": 0,
+              "index": -1
+            },
+            {
+              "viewName": "LinearLayout",
+              "id": "card_home_condition_ll_container",
+              "parent": 1,
+              "index": -1
+            }
+          ]
+        },
+        {
+          "viewName": "com.rishabhharit.roundedimageview.RoundedImageView",
+          "forceDark": true,
+          "usage": 105,
+          "backgroundUsage": 105,
+          "conditions": [
+            {
+              "parent": 0,
+              "viewName": "androidx.constraintlayout.widget.ConstraintLayout",
+              "index": -1
+            },
+            {
+              "parent": 1,
+              "viewName": "android.widget.LinearLayout",
+              "index": -1
+            },
+            {
+              "parent": 2,
+              "viewName": "androidx.constraintlayout.widget.ConstraintLayout",
+              "index": -1
+            },
+            {
+              "parent": 4,
+              "viewName": "androidx.recyclerview.widget.RecyclerView",
+              "index": -1,
+              "id": "rvHouseList"
+            }
+          ]
+        },
+        {
+          "viewName": "com.rentplat.midlib.view.rounder.RoundedCornerConstraintLayout",
+          "forceDark": false,
+          "conditions": [
+            {
+              "parent": 0,
+              "viewName": "androidx.recyclerview.widget.RecyclerView",
+              "index": -1,
+              "id": "home_middle_resource_rv_container"
+            },
+            {
+              "parent": 3,
+              "viewName": "androidx.recyclerview.widget.RecyclerView",
+              "index": -1,
+              "id": "rvHouseList"
+            },
+            {
+              "parent": 4,
+              "viewName": "com.lianjia.pullview.LJPaginationWrappedPullRecyclerView",
+              "index": -1,
+              "id": "rvHouseList"
+            }
+          ]
+        },
+        {
+          "viewName": "android.widget.LinearLayout",
+          "id": "card_home_location_btn_map",
+          "forceDark": false
+        },
+        {
+          "viewName": "com.rentplat.midlib.view.KeTextView",
+          "id": "feed_commute_tv_title",
+          "forceDark": false,
+          "conditions": [
+            {
+              "parent": 0,
+              "viewName": "androidx.constraintlayout.widget.ConstraintLayout",
+              "index": -1
+            },
+            {
+              "parent": 1,
+              "viewName": "androidx.recyclerview.widget.RecyclerView",
+              "index": -1,
+              "id": "rvHouseList"
+            },
+            {
+              "parent": 2,
+              "viewName": "com.lianjia.pullview.LJPaginationWrappedPullRecyclerView",
+              "index": -1,
+              "id": "rvHouseList"
+            }
+          ]
+        },
+        {
+          "viewName": "com.rentplat.midlib.view.KeTextView",
+          "id": "feed_commute_tv_sub_title",
+          "forceDark": false,
+          "conditions": [
+            {
+              "parent": 0,
+              "viewName": "androidx.constraintlayout.widget.ConstraintLayout",
+              "index": -1
+            },
+            {
+              "parent": 1,
+              "viewName": "androidx.recyclerview.widget.RecyclerView",
+              "index": -1,
+              "id": "rvHouseList"
+            },
+            {
+              "parent": 2,
+              "viewName": "com.lianjia.pullview.LJPaginationWrappedPullRecyclerView",
+              "index": -1,
+              "id": "rvHouseList"
+            }
+          ]
+        },
+        {
+          "viewName": "android.widget.ImageView",
+          "id": "im_message_iv_message",
+          "forceDark": false,
+          "conditions": [
+            {
+              "parent": 0,
+              "viewName": "android.widget.RelativeLayout",
+              "index": -1
+            },
+            {
+              "parent": 1,
+              "viewName": "android.widget.FrameLayout",
+              "index": -1,
+              "id": "card_home_title_bar_one_fl_message_im_container"
+            },
+            {
+              "parent": 3,
+              "viewName": "android.widget.FrameLayout",
+              "index": -1,
+              "id": "fl_new_home_title_bar_one"
+            }
+          ]
+        },
+        {
+          "viewName": "android.widget.ImageView",
+          "id": "card_home_title_bar_one_iv_back",
+          "forceDark": false,
+          "conditions": [
+            {
+              "parent": 0,
+              "viewName": "android.widget.LinearLayout",
+              "index": -1
+            },
+            {
+              "parent": 1,
+              "viewName": "android.widget.FrameLayout",
+              "index": -1,
+              "id": "fl_new_home_title_bar_one"
+            },
+            {
+              "parent": 3,
+              "viewName": "android.widget.FrameLayout",
+              "index": -1,
+              "id": "container"
+            }
+          ]
+        },
+        {
+          "viewName": "android.widget.TextView",
+          "id": "card_home_title_bar_one_tv_city",
+          "forceDark": false,
+          "conditions": [
+            {
+              "parent": 0,
+              "viewName": "android.widget.LinearLayout",
+              "index": -1,
+              "id": "card_home_title_bar_one_ll_switch_city"
+            },
+            {
+              "parent": 2,
+              "viewName": "android.widget.FrameLayout",
+              "index": -1,
+              "id": "fl_new_home_title_bar_one"
+            },
+            {
+              "parent": 4,
+              "viewName": "android.widget.FrameLayout",
+              "index": -1,
+              "id": "container"
+            }
+          ]
+        },
+        {
+          "viewName": "com.rentplat.midlib.view.KeTextView",
+          "id": "filter_more_sub_tv_title",
+          "forceDark": false,
+          "conditions": [
+            {
+              "parent": 0,
+              "viewName": "android.widget.LinearLayout",
+              "index": -1,
+              "id": "filter_more_ll_special_item"
+            },
+            {
+              "parent": 2,
+              "viewName": "androidx.recyclerview.widget.RecyclerView",
+              "index": -1,
+              "id": "filter_more_top_rv_container"
+            },
+            {
+              "parent": 4,
+              "viewName": "androidx.recyclerview.widget.RecyclerView",
+              "index": -1,
+              "id": "filter_more_rv_content"
+            }
+          ]
+        },
+        {
+          "viewName": "com.rentplat.midlib.view.KeTextView",
+          "id": "filter_more_sub_tv_desc",
+          "forceDark": false,
+          "conditions": [
+            {
+              "parent": 0,
+              "viewName": "android.widget.LinearLayout",
+              "index": -1,
+              "id": "filter_more_ll_special_item"
+            },
+            {
+              "parent": 2,
+              "viewName": "androidx.recyclerview.widget.RecyclerView",
+              "index": -1,
+              "id": "filter_more_top_rv_container"
+            },
+            {
+              "parent": 4,
+              "viewName": "androidx.recyclerview.widget.RecyclerView",
+              "index": -1,
+              "id": "filter_more_rv_content"
+            }
+          ]
+        },
+        {
+          "viewName": "android.widget.TextView",
+          "id": "tv_title",
+          "forceDark": false,
+          "conditions": [
+            {
+              "parent": 0,
+              "viewName": "android.widget.FrameLayout",
+              "index": -1,
+              "id": "fl_top"
+            },
+            {
+              "parent": 2,
+              "viewName": "androidx.recyclerview.widget.RecyclerView",
+              "index": -1,
+              "id": "rv_wish"
+            },
+            {
+              "parent": 3,
+              "viewName": "com.matrix.houseplugin.wishv5.view.WishRecyclerView",
+              "index": -1,
+              "id": "rv_wish"
+            }
+          ]
+        },
+        {
+          "viewName": "android.widget.RelativeLayout",
+          "forceDark": false,
+          "conditions": [
+            {
+              "parent": 0,
+              "viewName": "android.widget.RelativeLayout",
+              "index": -1
+            },
+            {
+              "parent": 1,
+              "viewName": "android.widget.LinearLayout",
+              "index": -1,
+              "id": "contract_ll_content_container"
+            },
+            {
+              "parent": 3,
+              "viewName": "androidx.core.widget.NestedScrollView",
+              "index": -1,
+              "id": "contract_sv"
+            }
+          ]
+        },
+        {
+          "viewName": "android.widget.RelativeLayout",
+          "forceDark": false,
+          "conditions": [
+            {
+              "parent": 0,
+              "viewName": "android.widget.LinearLayout",
+              "index": -1,
+              "id": "contract_ll_content_container"
+            },
+            {
+              "parent": 2,
+              "viewName": "androidx.core.widget.NestedScrollView",
+              "index": -1,
+              "id": "contract_sv"
+            },
+            {
+              "parent": 4,
+              "viewName": "androidx.swiperefreshlayout.widget.SwipeRefreshLayout",
+              "index": -1,
+              "id": "owner_srl_refresh"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "activityName": "com.matrix.houseplugin.housedetail.activity.RentHouseDetailActivity",
+      "forceDark": true,
+      "forceDarkViewConfigList": [
+        {
+          "viewName": "ImageView",
+          "forceDark": true,
+          "usage": 103,
+          "conditions": [
+            {
+              "viewName": "LinearLayout",
+              "parent": 0,
+              "index": -1
+            },
+            {
+              "viewName": "com.rentplat.midlib.view.MyTitleBar",
+              "id": "titleBar",
+              "parent": 1,
+              "index": -1
+            }
+          ]
+        },
+        {
+          "viewName": "RelativeLayout",
+          "forceDark": false,
+          "conditions": [
+            {
+              "viewName": "android.widget.LinearLayout",
+              "id": "ll_container",
+              "parent": 0,
+              "index": -1
+            }
+          ]
+        },
+        {
+          "viewName": "LinearLayout",
+          "forceDark": true,
+          "usage": 103,
+          "backgroundUsage": 103,
+          "conditions": [
+            {
+              "viewName": "android.widget.LinearLayout",
+              "id": "llQuestions",
+              "parent": 0,
+              "index": -1
+            }
+          ]
+        },
+        {
+          "viewName": "LinearLayout",
+          "forceDark": true,
+          "usage": 103,
+          "backgroundUsage": 103,
+          "id": "agentAsk",
+          "conditions": [
+            {
+              "viewName": "RelativeLayout",
+              "parent": 0,
+              "index": -1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "activityName": "com.matrix.houseplugin.housedetailnew.activity.RentHouseDetailActivity",
+      "forceDark": true,
+      "forceDarkViewConfigList": [
+        {
+          "viewName": "com.rentplat.midlib.view.KeTextView",
+          "id": "detail_commute_tv_name",
+          "forceDark": false,
+          "conditions": [
+            {
+              "parent": 0,
+              "viewName": "androidx.constraintlayout.widget.ConstraintLayout",
+              "index": -1,
+              "id": "detail_commute_cl_container"
+            },
+            {
+              "parent": 1,
+              "viewName": "android.widget.FrameLayout",
+              "index": -1,
+              "id": "basic_info_fl_commute_container"
+            },
+            {
+              "parent": 2,
+              "viewName": "android.widget.LinearLayout",
+              "index": -1,
+              "id": "basic_info_ll_container"
+            }
+          ]
+        },
+        {
+          "viewName": "android.widget.TextView",
+          "id": "item_house_detail_bottom_bar_im_question_tv_content",
+          "forceDark": false,
+          "conditions": [
+            {
+              "parent": 0,
+              "viewName": "com.rentplat.midlib.view.rounder.RoundedCornerConstraintLayout",
+              "index": -1
+            },
+            {
+              "parent": 1,
+              "viewName": "androidx.recyclerview.widget.RecyclerView",
+              "index": -1,
+              "id": "card_house_detail_bottom_bar_rv_question"
+            },
+            {
+              "parent": 2,
+              "viewName": "androidx.constraintlayout.widget.ConstraintLayout",
+              "index": -1,
+              "id": "card_house_detail_bottom_bar_cl_question_container"
+            }
+          ]
+        },
+        {
+          "viewName": "android.widget.ImageView",
+          "forceDark": true,
+          "usage": 103,
+          "conditions": [
+            {
+              "parent": 0,
+              "viewName": "com.rentplat.midlib.view.MyTitleBar",
+              "index": -1,
+              "id": "house_detail_title_bar"
+            },
+            {
+              "parent": 1,
+              "viewName": "android.widget.RelativeLayout",
+              "index": -1
+            },
+            {
+              "parent": 2,
+              "viewName": "android.widget.FrameLayout",
+              "index": -1,
+              "id": "content"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "activityName": "com.lianjia.jinggong.sdk.activity.search.activity.SearchHomeActivity",
+      "forceDark": true,
+      "forceDarkViewConfigList": [
+        {
+          "viewName": "RelativeLayout",
+          "forceDark": true,
+          "usage": 103,
+          "backgroundUsage": 103,
+          "conditions": [
+            {
+              "viewName": "RelativeLayout",
+              "parent": 0,
+              "index": -1
+            },
+            {
+              "viewName": "FragmentContainerView",
+              "id": "fragment_container_view",
+              "parent": 2,
+              "index": -1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "activityName": "om.homelink.android.newhouse.house.detailv1.NewHouseDetailActivityV1",
+      "forceDark": true,
+      "forceDarkViewConfigList": [
+        {
+          "viewName": "ImageView",
+          "forceDark": true,
+          "usage": 103,
+          "id": "iv_icon_img",
+          "conditions": [
+            {
+              "viewName": "androidx.constraintlayout.widget.ConstraintLayout",
+              "parent": 0,
+              "index": -1
+            },
+            {
+              "viewName": "com.homelink.android.newhouse.house.details.view.bottombar.ImageButtonView",
+              "id": "btn_left_small",
+              "parent": 1,
+              "index": -1
+            }
+          ]
+        },
+        {
+          "viewName": "android.widget.ImageView",
+          "id": "iv_title",
+          "forceDark": true,
+          "usage": 103,
+          "backgroundUsage": 103,
+          "conditions": [
+            {
+              "parent": 0,
+              "viewName": "android.widget.RelativeLayout",
+              "index": -1,
+              "id": "rl_title"
+            },
+            {
+              "parent": 1,
+              "viewName": "android.widget.LinearLayout",
+              "index": -1,
+              "id": "ll_container"
+            },
+            {
+              "parent": 2,
+              "viewName": "com.bk.uilib.card.buildingdetail.LiveVisitCard",
+              "index": -1,
+              "id": "card_live_visit_container"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "activityName": "com.lianjia.sdk.chatui.conv.chat.main.AccountConvChatActivity",
+      "forceDark": true,
+      "forceDarkViewConfigList": [
+        {
+          "viewName": "android.widget.ImageView",
+          "id": "chatui_top_image_bg",
+          "forceDark": true,
+          "usage": 105,
+          "backgroundUsage": 105,
+          "conditions": [
+            {
+              "parent": 0,
+              "viewName": "androidx.constraintlayout.widget.ConstraintLayout",
+              "index": -1,
+              "id": "fragment_chat_main"
+            },
+            {
+              "parent": 1,
+              "viewName": "android.widget.FrameLayout",
+              "index": -1,
+              "id": "chatui_fragment_container"
+            },
+            {
+              "parent": 2,
+              "viewName": "android.widget.FrameLayout",
+              "index": -1,
+              "id": "content"
+            }
+          ]
+        },
+        {
+          "viewName": "com.tmall.wireless.vaf.virtualview.view.image.NativeImageImp",
+          "forceDark": true,
+          "usage": 105,
+          "backgroundUsage": 105,
+          "conditions": [
+            {
+              "parent": 0,
+              "viewName": "com.tmall.wireless.vaf.virtualview.view.nlayout.NativeLayoutImpl",
+              "index": -1
+            },
+            {
+              "parent": 1,
+              "viewName": "com.bk.dynamic.DynamicView",
+              "index": -1
+            },
+            {
+              "parent": 2,
+              "viewName": "android.widget.LinearLayout",
+              "index": -1,
+              "id": "container_ll"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "activityName": "com.beike.biz.myhome.sub.activity.AddAssetV4GujiaActivity",
+      "forceDark": true,
+      "forceDarkViewConfigList": [
+        {
+          "viewName": "android.widget.ImageView",
+          "id": "iv_top_bg",
+          "forceDark": true,
+          "usage": 105,
+          "backgroundUsage": 105
+        }
+      ]
+    },
+    {
+      "activityName": "com.lianjia.busi_findhouse.newuserguide.activity.NewUserGuideActivityV2",
+      "forceDark": true,
+      "forceDarkViewConfigList": [
+        {
+          "viewName": "android.widget.ImageView",
+          "forceDark": true,
+          "usage": 103,
+          "backgroundUsage": 103,
+          "conditions": [
+            {
+              "parent": 0,
+              "viewName": "android.widget.RelativeLayout",
+              "index": -1,
+              "id": "item_btn"
+            },
+            {
+              "parent": 1,
+              "viewName": "androidx.recyclerview.widget.RecyclerView",
+              "index": -1,
+              "id": "options"
+            },
+            {
+              "parent": 3,
+              "viewName": "android.widget.FrameLayout",
+              "index": -1,
+              "id": "fl_container"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "activityName": "com.beike.biz.myhome.sub.activity.AddAssetV3Activity",
+      "forceDark": true,
+      "forceDarkViewConfigList": [
+        {
+          "viewName": "android.widget.ImageView",
+          "id": "iv_top_bg",
+          "forceDark": true,
+          "usage": 105,
+          "backgroundUsage": 105
+        }
+      ]
+    },
+    {
+      "activityName": "com.ljplugin.map.MapSearchActivity",
+      "forceDark": true,
+      "forceDarkViewConfigList": [
+        {
+          "viewName": "android.widget.EditText",
+          "id": "ev_nav_center_search_text",
+          "forceDark": false,
+          "conditions": [
+            {
+              "parent": 0,
+              "viewName": "android.widget.LinearLayout",
+              "index": -1,
+              "id": "ll_input_content"
+            },
+            {
+              "parent": 1,
+              "viewName": "android.widget.LinearLayout",
+              "index": -1,
+              "id": "ll_ev_nav_center_container"
+            },
+            {
+              "parent": 2,
+              "viewName": "android.widget.LinearLayout",
+              "index": -1,
+              "id": "ll_nav_center_container"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "forceDarkViewGlobalConfigList": [
+    {
+      "viewName": "androidx.appcompat.widget.AppCompatTextView",
+      "id": "tv_title",
+      "forceDark": false,
+      "conditions": [
+        {
+          "parent": 0,
+          "viewName": "android.widget.RelativeLayout",
+          "index": -1
+        },
+        {
+          "parent": 1,
+          "viewName": "android.widget.FrameLayout",
+          "index": -1,
+          "id": "fl_brand_container"
+        }
+      ]
+    },
+    {
+      "viewName": "androidx.appcompat.widget.AppCompatTextView",
+      "id": "tv_sub_title",
+      "forceDark": false,
+      "conditions": [
+        {
+          "parent": 0,
+          "viewName": "android.widget.RelativeLayout",
+          "index": -1
+        },
+        {
+          "parent": 1,
+          "viewName": "android.widget.FrameLayout",
+          "index": -1,
+          "id": "fl_brand_container"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
+<config>
+    <initial-package-state package="com.debug.loggerui" stopped="false"/>
+</config>

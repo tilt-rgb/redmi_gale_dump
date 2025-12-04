@@ -1,0 +1,217 @@
+<?xml version="1.0" encoding="utf-8"?>
+<settings>
+  <ui ui_name="MTK Tuner Controller">
+    <element ui_type="checkbox" label="Reboot for signaling writing">
+      <field>signaling_write_flag</field>
+      <save_data>true</save_data>
+      <options>
+        <option state="true" value="1"/>
+        <option state="false" value="0"/>
+      </options>
+      <action>
+        <cmd cmd_type="at_cmd" name="signaling_write" fail_action="stop">AT+ERFTX=12,0,1,0,1,0,0,signaling_write_flag</cmd>
+        <cmd cmd_type="show_dialog" name="reboot_hint">The selection will take effect after you reboot the device!! Please reboot!!!</cmd>
+      </action>
+    </element>
+    <element ui_type="GroupView">
+      <sub_element column="2"/>
+      <element ui_type="Button" label="Signaling">
+        <action>
+          <cmd name="signaling_cmd" cmd_type="at_cmd">AT+CFUN=1</cmd>
+          <cmd name="MD sleep lock" cmd_type="at_cmd">AT+EGCMD=53</cmd>
+        </action>
+      </element>
+      <element ui_type="Button" label="Non-Signaling">
+        <action>
+          <cmd name="non-signaling_cmd" cmd_type="at_cmd">AT+CFUN=0</cmd>
+          <cmd name="MD sleep lock" cmd_type="at_cmd">AT+EGCMD=53</cmd>
+        </action>
+      </element>
+    </element>
+    <element ui_type="GroupView">
+      <sub_element column="2"/>
+      <element ui_type="Spinner" label="MIPI_D">
+        <field>mipi_port</field>
+        <default>0</default>
+        <options>
+          <option index="0" label="port0" value="10" />
+          <option index="1" label="port1" value="11" />
+          <option index="2" label="port2" value="12" />
+          <option index="3" label="port3" value="13" />
+          <option index="4" label="port4" value="14" />
+        </options>
+      </element>
+      <element ui_type="EditText" label="USID">
+        <field>usid</field>
+        <range ui_format="%x" format="%d">0~f</range>
+      </element>
+      <element ui_type="Spinner" label="Tuner">
+        <options>
+          <option index="0" label="MT6130" value="0" />
+        </options>
+      </element>
+      <element ui_type="Spinner" label="Topology">
+        <field>topology</field>
+        <default>0</default>
+        <options>
+          <option index="0" label="1" value="0" />
+          <option index="1" label="2&amp;3" value="1" />
+          <option index="2" label="customization" value="2" />
+        </options>
+        <slave>topology_pane</slave>
+      </element>
+      <element ui_type="Spinner" label="rw type">
+        <field>rw_type</field>
+        <default>0</default>
+        <options>
+          <option index="0" label="MIPI RW" value="0" />
+          <option index="1" label="MIPI_EXTRW_1BYTE" value="1" />
+        </options>
+      </element>
+      <element ui_type="Button" label="Initial Command">
+        <action>
+          <cmd name="initial_cmd" cmd_type="at_cmd">AT+ERFTX=12,0,1,mipi_port,0,usid,5,136</cmd>
+          <cmd name="initial_cmd" cmd_type="at_cmd">AT+ERFTX=12,0,1,mipi_port,0,usid,6,24</cmd>
+          <cmd name="initial_cmd" cmd_type="at_cmd">AT+ERFTX=12,0,1,mipi_port,0,usid,7,69</cmd>
+          <cmd name="initial_cmd" cmd_type="at_cmd">AT+ERFTX=12,0,1,mipi_port,0,usid,8,4</cmd>
+          <cmd name="initial_cmd" cmd_type="at_cmd">AT+ERFTX=12,0,1,mipi_port,0,usid,9,30</cmd>
+          <cmd name="initial_cmd" cmd_type="at_cmd">AT+ERFTX=12,0,1,mipi_port,0,usid,10,56</cmd>
+          <cmd name="initial_cmd" cmd_type="at_cmd">AT+ERFTX=12,0,1,mipi_port,0,usid,3,105</cmd>
+          <cmd name="initial_cmd" cmd_type="at_cmd">AT+ERFTX=12,0,1,mipi_port,0,usid,12,0</cmd>
+          <cmd name="initial_cmd" cmd_type="at_cmd">AT+ERFTX=12,0,1,mipi_port,0,usid,12,0</cmd>
+          <cmd name="initial_cmd" cmd_type="at_cmd">AT+ERFTX=12,0,1,mipi_port,0,usid,7,197</cmd>
+          <cmd name="initial_cmd" cmd_type="at_cmd">AT+ERFTX=12,0,1,mipi_port,0,usid,3,239</cmd>
+        </action>
+      </element>
+    </element>
+    <element ui_type="ImageView">
+      <slave_id>topology_pane</slave_id>
+      <default>topology1</default>
+      <dependence master="topology" slave_attr="default">
+        <if topology="0">topology1</if>
+        <if topology="1">topology2</if>
+        <if topology="2">topology3</if>
+      </dependence>
+    </element>
+    <element ui_type="GroupView">
+      <grid>inside</grid>
+      <sub_element ui_type="CheckBox" column="4" batch_field="sw2,sw3,sw4,sw5,sh4,sh2,sh7,sh9" batch_label="sw2,sw3,sw4,sw5,sh4,sh2,sh7,sh9" batch_bit="0~7" parent="tuner_data1" batch_default="false"/>
+    </element>
+    <element ui_type="GroupView">
+      <grid>inside</grid>
+      <sub_element ui_type="CheckBox" column="2" batch_field="sw1,sh1" batch_label="sw1,sh1" batch_bit="0~1" parent="tuner_data2" batch_default="false"/>
+      <element ui_type="Spinner" label="dtc1(pF)">
+        <field>dtc1</field>
+        <default>0</default>
+        <parent_field>tuner_data2</parent_field>
+        <options>
+          <option label="(0)0.43" value="00000&lt;&lt;2" />
+          <option label="(1)0.69" value="00001&lt;&lt;2" />
+          <option label="(2)0.95" value="00010&lt;&lt;2" />
+          <option label="(3)1.21" value="00011&lt;&lt;2" />
+          <option label="(4)1.47" value="00100&lt;&lt;2" />
+          <option label="(5)1.73" value="00101&lt;&lt;2" />
+          <option label="(6)1.99" value="00110&lt;&lt;2" />
+          <option label="(7)2.25" value="00111&lt;&lt;2" />
+          <option label="(8)2.51" value="01000&lt;&lt;2" />
+          <option label="(9)2.77" value="01001&lt;&lt;2" />
+          <option label="(10)3.03" value="01010&lt;&lt;2" />
+          <option label="(11)3.29" value="01011&lt;&lt;2" />
+          <option label="(12)3.55" value="01100&lt;&lt;2" />
+          <option label="(13)3.81" value="01101&lt;&lt;2" />
+          <option label="(14)4.07" value="01110&lt;&lt;2" />
+          <option label="(15)4.33" value="01111&lt;&lt;2" />
+          <option label="(16)4.59" value="10000&lt;&lt;2" />
+          <option label="(17)4.85" value="10001&lt;&lt;2" />
+          <option label="(18)5.11" value="10010&lt;&lt;2" />
+          <option label="(19)5.37" value="10011&lt;&lt;2" />
+          <option label="(20)5.63" value="10100&lt;&lt;2" />
+          <option label="(21)5.89" value="10101&lt;&lt;2" />
+          <option label="(22)6.15" value="10110&lt;&lt;2" />
+          <option label="(23)6.41" value="10111&lt;&lt;2" />
+          <option label="(24)6.67" value="11000&lt;&lt;2" />
+          <option label="(25)6.93" value="11001&lt;&lt;2" />
+          <option label="(26)7.19" value="11010&lt;&lt;2" />
+          <option label="(27)7.45" value="11011&lt;&lt;2" />
+          <option label="(28)7.71" value="11100&lt;&lt;2" />
+          <option label="(29)7.97" value="11101&lt;&lt;2" />
+          <option label="(30)8.24" value="11110&lt;&lt;2" />
+          <option label="(31)8.49" value="11111&lt;&lt;2" />
+        </options>
+      </element>
+      <element ui_type="Spinner" label="dtc2(pF)">
+        <field>dtc2</field>
+        <default>0</default>
+        <parent_field>tuner_data3</parent_field>
+        <options>
+          <option label="(0)0.25" value="0000&lt;&lt;0" />
+          <option label="(1)0.4" value="0001&lt;&lt;0" />
+          <option label="(2)0.55" value="0010&lt;&lt;0" />
+          <option label="(3)0.7" value="0011&lt;&lt;0" />
+          <option label="(4)0.85" value="0100&lt;&lt;0" />
+          <option label="(5)1" value="0101&lt;&lt;0" />
+          <option label="(6)1.15" value="0110&lt;&lt;0" />
+          <option label="(7)1.3" value="0111&lt;&lt;0" />
+          <option label="(8)1.45" value="1000&lt;&lt;0" />
+          <option label="(9)1.6" value="1001&lt;&lt;0" />
+          <option label="(10)1.75" value="1010&lt;&lt;0" />
+          <option label="(11)1.9" value="1011&lt;&lt;0" />
+          <option label="(12)2.05" value="1100&lt;&lt;0" />
+          <option label="(13)2.2" value="1101&lt;&lt;0" />
+          <option label="(14)2.35" value="1110&lt;&lt;0" />
+          <option label="(15)2.5" value="1111&lt;&lt;0" />
+        </options>
+      </element>
+    </element>
+    <element ui_type="GroupView">
+      <sub_element column="4"/>
+      <element ui_type="TextView">
+        <default>Address</default>
+      </element>
+      <element ui_type="TextView">
+        <default>0</default>
+      </element>
+      <element ui_type="TextView">
+        <default>1</default>
+      </element>
+      <element ui_type="TextView">
+        <default>2</default>
+      </element>
+      <element ui_type="TextView">
+        <default>MIPI Data</default>
+      </element>
+      <element ui_type="Edittext">
+          <field>tuner_data1</field>
+          <range ui_format="%x" format="%d">0~ff</range>
+          <children_field operation="bitwise" format="%d">sw2,sw3,sw4,sw5,sh4,sh2,sh7,sh9</children_field>
+      </element>
+      <element ui_type="Edittext">
+        <field>tuner_data2</field>
+        <range ui_format="%x" format="%d">0~7f</range>
+        <children_field operation="bitwise" format="%d">sw1,sh1,dtc1</children_field>
+      </element>
+      <element ui_type="Edittext">
+        <field>tuner_data3</field>
+        <range ui_format="%x" format="%d">0~f</range>
+        <children_field operation="bitwise" format="%d">dtc2</children_field>
+      </element>
+    </element>
+    <element ui_type="GroupView">
+      <sub_element column="2"/>
+      <element ui_type="Button" label="Read">
+        <action>
+          <cmd name="read_cmd1" cmd_type="at_cmd">AT+ERFTX=12,0,0,mipi_port,rw_type,usid,0;+ERFTX:,,tuner_data1</cmd>
+          <cmd name="read_cmd2" cmd_type="at_cmd">AT+ERFTX=12,0,0,mipi_port,rw_type,usid,1;+ERFTX:,,tuner_data2</cmd>
+          <cmd name="read_cmd3" cmd_type="at_cmd">AT+ERFTX=12,0,0,mipi_port,rw_type,usid,2;+ERFTX:,,tuner_data3</cmd>
+        </action>
+      </element>
+      <element ui_type="Button" label="Write">
+        <action>
+          <cmd name="write_cmd1" cmd_type="at_cmd">AT+ERFTX=12,0,1,mipi_port,rw_type,usid,0,tuner_data1</cmd>
+          <cmd name="write_cmd2" cmd_type="at_cmd">AT+ERFTX=12,0,1,mipi_port,rw_type,usid,1,tuner_data2</cmd>
+          <cmd name="write_cmd3" cmd_type="at_cmd">AT+ERFTX=12,0,1,mipi_port,rw_type,usid,2,tuner_data3</cmd>
+        </action>
+      </element>
+    </element>
+  </ui>
+</settings>

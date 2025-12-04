@@ -1,0 +1,436 @@
+<?xml version="1.0" encoding="utf-8"?>
+<settings>
+  <if condition="getPlatform();!=mt6765,mt6762,mt6761,mt6739,mt6768,mt6769,mt6771,mt6779,mt6781,mt6783,mt6785,mt6789"/>
+  <dualsim>true</dualsim>
+  <ui>
+    <element ui_type="Spinner" label="Force ANT Mode">
+      <field>tas_mode</field>
+      <default>0</default>
+      <slave>query_btn,ant_index</slave>
+      <options>
+        <option index="0" label="Disable" value="0" />
+        <option index="1" label="Enable" value="1" />
+        <option index="2" label="Read" value="2" />
+      </options>
+    </element>
+    <element ui_type="Spinner" label="TAS Rat" >
+      <field>rat</field>
+      <default>0</default>
+      <slave>rx_state,index_tx0,index_tx1,index_mimo1,index_mimo2,ttps,ttps_support</slave>
+      <options>
+        <option index="0" label="GSM" value="1" />
+        <option index="1" label="UMTS(W/TD)" value="2" />
+        <option index="2" label="LTE" value="3" />
+        <option index="3" label="C2K" value="4" condition="isCdma();=true" />
+        <option index="4" label="NR" value="5" />
+        <option index="5" label="LTE TDD" value="6" />
+      </options>
+    </element>
+    <element ui_type="EditText" label="TAS band(0-255)" >
+      <field>band</field>
+      <range>0~255</range>
+    </element>
+    <element ui_type="GroupView">
+      <sub_element column="1"/>
+      <grid>outside</grid>
+      <element ui_type="Spinner" label="Tx TAS State" >
+        <field>tx_state</field>
+        <default>0</default>
+        <options batch_range="0~23">
+          <option index="25" label="default" value="255" />
+        </options>
+      </element>
+      <element ui_type="Spinner" label="Rx TAS State" >
+        <field>rx_state</field>
+        <default>0</default>
+        <slave_id>rx_state</slave_id>
+        <dependence master="rat" slave_attr="ui_status">
+          <if rat="1,2,3,4">hide</if>
+          <if rat="others">visible</if>
+        </dependence>
+        <options batch_range="0~23">
+          <option index="25" label="default" value="255" />
+        </options>
+      </element>
+    </element>
+    <element ui_type="GroupView">
+      <sub_element column="2"/>
+      <slave_id>query_btn</slave_id>
+      <dependence master="tas_mode" slave_attr="ui_status">
+        <if tas_mode="0,2">hide</if>
+        <if tas_mode="1">visible</if>
+      </dependence>
+      <element ui_type="Button" label="Get index by state">
+        <action>
+          <if condition="rat=1"><!--gsm-->
+            <cmd name="query_gsm_index_by_state" cmd_type="at_cmd">AT+EGMC=1,"utas_query_ant_port",0,band,tx_state,tx_state;+EGMC:,index_tx0,index_tx1,index_prx,index_drx,index_mimo1,index_mimo2</cmd>
+          </if>
+          <elif condition="rat=2">
+            <if condition="getModemType();=2"><!--tdcdma-->
+              <cmd name="query_tdcdma_index_by_state" cmd_type="at_cmd">AT+EGMC=1,"utas_query_ant_port",2,band,tx_state,tx_state;+EGMC:,index_tx0,index_tx1,index_prx,index_drx,index_mimo1,index_mimo2</cmd>
+            </if>
+            <else><!--wcdma-->
+              <cmd name="query_wcdma_index_by_state" cmd_type="at_cmd">AT+EGMC=1,"utas_query_ant_port",1,band,tx_state,tx_state;+EGMC:,index_tx0,index_tx1,index_prx,index_drx,index_mimo1,index_mimo2</cmd>
+            </else>
+          </elif>
+          <elif condition="rat=3"><!--lte-->
+            <cmd name="query_lte_index_by_state" cmd_type="at_cmd">AT+EGMC=1,"utas_query_ant_port",4,band,tx_state,tx_state;+EGMC:,index_tx0,index_tx1,index_prx,index_drx,index_mimo1,index_mimo2</cmd>
+          </elif>
+          <elif condition="rat=6"><!--lte_tdd-->
+            <cmd name="query_lte_tdd_index_by_state" cmd_type="at_cmd">AT+EGMC=1,"utas_query_ant_port",4,band,tx_state,rx_state;+EGMC:,index_tx0,index_tx1,index_prx,index_drx,index_mimo1,index_mimo2</cmd>
+          </elif>
+          <elif condition="rat=4"><!--c2k-->
+            <cmd name="query_c2k_index_by_state" cmd_type="at_cmd">AT+EGMC=1,"utas_query_ant_port",3,band,tx_state,tx_state;+EGMC:,index_tx0,index_tx1,index_prx,index_drx,index_mimo1,index_mimo2</cmd>
+          </elif>
+          <else><!--rat=5, nr-->
+            <cmd name="query_nr_index_by_state" cmd_type="at_cmd">AT+EGMC=1,"utas_query_ant_port",5,band,tx_state,rx_state;+EGMC:,index_tx0,index_tx1,index_prx,index_drx,index_mimo1,index_mimo2</cmd>
+          </else>
+        </action>
+      </element>
+      <element ui_type="Button" label="Get state by index">
+        <action>
+          <if condition="rat=1"><!--gsm-->
+            <if condition="index_drx=255">
+              <cmd name="query_gsm_state_by_index" cmd_type="at_cmd">AT+EGMC=1,"gsm_utas",band,1,index_prx,index_prx;+EGMC:,tx_state</cmd>
+            </if>
+            <else>
+              <cmd name="query_gsm_state_by_index" cmd_type="at_cmd">AT+EGMC=1,"gsm_utas",band,2,index_prx,index_drx,index_prx;+EGMC:,tx_state</cmd>
+            </else>
+          </if>
+          <if condition="rat=2">
+            <if condition="getModemType();=1"><!--wcdma-->
+              <if condition="index_drx=255">
+                <cmd name="query_wcdma_state_by_index" cmd_type="at_cmd">AT+EGMC=1,"wcdma_utas",1,band,1,index_prx,index_drx,0,0,index_prx;+EGMC:,tx_state</cmd>
+              </if>
+              <else>
+                <cmd name="query_wcdma_state_by_index" cmd_type="at_cmd">AT+EGMC=1,"wcdma_utas",1,band,2,index_prx,index_drx,0,0,index_prx;+EGMC:,tx_state</cmd>
+              </else>
+            </if>
+            <else><!--tdscdma-->
+              <if condition="index_drx=255">
+                <cmd name="query_tdscdma_state_by_index" cmd_type="at_cmd">AT+EGMC=1,"t_utas_query",band,1,index_prx;+EGMC:,tx_state</cmd>
+              </if>
+              <else>
+                <cmd name="query_tdscdma_state_by_index" cmd_type="show_dialog">The tdscdma only support 1 path:PRx, DRx should be invalid</cmd>
+              </else>
+            </else>
+          </if>
+          <if condition="rat=4"><!--c2k-->
+            <if condition="index_drx=255">
+              <cmd name="query_c2k_state_by_index" cmd_type="at_cmd">AT+EGMC=1,"c2k_utas",band,1,index_prx,index_drx;+EGMC:,tx_state</cmd>
+            </if>
+            <else>
+              <cmd name="query_c2k_state_by_index" cmd_type="at_cmd">AT+EGMC=1,"c2k_utas",band,2,index_prx,index_drx;+EGMC:,tx_state</cmd>
+            </else>
+          </if>
+          <if condition="rat=3"><!--lte-->
+            <if condition="index_drx=255">
+              <cmd name="query_lte_state_by_index" cmd_type="show_dialog">The index DRx should not be invalid</cmd>
+            </if>
+            <elif condition="index_mimo1!=255&amp;index_mimo2!=255">
+              <cmd name="query_lte_state_by_index" cmd_type="at_cmd">AT+EGMC=1,"l_utas_query",1,band,4,index_prx,index_drx,index_mimo1,index_mimo2,index_tx0;+EGMC:,tx_state</cmd>
+            </elif>
+            <elif condition="index_mimo1=255&amp;index_mimo2=255">
+              <cmd name="query_lte_state_by_index" cmd_type="at_cmd">AT+EGMC=1,"l_utas_query",1,band,2,index_prx,index_drx,index_mimo1,index_mimo2,index_tx0;+EGMC:,tx_state</cmd>
+            </elif>
+            <else>
+              <cmd name="query_lte_state_by_index" cmd_type="show_dialog">The index MIMO1 and MIMO2 should be both invalid or none invalid</cmd>
+            </else>
+          </if>
+          <if condition="rat=6"><!--lte_tdd-->
+            <cmd name="query_lte_tdd_state_by_index" cmd_type="show_dialog">LTE TDD doesn't support Query State By Index</cmd>
+          </if>
+          <if condition="rat=5"><!--nr-->
+            <if condition="index_drx=255">
+              <cmd name="query_nr_state_by_index" cmd_type="show_dialog">The index DRx should not be invalid</cmd>
+            </if>
+            <elif condition="index_mimo1!=255&amp;index_mimo2!=255">
+              <cmd name="query_nr_state_by_index" cmd_type="at_cmd">AT+EGMC=1,"n_utas_query",1,band,4,index_prx,index_drx,index_mimo1,index_mimo2,index_tx0,index_tx1;+EGMC:,tx_state,rx_state</cmd>
+            </elif>
+            <elif condition="index_mimo1=255&amp;index_mimo2=255">
+              <cmd name="query_nr_state_by_index" cmd_type="at_cmd">AT+EGMC=1,"n_utas_query",1,band,2,index_prx,index_drx,index_mimo1,index_mimo2,index_tx0,index_tx1;+EGMC:,tx_state,rx_state</cmd>
+            </elif>
+            <else>
+              <cmd name="query_nr_state_by_index" cmd_type="show_dialog">The index MIMO1 and MIMO2 should be both invalid or none invalid</cmd>
+            </else>
+          </if>
+        </action>
+      </element>
+    </element>
+    <element ui_type="GroupView" label="ANT Index">
+      <slave_id>ant_index</slave_id>
+      <dependence master="tas_mode" slave_attr="ui_status">
+        <if tas_mode="0,2">hide</if>
+        <if tas_mode="1">visible</if>
+      </dependence>
+      <sub_element column="2"/>
+      <grid>outside</grid>
+      <element ui_type="Spinner" label="TX0" >
+        <field>index_tx0</field>
+        <default>0</default>
+        <slave_id>index_tx0</slave_id>
+        <dependence master="rat" slave_attr="ui_status">
+          <if rat="1,2,4">hide</if>
+          <if rat="others">visible</if>
+        </dependence>
+        <options>
+          <option index="0" label="ANT0" value="0" />
+          <option index="1" label="ANT1" value="1" />
+          <option index="2" label="ANT2" value="2" />
+          <option index="3" label="ANT3" value="3" />
+          <option index="4" label="ANT4" value="4" />
+          <option index="5" label="ANT5" value="5" />
+          <option index="6" label="ANT6" value="6" />
+          <option index="7" label="ANT7" value="7" />
+          <option index="8" label="ANT8" value="8" />
+          <option index="9" label="ANT9" value="9" />
+          <option index="10" label="Invalid" value="255" />
+        </options>
+      </element>
+      <element ui_type="Spinner" label="TX1" >
+        <field>index_tx1</field>
+        <default>0</default>
+        <slave_id>index_tx1</slave_id>
+        <dependence master="rat" slave_attr="ui_status">
+          <if rat="1,2,3,4">hide</if>
+          <if rat="others">visible</if>
+        </dependence>
+        <options>
+          <option index="0" label="ANT0" value="0" />
+          <option index="1" label="ANT1" value="1" />
+          <option index="2" label="ANT2" value="2" />
+          <option index="3" label="ANT3" value="3" />
+          <option index="4" label="ANT4" value="4" />
+          <option index="5" label="ANT5" value="5" />
+          <option index="6" label="ANT6" value="6" />
+          <option index="7" label="ANT7" value="7" />
+          <option index="8" label="ANT8" value="8" />
+          <option index="9" label="ANT9" value="9" />
+          <option index="10" label="Invalid" value="255" />
+        </options>
+      </element>
+      <element ui_type="Spinner" label="PRX" >
+        <field>index_prx</field>
+        <default>0</default>
+        <options>
+          <option index="0" label="ANT0" value="0" />
+          <option index="1" label="ANT1" value="1" />
+          <option index="2" label="ANT2" value="2" />
+          <option index="3" label="ANT3" value="3" />
+          <option index="4" label="ANT4" value="4" />
+          <option index="5" label="ANT5" value="5" />
+          <option index="6" label="ANT6" value="6" />
+          <option index="7" label="ANT7" value="7" />
+          <option index="8" label="ANT8" value="8" />
+          <option index="9" label="ANT9" value="9" />
+          <option index="10" label="Invalid" value="255" />
+        </options>
+      </element>
+      <element ui_type="Spinner" label="DRX" >
+        <field>index_drx</field>
+        <default>0</default>
+        <options>
+          <option index="0" label="ANT0" value="0" />
+          <option index="1" label="ANT1" value="1" />
+          <option index="2" label="ANT2" value="2" />
+          <option index="3" label="ANT3" value="3" />
+          <option index="4" label="ANT4" value="4" />
+          <option index="5" label="ANT5" value="5" />
+          <option index="6" label="ANT6" value="6" />
+          <option index="7" label="ANT7" value="7" />
+          <option index="8" label="ANT8" value="8" />
+          <option index="9" label="ANT9" value="9" />
+          <option index="10" label="Invalid" value="255" />
+        </options>
+      </element>
+      <element ui_type="Spinner" label="MIMO1" >
+        <field>index_mimo1</field>
+        <default>0</default>
+        <slave_id>index_mimo1</slave_id>
+        <dependence master="rat" slave_attr="ui_status">
+          <if rat="1,2,4">hide</if>
+          <if rat="others">visible</if>
+        </dependence>
+        <options>
+          <option index="0" label="ANT0" value="0" />
+          <option index="1" label="ANT1" value="1" />
+          <option index="2" label="ANT2" value="2" />
+          <option index="3" label="ANT3" value="3" />
+          <option index="4" label="ANT4" value="4" />
+          <option index="5" label="ANT5" value="5" />
+          <option index="6" label="ANT6" value="6" />
+          <option index="7" label="ANT7" value="7" />
+          <option index="8" label="ANT8" value="8" />
+          <option index="9" label="ANT9" value="9" />
+          <option index="10" label="Invalid" value="255" />
+        </options>
+      </element>
+      <element ui_type="Spinner" label="MIMO2" >
+        <field>index_mimo2</field>
+        <default>0</default>
+        <slave_id>index_mimo2</slave_id>
+        <dependence master="rat" slave_attr="ui_status">
+          <if rat="1,2,4">hide</if>
+          <if rat="others">visible</if>
+        </dependence>
+        <options>
+          <option index="0" label="ANT0" value="0" />
+          <option index="1" label="ANT1" value="1" />
+          <option index="2" label="ANT2" value="2" />
+          <option index="3" label="ANT3" value="3" />
+          <option index="4" label="ANT4" value="4" />
+          <option index="5" label="ANT5" value="5" />
+          <option index="6" label="ANT6" value="6" />
+          <option index="7" label="ANT7" value="7" />
+          <option index="8" label="ANT8" value="8" />
+          <option index="9" label="ANT9" value="9" />
+          <option index="10" label="Invalid" value="255" />
+        </options>
+      </element>
+    </element>
+    <element ui_type="GroupView">
+      <if condition="getModemVersion();!&gt;NR15"/>
+      <slave_id>ttps</slave_id>
+      <dependence master="rat" slave_attr="ui_status">
+        <if rat="1,2,4">hide</if>
+        <if rat="others">visible</if>
+      </dependence>
+      <grid>outside</grid>
+      <sub_element column="1"/>
+      <element ui_type="CheckBox" label="TTPS support">
+        <field>ttps_support</field>
+        <default>false</default>
+        <options>
+          <option state="true" value="1"/>
+          <option state="false" value="0"/>
+        </options>
+      <slave>set_all</slave>
+      <slave_id>ttps_support</slave_id>
+      <dependence master="rat" slave_attr="value">
+        <if rat="1,2,4">0</if>
+      </dependence>
+      </element>
+      <element ui_type="Spinner" label="TTPS TX port" >
+        <field>ttps_port</field>
+        <default>0</default>
+        <options>
+          <option index="0" label="0" value="0" />
+          <option index="1" label="1" value="1" />
+        </options>
+      </element>
+    </element>
+    <element ui_type="Button" label="Set">
+      <action>
+        <if condition="rat=3,5,6&amp;ttps_support=1"><!--lte/lte_tdd/nr and support ttps-->
+          <if condition="tas_mode=2"><!--read-->
+            <cmd name="read_ttps_cmd" cmd_type="show_dialog">TTPS doesn't support Force ANT Mode: Read</cmd>
+          </if>
+          <elif condition="tas_mode=0"><!--disable-->
+            <if condition="rat=3,6">
+              <cmd name="disable_ttps_cmd(lte|lte_tdd)" cmd_type="at_cmd">AT+EGMC=1,"lte_force_ttps",tas_mode,255,255,255,band</cmd>
+            </if>
+            <else condition="rat=5">
+              <cmd name="disable_ttps_cmd(nr)" cmd_type="at_cmd">AT+EGMC=1,"NR_force_TTPS",tas_mode,255,255,255,band</cmd>
+            </else>
+          </elif>
+          <else><!--enable-->
+            <if condition="rat=3">
+              <cmd name="enable_ttps_cmd(lte)" cmd_type="at_cmd">AT+EGMC=1,"lte_force_ttps",tas_mode,tx_state,tx_state,ttps_port,band</cmd>
+            </if>
+            <elif condition="rat=6">
+              <cmd name="enable_ttps_cmd(lte_tdd)" cmd_type="at_cmd">AT+EGMC=1,"lte_force_ttps",tas_mode,tx_state,rx_state,ttps_port,band</cmd>
+            </elif>
+            <else condition="rat=5(nr)">
+              <cmd name="enable_ttps_cmd" cmd_type="at_cmd">AT+EGMC=1,"NR_force_TTPS",tas_mode,tx_state,rx_state,ttps_port,band</cmd>
+            </else>
+          </else>
+        </if>
+        <else>
+          <if condition="rat=5"><!--NR-->
+            <if condition="tas_mode=0"><!--disable-->
+              <cmd name="disable_cmd(nr)" cmd_type="at_cmd">AT+EGMC=1,"NrForceTxRx",3,,,band</cmd>
+            </if>
+            <elif condition="tas_mode=2"><!--read-->
+              <cmd name="read_cmd(nr)" cmd_type="at_cmd">AT+EGMC=1,"NrForceTxRx",5,,,band;+EGMC:,tx_state,rx_state</cmd>
+            </elif>
+            <else><!--enable-->
+              <cmd name="enable_cmd(nr)" cmd_type="at_cmd">AT+EGMC=1,"NrForceTxRx",4,tx_state,rx_state,band</cmd>
+            </else>
+          </if>
+          <elif condition="rat=6"><!--LTE_TDD-->
+            <if condition="tas_mode=0"><!--disable-->
+              <cmd name="disable_cmd(lte_tdd)" cmd_type="at_cmd">AT+EGMC=1,"lte_tdd_tx_rx",0</cmd>
+            </if>
+            <elif condition="tas_mode=2"><!--read-->
+              <cmd name="read_cmd(lte_tdd)" cmd_type="show_dialog">LTE TDD doesn't support Force ANT Mode: Read</cmd>
+            </elif>
+            <else><!--enable-->
+              <cmd name="enable_cmd(lte_tdd)" cmd_type="at_cmd">AT+EGMC=1,"lte_tdd_tx_rx",1,tx_state,rx_state</cmd>
+            </else>
+          </elif>
+          <else> <!-- other RAT -->
+            <if condition="tas_mode=0"><!--disable-->
+              <cmd name="disable_cmd" cmd_type="at_cmd">AT+ETXANT=3,rat,,band</cmd>
+            </if>
+            <elif condition="tas_mode=2"><!--read-->
+              <cmd name="read_cmd" cmd_type="at_cmd">AT+ETXANT=5,rat,,band;+ETXANT:,tx_state</cmd>
+            </elif>
+            <else><!--enable-->
+              <cmd name="enable_cmd" cmd_type="at_cmd">AT+ETXANT=4,rat,tx_state,band</cmd>
+            </else>
+          </else>
+        </else>
+      </action>
+    </element>
+    <element ui_type="GroupView">
+      <sub_element column="2"/>
+      <slave_id>set_all</slave_id>
+      <dependence master="ttps_support" slave_attr="ui_status">
+        <if ttps_support="1">hide</if>
+        <if ttps_support="others">visible</if>
+      </dependence>
+      <element ui_type="Button" label="All Band Set">
+        <action>
+          <if condition="rat=5"><!--NR-->
+            <if condition="tas_mode=0"><!--disable-->
+              <cmd name="disable_all_cmd(nr)" cmd_type="at_cmd">AT+EGMC=1,"NrForceTxRx",tas_mode,,,write_nvram</cmd>
+            </if>
+            <elif condition="tas_mode=2"><!--read-->
+              <cmd name="read_all_cmd(nr)" cmd_type="at_cmd">AT+EGMC=1,"NrForceTxRx",tas_mode,,,write_nvram;+EGMC:,tx_state,rx_state</cmd>
+            </elif>
+            <else><!--enable-->
+              <cmd name="enable_all_cmd(nr)" cmd_type="at_cmd">AT+EGMC=1,"NrForceTxRx",tas_mode,tx_state,rx_state,write_nvram</cmd>
+            </else>
+          </if>
+          <elif condition="rat=6"><!--LTE_TDD-->
+            <cmd name="set_all_cmd(lte_tdd)" cmd_type="show_dialog">LTE TDD doesn't support All Band Set</cmd>
+          </elif>
+          <else>
+            <if condition="tas_mode=0"><!--disable-->
+              <cmd name="disable_all_cmd" cmd_type="at_cmd">AT+ETXANT=tas_mode,rat,,band,write_nvram</cmd>
+            </if>
+            <elif condition="tas_mode=2"><!--read-->
+              <cmd name="read_all_cmd" cmd_type="at_cmd">AT+ETXANT=tas_mode,rat,,band,write_nvram;+ETXANT:,tx_state</cmd>
+            </elif>
+            <else><!--enable-->
+              <cmd name="enable_all_cmd" cmd_type="at_cmd">AT+ETXANT=tas_mode,rat,tx_state,band,write_nvram</cmd>
+            </else>
+          </else>
+        </action>
+      </element>
+      <element ui_type="checkbox" label="Nvram">
+        <field>write_nvram</field>
+        <default>false</default>
+        <options>
+          <option state="true" value="1"/>
+          <option state="false" value="0"/>
+        </options>
+      </element>
+    </element>
+    <element ui_type="TextView">
+      <field>result</field>
+      <textmode>append</textmode>
+      <default>Result:</default>
+    </element>
+  </ui>
+</settings>

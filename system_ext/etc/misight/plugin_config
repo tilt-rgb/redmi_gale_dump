@@ -1,0 +1,13 @@
+plugins: 7
+EventPrivacyCompliance[thread:eventInfo]:0 static
+OtEventCompliance[thread:eventInfo]:0 static
+EventInfoPack[thread:eventInfo]:0 static
+EventStorageManager[thread:eventInfo]:0 static
+EventLogProcessor[thread:eventInfo]:0 static
+EventRadiator[thread:eventRadiator]:0 static
+BSPLogManager[thread:bspLogMgr]:0 static
+pipelines:2
+dftFaultEvent:EventPrivacyCompliance EventStorageManager EventInfoPack
+otEvent:OtEventCompliance EventStorageManager EventInfoPack
+pipelinetriggers:1
+EventRadiator:dftFaultEvent otEvent

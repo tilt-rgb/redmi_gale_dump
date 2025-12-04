@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EventQuota>
+<Dev>
+<Summary defDailyCnt="200" defLogCnt="100" defLogSpace="300" UploadExpireYear="3" Level1Month="3" Level1Max="8" Level2Month="12" Level2Max="5" Level3Month="24" Level3Max="3" LogStatic="240"/>
+<Domain name="security" eventMin ="904000000" eventMax ="904999999"  logSame="true"/>
+<Domain name="media" eventMin="906000000" eventMax="906999999">
+    <SubDomain eventMin="906001001" eventMax="906001354" logSpace="300" logSame="true"/>
+    <SubDomain eventMin="906003031" eventMax="906003321" logSpace="300" logSame="true"/>
+    <SubDomain eventMin="906006001" eventMax="906006010" logSpace="300" logSame="true"/>
+    <SubDomain eventMin="906006031" eventMax="906006035" logSpace="300" logSame="true"/>
+</Domain>
+<Domain name="power" eventMin="903000000" eventMax="903999999">
+    <SubDomain eventMin="903000000" eventMax="903999999" logSame="true" maxLogCnt="50"/>
+</Domain>
+<Event  eventId="908003001" dailyCnt="24000" />
+</Dev>
+
+<Stable>
+<Summary defDailyCnt="200" defLogCnt="10" defLogSpace="300" UploadExpireYear="3" Level1Month="3" Level1Max="8" Level2Month="12" Level2Max="5" Level3Month="24" Level3Max="2" LogStatic="240"/>
+<Domain name="security" eventMin ="904000000" eventMax ="904999999"  logSame="true"/>
+<Domain name="media" eventMin="906000000" eventMax="906999999">
+    <SubDomain eventMin="906001001" eventMax="906001354" logSpace="300" logSame="true"/>
+    <SubDomain eventMin="906003031" eventMax="906003321" logSpace="300" logSame="true"/>
+    <SubDomain eventMin="906006001" eventMax="906006010" logSpace="300" logSame="true"/>
+    <SubDomain eventMin="906006031" eventMax="906006035" logSpace="300" logSame="true"/>
+</Domain>
+<Domain name="power" eventMin="903000000" eventMax="903999999">
+    <SubDomain eventMin="903000000" eventMax="903999999" logSame="true" maxLogCnt="50"/>
+</Domain>
+<Event  eventId="908003001" dailyCnt="24000" />
+</Stable>
+</EventQuota>

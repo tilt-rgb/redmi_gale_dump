@@ -1,0 +1,3 @@
+set noparent
+include miui/frameworks/base:/owners/INPUT_OWNERS
+yuyouyang@xiaomi.com

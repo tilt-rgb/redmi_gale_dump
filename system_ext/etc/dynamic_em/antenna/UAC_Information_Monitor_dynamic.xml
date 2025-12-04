@@ -1,0 +1,300 @@
+<?xml version="1.0" encoding="utf-8"?>
+<settings>
+  <ui>
+    <lifecycle>
+      <action type="onCreate">
+        <cmd name="onCreate" cmd_type="api" next_step="run_in_background|exit_activity"></cmd>
+      </action>
+      <action type="onBackPressed">
+        <cmd name="exit_activity" cmd_type="exit" next_step="none">exit</cmd>
+      </action>
+      <action type="onDestroy">
+        <cmd name="stop_dmf_urc" cmd_type="at_cmd">AT+ERFIDX=4,,0</cmd>
+        <cmd name="unregister" cmd_type="urc">unregisterUrc</cmd>
+        <cmd name="exit_background" cmd_type="api">runInBackground(false,UAC Information Monitor)</cmd>
+      </action>
+    </lifecycle>
+    <element ui_type="GroupView">
+      <sub_element column="2"/>
+      <element ui_type="Button" label="Start">
+        <action>
+          <cmd name="run_in_background" cmd_type="api" fail_action="stop">runInBackground(true,UAC Information Monitor)</cmd>
+          <cmd name="registerUrc" cmd_type="urc">registerUrc();+ERFIDX:4,0,ant_num,&lt;12&gt;[scenario_info_ii,as_instance_info_ii,channel_info_ii,cdtn_info_ii],lte_band_num,&lt;lte_band_num&gt;[lte_band_ii],nr_band_num,&lt;nr_band_num&gt;[nr_band_ii];+ERFIDX:4,1,ant_sub_num,&lt;12&gt;[scenario_info_sub_ii,as_instance_info_sub_ii,channel_info_sub_ii,cdtn_info_sub_ii],lte_band_sub_num,&lt;lte_band_sub_num&gt;[lte_band_sub_ii],nr_band_sub_num,&lt;nr_band_sub_num&gt;[nr_band_sub_ii]</cmd>
+          <cmd name="allow_urc" cmd_type="at_cmd">AT+EURCALLOW="+ERFIDX:"</cmd>
+          <cmd name="request_dmf_urc" cmd_type="at_cmd" next_step="stop_dmf_urc|unregister">AT+ERFIDX=4,,1</cmd>
+        </action>
+      </element>
+      <element ui_type="Button" label="Stop">
+        <action>
+          <cmd name="stop_dmf_urc" cmd_type="at_cmd" next_step="run_in_background|exit_activity">AT+ERFIDX=4,,0</cmd>
+          <cmd name="unregister" cmd_type="urc">unregisterUrc</cmd>
+          <cmd name="exit_background" cmd_type="api" next_step="run_in_background|exit_activity">runInBackground(false,UAC Information Monitor)</cmd>
+        </action>
+      </element>
+    </element>
+    <element ui_type="GroupView" label="ANT">
+      <grid>outside</grid>
+      <sub_element column="6" batch_element="ant0~11"/>
+      <element ui_type="CheckBox" label="">
+        <field>ant</field>
+        <default>false</default>
+        <slave>info_ii,info_sub_ii</slave>
+        <options>
+          <option state="true" value="1"/>
+          <option state="false" value="0"/>
+        </options>
+      </element>
+    </element>
+    <element ui_type="GroupView">
+      <grid>outside</grid>
+      <sub_element column="2"/>
+      <element ui_type="CheckBox" label="Band">
+        <field>bd</field>
+        <default>false</default>
+        <slave>band_info</slave>
+        <options>
+          <option state="true" value="1"/>
+          <option state="false" value="0"/>
+        </options>
+      </element>
+      <element ui_type="CheckBox" label="Scenario">
+        <field>scenario</field>
+        <default>false</default>
+        <slave>scenario_info,scenario_info0~11,scenario_info_sub0~11</slave>
+        <options>
+          <option state="true" value="1"/>
+          <option state="false" value="0"/>
+        </options>
+      </element>
+      <element ui_type="CheckBox" label="As_instance">
+        <field>as_instance</field>
+        <default>false</default>
+        <slave>as_instance_info,as_instance_info0~11,as_instance_info_sub0~11</slave>
+        <options>
+          <option state="true" value="1"/>
+          <option state="false" value="0"/>
+        </options>
+      </element>
+      <element ui_type="CheckBox" label="Split Band">
+        <field>channel</field>
+        <default>false</default>
+        <slave>channel_info,channel_info0~11,channel_info_sub0~11</slave>
+        <options>
+          <option state="true" value="1"/>
+          <option state="false" value="0"/>
+        </options>
+      </element>
+      <element ui_type="CheckBox" label="Condition">
+        <field>cdtn</field>
+        <default>false</default>
+        <slave>cdtn_info,cdtn_info0~11,cdtn_info_sub0~11</slave>
+        <options>
+          <option state="true" value="1"/>
+          <option state="false" value="0"/>
+        </options>
+      </element>
+    </element>
+    <element ui_type="GroupView">
+      <if condition="getSimCount();>1"/>
+      <grid>outside</grid>
+      <sub_element column="2" batch_element="sim1~2"/>
+      <element ui_type="CheckBox" label="SIM">
+        <field>sim</field>
+        <default>true</default>
+        <slave>inf_panel_ii,band_ii</slave>
+        <options>
+          <option state="true" value="1"/>
+          <option state="false" value="0"/>
+        </options>
+      </element>
+    </element>
+  </ui>
+  <ui floating="true">
+    <element ui_type="GroupView">
+      <ui_status>runtime</ui_status>
+      <slave_id>band_info</slave_id>
+      <dependence master="bd" slave_attr="ui_status">
+        <if bd="1">visible</if>
+        <if bd="others">hide</if>
+      </dependence>
+      <element ui_type="TextView" label="SIM1-Band">
+        <field>band0</field>
+        <ui_status>runtime</ui_status>
+        <default>-</default>
+        <slave_id>band1</slave_id>
+        <dependence master="sim1" slave_attr="ui_status">
+          <if sim1="0">hide</if>
+          <if sim1="others">visible</if>
+        </dependence>
+      </element>
+      <element ui_type="TextView" label="SIM2-Band">
+        <if condition="getSimCount();>1"/>
+        <field>band1</field>
+        <ui_status>runtime</ui_status>
+        <default>-</default>
+        <slave_id>band2</slave_id>
+        <dependence master="sim2" slave_attr="ui_status">
+          <if sim2="1">visible</if>
+          <if sim2="others">hide</if>
+        </dependence>
+      </element>
+    </element>
+    <element ui_type="GroupView">
+      <sub_element column="5"/>
+      <element ui_type="TextView" label="ANT"/>
+      <element ui_type="TextView" label="Scen.">
+        <ui_status>runtime</ui_status>
+        <slave_id>scenario_info</slave_id>
+        <dependence master="scenario" slave_attr="ui_status">
+          <if scenario="1">visible</if>
+          <if scenario="others">hide</if>
+        </dependence>
+      </element>
+      <element ui_type="TextView" label="AS">
+        <ui_status>runtime</ui_status>
+        <slave_id>as_instance_info</slave_id>
+        <dependence master="as_instance" slave_attr="ui_status">
+          <if as_instance="1">visible</if>
+          <if as_instance="others">hide</if>
+        </dependence>
+      </element>
+      <element ui_type="TextView" label="Split">
+        <ui_status>runtime</ui_status>
+        <slave_id>channel_info</slave_id>
+        <dependence master="channel" slave_attr="ui_status">
+          <if channel="1">visible</if>
+          <if channel="others">hide</if>
+        </dependence>
+      </element>
+      <element ui_type="TextView" label="Cond.">
+        <ui_status>runtime</ui_status>
+        <slave_id>cdtn_info</slave_id>
+        <dependence master="cdtn" slave_attr="ui_status">
+          <if cdtn="1">visible</if>
+          <if cdtn="others">hide</if>
+        </dependence>
+      </element>
+    </element>
+    <element ui_type="GroupView">
+      <ui_status>runtime</ui_status>
+      <sub_element column="1" batch_element="info0~11"/>
+      <slave_id>inf_panel1</slave_id>
+      <dependence master="sim1" slave_attr="ui_status">
+        <if sim1="0">hide</if>
+        <if sim1="others">visible</if>
+      </dependence>
+      <element ui_type="GroupView">
+        <field>info</field>
+        <ui_status>runtime</ui_status>
+        <slave_id>info</slave_id>
+        <dependence master="ant_ii" slave_attr="ui_status">
+          <if ant_ii="1">visible</if>
+          <if ant_ii="others">hide</if>
+        </dependence>
+        <sub_element column="5"/>
+        <element ui_type="TextView" label="SIM1-"/>
+        <element ui_type="TextView">
+          <field>scenario_info</field>
+          <ui_status>runtime</ui_status>
+          <default>-</default>
+          <slave_id>scenario_info</slave_id>
+          <dependence master="scenario" slave_attr="ui_status">
+            <if scenario="1">visible</if>
+            <if scenario="others">hide</if>
+          </dependence>
+        </element>
+        <element ui_type="TextView">
+          <field>as_instance_info</field>
+          <ui_status>runtime</ui_status>
+          <default>-</default>
+          <slave_id>as_instance_info</slave_id>
+          <dependence master="as_instance" slave_attr="ui_status">
+            <if as_instance="1">visible</if>
+            <if as_instance="others">hide</if>
+          </dependence>
+        </element>
+        <element ui_type="TextView">
+          <field>channel_info</field>
+          <ui_status>runtime</ui_status>
+          <default>-</default>
+          <slave_id>channel_info</slave_id>
+          <dependence master="channel" slave_attr="ui_status">
+            <if channel="1">visible</if>
+            <if channel="others">hide</if>
+          </dependence>
+        </element>
+        <element ui_type="TextView">
+          <field>cdtn_info</field>
+          <ui_status>runtime</ui_status>
+          <default>-</default>
+          <slave_id>cdtn_info</slave_id>
+          <dependence master="cdtn" slave_attr="ui_status">
+            <if cdtn="1">visible</if>
+            <if cdtn="others">hide</if>
+          </dependence>
+        </element>
+      </element>
+    </element>
+    <element ui_type="GroupView">
+      <if condition="getSimCount();>1"/>
+      <ui_status>runtime</ui_status>
+      <sub_element column="1" batch_element="info_sub0~11"/>
+      <slave_id>inf_panel2</slave_id>
+      <dependence master="sim2" slave_attr="ui_status">
+        <if sim2="1">visible</if>
+        <if sim2="others">hide</if>
+      </dependence>
+      <element ui_type="GroupView">
+        <field>info_sub</field>
+        <ui_status>runtime</ui_status>
+        <slave_id>info_sub</slave_id>
+        <dependence master="ant_ii" slave_attr="ui_status">
+          <if ant_ii="1">visible</if>
+          <if ant_ii="others">hide</if>
+        </dependence>
+        <sub_element column="5"/>
+        <element ui_type="TextView" label="SIM2-"/>
+        <element ui_type="TextView">
+          <field>scenario_info_sub</field>
+          <ui_status>runtime</ui_status>
+          <default>-</default>
+          <slave_id>scenario_info_sub</slave_id>
+          <dependence master="scenario" slave_attr="ui_status">
+            <if scenario="1">visible</if>
+            <if scenario="others">hide</if>
+          </dependence>
+        </element>
+        <element ui_type="TextView">
+          <field>as_instance_info_sub</field>
+          <ui_status>runtime</ui_status>
+          <default>-</default>
+          <slave_id>as_instance_info_sub</slave_id>
+          <dependence master="as_instance" slave_attr="ui_status">
+            <if as_instance="1">visible</if>
+            <if as_instance="others">hide</if>
+          </dependence>
+        </element>
+        <element ui_type="TextView">
+          <field>channel_info_sub</field>
+          <ui_status>runtime</ui_status>
+          <default>-</default>
+          <slave_id>channel_info_sub</slave_id>
+          <dependence master="channel" slave_attr="ui_status">
+            <if channel="1">visible</if>
+            <if channel="others">hide</if>
+          </dependence>
+        </element>
+        <element ui_type="TextView">
+          <field>cdtn_info_sub</field>
+          <ui_status>runtime</ui_status>
+          <default>-</default>
+          <slave_id>cdtn_info_sub</slave_id>
+          <dependence master="cdtn" slave_attr="ui_status">
+            <if cdtn="1">visible</if>
+            <if cdtn="others">hide</if>
+          </dependence>
+        </element>
+      </element>
+    </element>
+  </ui>
+</settings>

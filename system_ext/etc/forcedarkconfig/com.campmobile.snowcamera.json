@@ -1,0 +1,103 @@
+{
+  "packageName": "com.campmobile.snowcamera",
+  "forceDark": true,
+  "mainRule": 128,
+  "forceDarkActivityConfigList": [
+    {
+      "activityName": "com.linecorp.b612.android.activity.ActivityCamera",
+      "forceDark": true,
+      "forceDarkViewConfigList": [
+        {
+          "viewName": "com.linecorp.b612.android.view.NewMarkImageButton",
+          "id": "btn_image",
+          "forceDark": true,
+          "usage": 103
+        },
+        {
+          "viewName": "com.linecorp.b612.android.activity.activitymain.qualitymode.QualityModeSwitchView",
+          "id": "quality_mode_switch",
+          "forceDark": true,
+          "usage": 105,
+          "conditions": [
+            {
+              "parent": 0,
+              "viewName": "androidx.constraintlayout.widget.ConstraintLayout",
+              "index": -1,
+              "id": "layout_quality_mode"
+            },
+            {
+              "parent": 2,
+              "viewName": "com.linecorp.b612.android.activity.activitymain.views.RootView",
+              "index": -1,
+              "id": "main_root_layout"
+            }
+          ]
+        },
+        {
+          "viewName": "androidx.appcompat.widget.AppCompatImageView",
+          "id": "item_image",
+          "forceDark": true,
+          "usage": 103,
+          "conditions": [
+            {
+              "parent": 0,
+              "viewName": "com.linecorp.b612.android.view.PressedScaleConstraintLayout",
+              "index": -1,
+              "id": "entire_view"
+            },
+            {
+              "parent": 1,
+              "viewName": "androidx.recyclerview.widget.RecyclerView",
+              "index": -1,
+              "id": "beauty_detail_list"
+            },
+            {
+              "parent": 2,
+              "viewName": "androidx.constraintlayout.widget.ConstraintLayout",
+              "index": -1,
+              "id": "beauty_detail_layout"
+            }
+          ]
+        },
+        {
+          "viewName": "androidx.appcompat.widget.AppCompatImageView",
+          "id": "item_image",
+          "forceDark": true,
+          "usage": 103,
+          "conditions": [
+            {
+              "parent": 0,
+              "viewName": "com.linecorp.b612.android.view.PressedScaleConstraintLayout",
+              "index": -1,
+              "id": "entire_view"
+            },
+            {
+              "parent": 1,
+              "viewName": "androidx.recyclerview.widget.RecyclerView",
+              "index": -1,
+              "id": "beauty_makeup_list"
+            },
+            {
+              "parent": 3,
+              "viewName": "android.widget.FrameLayout",
+              "index": -1,
+              "id": "sub_container"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "activityName": "com.linecorp.b612.android.activity.setting.SettingsActivity",
+      "forceDark": true,
+      "forceDarkViewConfigList": [
+        {
+          "viewName": "androidx.appcompat.widget.AppCompatImageView",
+          "id": "top_back_btn",
+          "forceDark": true,
+          "usage": 103
+        }
+      ]
+    }
+  ]
+}

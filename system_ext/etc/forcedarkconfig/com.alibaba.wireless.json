@@ -1,0 +1,545 @@
+{
+  "packageName": "com.alibaba.wireless",
+  "forceDark": true,
+  "mainRule": 16,
+  "forceDarkActivityConfigList": [
+    {
+      "activityName": "com.alibaba.wireless.UnifyLoginActivity",
+      "forceDark": true,
+      "forceDarkViewConfigList": [
+        {
+          "viewName": "android.widget.TextView",
+          "forceDark": false,
+          "conditions": [
+            {
+              "parent": 0,
+              "viewName": "android.widget.RelativeLayout",
+              "index": -1,
+              "id": "login_info_top_title_groups"
+            },
+            {
+              "parent": 1,
+              "viewName": "android.widget.LinearLayout",
+              "index": -1,
+              "id": "login_new_ui_v3_layout"
+            },
+            {
+              "parent": 2,
+              "viewName": "com.alibaba.wireless.viewtracker.ui.TrackerFrameLayout",
+              "index": -1,
+              "id": "id_tracker_frame_layout"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "activityName": "com.alibaba.wireless.detail_dx.activity.OfferDetailActivityDX",
+      "forceDark": true,
+      "forceDarkViewConfigList": [
+        {
+          "forceDark": true,
+          "viewName": "com.alibaba.wireless.image.fresco.view.AlibabaImageView",
+          "usage": 103,
+          "conditions": [
+            {
+              "viewName": "LinearLayout",
+              "parent": 0,
+              "index": -1
+            }
+          ]
+        },
+        {
+          "forceDark": true,
+          "viewName": "ImageView",
+          "usage": 103,
+          "conditions": [
+            {
+              "viewName": "RelativeLayout",
+              "parent": 0,
+              "index": -1
+            }
+          ]
+        },
+        {
+          "forceDark": true,
+          "viewName": "AliUriImageView",
+          "usage": 103,
+          "conditions": [
+            {
+              "viewName": "DXNativeFrameLayout",
+              "parent": 0,
+              "index": -1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "activityName": "com.alibaba.wireless.container.windvane.AliWindvaneActivity",
+      "forceDark": true,
+      "forceDarkViewConfigList": [
+        {
+          "forceDark": true,
+          "viewName": "ImageView",
+          "usage": 103,
+          "id": "v5_common_return",
+          "conditions": [
+            {
+              "viewName": "RelativeLayout",
+              "parent": 0,
+              "index": -1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "activityName": "com.alibaba.wireless.launch.home.V5HomeActivity",
+      "forceDark": true,
+      "forceDarkViewConfigList": [
+        {
+          "forceDark": true,
+          "viewName": "SafeLottieView",
+          "usage": 103,
+          "id": "new_homebar_tab_img_0"
+        },
+        {
+          "forceDark": true,
+          "viewName": "AliUrlImageView",
+          "usage": 106,
+          "conditions": [
+            {
+              "viewName": "DXRootView",
+              "parent": 0,
+              "index": -1
+            },
+            {
+              "viewName": "DinamicRenderContainer",
+              "parent": 1,
+              "index": -1
+            }
+          ]
+        },
+        {
+          "viewName": "com.taobao.android.AliUrlImageView",
+          "forceDark": true,
+          "usage": 106,
+          "conditions": [
+            {
+              "parent": 0,
+              "viewName": "com.taobao.android.dinamicx.view.DXNativeFrameLayout",
+              "index": -1
+            },
+            {
+              "parent": 3,
+              "viewName": "com.alibaba.wireless.cybertron.component.list.NestedRecyclerView",
+              "index": -1,
+              "id": "cybertron_recyclerView"
+            },
+            {
+              "parent": 6,
+              "viewName": "com.taobao.uikit.feature.view.TCommonAssembleLayout",
+              "index": -1,
+              "id": "v_loading"
+            }
+          ]
+        },
+        {
+          "viewName": "com.taobao.android.AliUrlImageView",
+          "forceDark": true,
+          "usage": 103,
+          "conditions": [
+            {
+              "parent": 0,
+              "viewName": "com.taobao.android.dinamicx.view.DXNativeGridLayout",
+              "index": -1
+            },
+            {
+              "parent": 4,
+              "viewName": "com.alibaba.wireless.cybertron.component.list.NestedRecyclerView",
+              "index": -1,
+              "id": "cybertron_recyclerView"
+            },
+            {
+              "parent": 7,
+              "viewName": "com.taobao.uikit.feature.view.TCommonAssembleLayout",
+              "index": -1,
+              "id": "v_loading"
+            }
+          ]
+        },
+        {
+          "viewName": "android.widget.ImageView",
+          "forceDark": true,
+          "usage": 103,
+          "backgroundUsage": 103,
+          "conditions": [
+            {
+              "parent": 0,
+              "viewName": "android.widget.RelativeLayout",
+              "index": -1
+            },
+            {
+              "parent": 2,
+              "viewName": "android.widget.LinearLayout",
+              "index": -1
+            },
+            {
+              "parent": 4,
+              "viewName": "com.alibaba.wireless.workbench.newcyber.MyOrderView",
+              "index": -1
+            }
+          ]
+        },
+        {
+          "viewName": "com.taobao.android.dinamicx.view.DXNativeTextView",
+          "forceDark": false,
+          "conditions": [
+            {
+              "parent": 0,
+              "viewName": "com.taobao.android.dinamicx.view.DXNativeFrameLayout",
+              "index": -1
+            },
+            {
+              "parent": 2,
+              "viewName": "com.taobao.android.dinamicx.view.DXNativeRecyclerView",
+              "index": -1
+            },
+            {
+              "parent": 5,
+              "viewName": "com.alibaba.wireless.cybertron.component.list.NestedRecyclerView",
+              "index": -1,
+              "id": "cybertron_recyclerView"
+            }
+          ]
+        },
+        {
+          "viewName": "com.taobao.android.AliUrlImageView",
+          "forceDark": true,
+          "usage": 106,
+          "backgroundUsage": 106,
+          "conditions": [
+            {
+              "parent": 0,
+              "viewName": "com.taobao.android.dinamicx.view.DXNativeFrameLayout",
+              "index": -1
+            },
+            {
+              "parent": 2,
+              "viewName": "com.taobao.android.dinamicx.view.DXNativeRecyclerView",
+              "index": -1
+            },
+            {
+              "parent": 5,
+              "viewName": "com.alibaba.wireless.cybertron.component.list.NestedRecyclerView",
+              "index": -1,
+              "id": "cybertron_recyclerView"
+            }
+          ]
+        },
+        {
+          "viewName": "androidx.appcompat.widget.AppCompatTextView",
+          "forceDark": true,
+          "usage": 103,
+          "backgroundUsage": 103,
+          "conditions": [
+            {
+              "parent": 0,
+              "viewName": "com.alibaba.wireless.home.v10.tab.V10HomeTabView",
+              "index": -1
+            },
+            {
+              "parent": 1,
+              "viewName": "com.alibaba.wireless.dpl.component.tab.biz.TabViewV2",
+              "index": -1
+            },
+            {
+              "parent": 2,
+              "viewName": "com.alibaba.wireless.dpl.component.tab.biz.TabViewContainerV2",
+              "index": -1
+            }
+          ]
+        },
+        {
+          "viewName": "com.taobao.android.dinamicx.view.DXNativeTextView",
+          "forceDark": false,
+          "conditions": [
+            {
+              "parent": 0,
+              "viewName": "com.taobao.android.dinamicx.view.DXNativeFrameLayout",
+              "index": -1
+            },
+            {
+              "parent": 4,
+              "viewName": "com.alibaba.wireless.home.v10.view.HomeHeaderLayout",
+              "index": -1,
+              "id": "layout_home_tab_root"
+            },
+            {
+              "parent": 5,
+              "viewName": "com.alibaba.wireless.home.v10.view.HomeCoordinatorLayout",
+              "index": -1,
+              "id": "layout_tab_content"
+            }
+          ]
+        },
+        {
+          "viewName": "com.taobao.android.dinamicx.view.DXNativeTextView",
+          "forceDark": false,
+          "conditions": [
+            {
+              "parent": 0,
+              "viewName": "com.taobao.android.dinamicx.DXRootView",
+              "index": -1
+            },
+            {
+              "parent": 3,
+              "viewName": "com.alibaba.wireless.home.v10.view.HomeHeaderLayout",
+              "index": -1,
+              "id": "layout_home_tab_root"
+            },
+            {
+              "parent": 4,
+              "viewName": "com.alibaba.wireless.home.v10.view.HomeCoordinatorLayout",
+              "index": -1,
+              "id": "layout_tab_content"
+            }
+          ]
+        },
+        {
+          "viewName": "com.taobao.android.AliUrlImageView",
+          "forceDark": true,
+          "usage": 106,
+          "backgroundUsage": 106,
+          "conditions": [
+            {
+              "parent": 0,
+              "viewName": "com.taobao.android.dinamicx.view.DXNativeFrameLayout",
+              "index": -1
+            },
+            {
+              "parent": 4,
+              "viewName": "com.alibaba.wireless.home.v10.view.HomeHeaderLayout",
+              "index": -1,
+              "id": "layout_home_tab_root"
+            },
+            {
+              "parent": 5,
+              "viewName": "com.alibaba.wireless.home.v10.view.HomeCoordinatorLayout",
+              "index": -1,
+              "id": "layout_tab_content"
+            }
+          ]
+        },
+        {
+          "viewName": "android.widget.TextView",
+          "id": "item_first_frame_tv",
+          "forceDark": false,
+          "conditions": [
+            {
+              "parent": 0,
+              "viewName": "android.widget.RelativeLayout",
+              "index": -1
+            },
+            {
+              "parent": 1,
+              "viewName": "com.alibaba.wireless.home.dinamic.HomeNewCustomBannerForIndustry",
+              "index": -1,
+              "id": "home_new_custom_banner"
+            },
+            {
+              "parent": 6,
+              "viewName": "com.alibaba.wireless.home.v10.view.HomeHeaderLayout",
+              "index": -1,
+              "id": "layout_home_tab_root"
+            }
+          ]
+        },
+        {
+          "viewName": "com.taobao.uikit.feature.view.TCommonAssembleLayout",
+          "id": "v_loading",
+          "forceDark": true,
+          "usage": 105,
+          "backgroundUsage": 105,
+          "conditions": [
+            {
+              "parent": 0,
+              "viewName": "android.widget.FrameLayout",
+              "index": -1,
+              "id": "content"
+            },
+            {
+              "parent": 2,
+              "viewName": "android.widget.FrameLayout",
+              "index": -1,
+              "id": "v5_home_content"
+            },
+            {
+              "parent": 4,
+              "viewName": "com.alibaba.wireless.viewtracker.ui.TrackerFrameLayout",
+              "index": -1,
+              "id": "id_tracker_frame_layout"
+            }
+          ]
+        },
+        {
+          "viewName": "com.alibaba.wireless.image.fresco.view.AlibabaImageView",
+          "id": "bg_image",
+          "forceDark": true,
+          "usage": 105,
+          "backgroundUsage": 105,
+          "conditions": [
+            {
+              "parent": 0,
+              "viewName": "android.widget.FrameLayout",
+              "index": -1
+            },
+            {
+              "parent": 1,
+              "viewName": "android.widget.FrameLayout",
+              "index": -1,
+              "id": "v5_home_content"
+            },
+            {
+              "parent": 3,
+              "viewName": "com.alibaba.wireless.viewtracker.ui.TrackerFrameLayout",
+              "index": -1,
+              "id": "id_tracker_frame_layout"
+            }
+          ]
+        },
+        {
+          "viewName": "com.taobao.android.dinamicx.view.DXNativeTextView",
+          "forceDark": false,
+          "conditions": [
+            {
+              "parent": 0,
+              "viewName": "com.taobao.android.dinamicx.view.DXNativeFrameLayout",
+              "index": -1
+            },
+            {
+              "parent": 1,
+              "viewName": "com.taobao.android.dinamicx.DXRootView",
+              "index": -1,
+              "id": "cyber_item_content"
+            },
+            {
+              "parent": 2,
+              "viewName": "com.alibaba.wireless.cyber.view.CyberItemContainerView",
+              "index": -1,
+              "id": "cyber_item_container"
+            }
+          ]
+        },
+        {
+          "viewName": "com.taobao.android.dinamicx.view.DXNativeTextView",
+          "forceDark": false,
+          "conditions": [
+            {
+              "parent": 0,
+              "viewName": "com.taobao.android.dinamicx.view.DXNativeLinearLayout",
+              "index": -1
+            },
+            {
+              "parent": 3,
+              "viewName": "com.alibaba.wireless.roc.component.ui.DinamicRenderContainer",
+              "index": -1
+            },
+            {
+              "parent": 4,
+              "viewName": "com.alibaba.wireless.cybertron.component.list.NestedRecyclerView",
+              "index": -1,
+              "id": "cybertron_recyclerView"
+            }
+          ]
+        },
+        {
+          "viewName": "com.taobao.android.dinamicx.view.DXNativeTextView",
+          "forceDark": false,
+          "conditions": [
+            {
+              "parent": 0,
+              "viewName": "com.taobao.android.dinamicx.view.DXNativeFrameLayout",
+              "index": -1
+            },
+            {
+              "parent": 3,
+              "viewName": "com.alibaba.wireless.cyber.v2.view.ComponentContainer",
+              "index": -1
+            },
+            {
+              "parent": 4,
+              "viewName": "com.alibaba.wireless.cyber.v2.view.CyberList",
+              "index": -1
+            }
+          ]
+        },
+        {
+          "viewName": "com.taobao.android.dinamicx.view.DXNativeTextView",
+          "forceDark": false,
+          "conditions": [
+            {
+              "parent": 0,
+              "viewName": "com.taobao.android.dinamicx.view.DXNativeLinearLayout",
+              "index": -1
+            },
+            {
+              "parent": 4,
+              "viewName": "com.alibaba.wireless.roc.component.ui.DinamicRenderContainer",
+              "index": -1
+            },
+            {
+              "parent": 5,
+              "viewName": "com.alibaba.wireless.cybertron.protocol.multilayer.PartnerRecyclerView",
+              "index": -1,
+              "id": "cybertron_recyclerView"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "activityName": "com.taobao.message.chat.page.chat.ChatActivity",
+      "forceDark": true,
+      "forceDarkViewConfigList": [
+        {
+          "viewName": "com.taobao.uikit.feature.view.TImageView",
+          "forceDark": true,
+          "usage": 103,
+          "conditions": [
+            {
+              "parent": 0,
+              "viewName": "android.widget.FrameLayout",
+              "index": -1
+            },
+            {
+              "parent": 2,
+              "viewName": "android.widget.RelativeLayout",
+              "index": -1,
+              "id": "root_view"
+            }
+          ]
+        },
+        {
+          "viewName": "com.taobao.uikit.feature.view.TImageView",
+          "forceDark": true,
+          "usage": 103,
+          "conditions": [
+            {
+              "parent": 0,
+              "viewName": "android.widget.FrameLayout",
+              "index": -1
+            },
+            {
+              "parent": 2,
+              "viewName": "android.widget.RelativeLayout",
+              "index": -1,
+              "id": "root_view"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

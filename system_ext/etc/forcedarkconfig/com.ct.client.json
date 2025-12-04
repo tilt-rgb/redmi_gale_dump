@@ -1,0 +1,633 @@
+{
+  "packageName": "com.ct.client",
+  "forceDark": true,
+  "mainRule": 0,
+  "secondaryRule": 8,
+  "forceDarkActivityConfigList": [
+    {
+      "activityName": "com.ct.client.virtualperson.activity.DigitalPersonActivity",
+      "forceDark": true,
+      "forceDarkViewConfigList": [
+        {
+          "viewName": "androidx.appcompat.widget.AppCompatImageView",
+          "forceDark": true,
+          "usage": 105,
+          "backgroundUsage": 105,
+          "conditions": [
+            {
+              "parent": 0,
+              "viewName": "androidx.cardview.widget.CardView",
+              "index": -1
+            },
+            {
+              "parent": 1,
+              "viewName": "androidx.recyclerview.widget.RecyclerView",
+              "index": -1,
+              "id": "rv_virtual_person"
+            },
+            {
+              "parent": 2,
+              "viewName": "androidx.swiperefreshlayout.widget.SwipeRefreshLayout",
+              "index": -1,
+              "id": "refresh_layout"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "activityName": "com.ct.client.recharge.activity.ChargeCenterActivity",
+      "forceDark": true,
+      "forceDarkViewConfigList": [
+        {
+          "viewName": "com.ct.client.homepage.widget.ResizableImageView",
+          "forceDark": true,
+          "usage": 105,
+          "backgroundUsage": 105,
+          "conditions": [
+            {
+              "parent": 0,
+              "viewName": "android.widget.RelativeLayout",
+              "index": -1
+            },
+            {
+              "parent": 1,
+              "viewName": "androidx.appcompat.widget.ContentFrameLayout",
+              "index": -1,
+              "id": "content"
+            },
+            {
+              "parent": 2,
+              "viewName": "androidx.appcompat.widget.FitWindowsLinearLayout",
+              "index": -1,
+              "id": "action_bar_root"
+            }
+          ]
+        },
+        {
+          "viewName": "androidx.appcompat.widget.AppCompatTextView",
+          "id": "tvTabMobile",
+          "forceDark": false,
+          "conditions": [
+            {
+              "parent": 0,
+              "viewName": "android.widget.RelativeLayout",
+              "index": -1,
+              "id": "rlTab"
+            },
+            {
+              "parent": 1,
+              "viewName": "com.google.android.material.tabs.TabLayout$TabView",
+              "index": -1
+            },
+            {
+              "parent": 2,
+              "viewName": "com.google.android.material.tabs.TabLayout$SlidingTabIndicator",
+              "index": -1
+            }
+          ]
+        },
+        {
+          "viewName": "androidx.appcompat.widget.AppCompatImageView",
+          "id": "ivBackButton",
+          "forceDark": true,
+          "usage": 103,
+          "backgroundUsage": 103,
+          "conditions": [
+            {
+              "parent": 0,
+              "viewName": "android.widget.RelativeLayout",
+              "index": -1
+            },
+            {
+              "parent": 1,
+              "viewName": "android.widget.RelativeLayout",
+              "index": -1,
+              "id": "rlTitleBar"
+            },
+            {
+              "parent": 2,
+              "viewName": "com.ct.client.widget.CommonTabTitleBar",
+              "index": -1,
+              "id": "titleBar"
+            }
+          ]
+        },
+        {
+          "viewName": "androidx.appcompat.widget.AppCompatImageView",
+          "id": "ivCusButton2",
+          "forceDark": true,
+          "usage": 103,
+          "backgroundUsage": 103,
+          "conditions": [
+            {
+              "parent": 0,
+              "viewName": "androidx.constraintlayout.widget.ConstraintLayout",
+              "index": -1,
+              "id": "clRight"
+            },
+            {
+              "parent": 2,
+              "viewName": "android.widget.RelativeLayout",
+              "index": -1,
+              "id": "rlTitleBar"
+            },
+            {
+              "parent": 3,
+              "viewName": "com.ct.client.widget.CommonTabTitleBar",
+              "index": -1,
+              "id": "titleBar"
+            }
+          ]
+        },
+        {
+          "viewName": "androidx.appcompat.widget.AppCompatImageView",
+          "id": "ivCusButton1",
+          "forceDark": true,
+          "usage": 103,
+          "backgroundUsage": 103,
+          "conditions": [
+            {
+              "parent": 0,
+              "viewName": "androidx.constraintlayout.widget.ConstraintLayout",
+              "index": -1,
+              "id": "clRight"
+            },
+            {
+              "parent": 2,
+              "viewName": "android.widget.RelativeLayout",
+              "index": -1,
+              "id": "rlTitleBar"
+            },
+            {
+              "parent": 3,
+              "viewName": "com.ct.client.widget.CommonTabTitleBar",
+              "index": -1,
+              "id": "titleBar"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "activityName": "MainActivity",
+      "forceDark": true,
+      "forceDarkViewConfigList": [
+        {
+          "forceDark": true,
+          "usage": 103,
+          "viewName": "androidx.appcompat.widget.AppCompatTextView",
+          "id": "tvTab"
+        },
+        {
+          "viewName": "androidx.appcompat.widget.AppCompatImageView",
+          "id": "iv_background",
+          "forceDark": true,
+          "usage": 105
+        },
+        {
+          "forceDark": false,
+          "viewName": "MyOrderView",
+          "id": "myOrderView"
+        },
+        {
+          "viewName": "androidx.appcompat.widget.AppCompatTextView",
+          "forceDark": false,
+          "conditions": [
+            {
+              "parent": 0,
+              "viewName": "android.widget.LinearLayout",
+              "index": -1,
+              "id": "ll_content"
+            },
+            {
+              "parent": 2,
+              "viewName": "androidx.viewpager2.widget.ViewPager2",
+              "index": -1
+            },
+            {
+              "parent": 3,
+              "viewName": "androidx.viewpager2.widget.ViewPager2",
+              "index": -1
+            }
+          ]
+        },
+        {
+          "viewName": "androidx.appcompat.widget.AppCompatImageView",
+          "id": "iv_bg",
+          "forceDark": true,
+          "usage": 105,
+          "backgroundUsage": 105,
+          "conditions": [
+            {
+              "parent": 0,
+              "viewName": "android.widget.RelativeLayout",
+              "index": -1
+            },
+            {
+              "parent": 1,
+              "viewName": "android.widget.FrameLayout",
+              "index": -1
+            },
+            {
+              "parent": 2,
+              "viewName": "androidx.viewpager2.widget.ViewPager2$RecyclerViewImpl",
+              "index": -1
+            }
+          ]
+        },
+        {
+          "viewName": "androidx.appcompat.widget.AppCompatImageView",
+          "id": "ivTop",
+          "forceDark": true,
+          "usage": 105,
+          "backgroundUsage": 105,
+          "conditions": [
+            {
+              "parent": 0,
+              "viewName": "android.widget.RelativeLayout",
+              "index": -1,
+              "id": "rlContent"
+            },
+            {
+              "parent": 1,
+              "viewName": "android.widget.FrameLayout",
+              "index": -1
+            },
+            {
+              "parent": 2,
+              "viewName": "androidx.viewpager2.widget.ViewPager2$RecyclerViewImpl",
+              "index": -1
+            }
+          ]
+        },
+        {
+          "viewName": "androidx.appcompat.widget.AppCompatImageView",
+          "id": "ivCusButton1",
+          "forceDark": true,
+          "usage": 103,
+          "backgroundUsage": 103,
+          "conditions": [
+            {
+              "parent": 0,
+              "viewName": "androidx.constraintlayout.widget.ConstraintLayout",
+              "index": -1,
+              "id": "rlTitleBar"
+            },
+            {
+              "parent": 1,
+              "viewName": "com.ct.client.message.widget.MessageTitleBar",
+              "index": -1,
+              "id": "messageTitleBar"
+            },
+            {
+              "parent": 2,
+              "viewName": "android.widget.RelativeLayout",
+              "index": -1,
+              "id": "rlContent"
+            }
+          ]
+        },
+        {
+          "viewName": "androidx.appcompat.widget.AppCompatImageView",
+          "id": "ivMessageSetting",
+          "forceDark": true,
+          "usage": 103,
+          "backgroundUsage": 103,
+          "conditions": [
+            {
+              "parent": 0,
+              "viewName": "androidx.constraintlayout.widget.ConstraintLayout",
+              "index": -1,
+              "id": "rlTitleBar"
+            },
+            {
+              "parent": 1,
+              "viewName": "com.ct.client.message.widget.MessageTitleBar",
+              "index": -1,
+              "id": "messageTitleBar"
+            },
+            {
+              "parent": 2,
+              "viewName": "android.widget.RelativeLayout",
+              "index": -1,
+              "id": "rlContent"
+            }
+          ]
+        },
+        {
+          "viewName": "androidx.appcompat.widget.AppCompatImageView",
+          "id": "iv_icon",
+          "forceDark": true,
+          "usage": 103,
+          "backgroundUsage": 103,
+          "conditions": [
+            {
+              "parent": 0,
+              "viewName": "android.widget.RelativeLayout",
+              "index": -1
+            },
+            {
+              "parent": 1,
+              "viewName": "androidx.recyclerview.widget.RecyclerView",
+              "index": -1,
+              "id": "rv_top_ad"
+            },
+            {
+              "parent": 4,
+              "viewName": "com.ct.client.mine.widget.MineInfoViewNew",
+              "index": -1,
+              "id": "view_info"
+            }
+          ]
+        },
+        {
+          "viewName": "androidx.appcompat.widget.AppCompatImageView",
+          "id": "iv_customer_service",
+          "forceDark": true,
+          "usage": 103,
+          "backgroundUsage": 103,
+          "conditions": [
+            {
+              "parent": 0,
+              "viewName": "android.widget.LinearLayout",
+              "index": -1,
+              "id": "ll_tab"
+            },
+            {
+              "parent": 2,
+              "viewName": "android.widget.FrameLayout",
+              "index": -1
+            },
+            {
+              "parent": 3,
+              "viewName": "androidx.viewpager2.widget.ViewPager2$RecyclerViewImpl",
+              "index": -1
+            }
+          ]
+        },
+        {
+          "viewName": "androidx.appcompat.widget.AppCompatImageView",
+          "id": "iv_no_login_order1",
+          "forceDark": true,
+          "usage": 103,
+          "backgroundUsage": 103,
+          "conditions": [
+            {
+              "parent": 0,
+              "viewName": "android.widget.LinearLayout",
+              "index": -1,
+              "id": "ll_login"
+            },
+            {
+              "parent": 2,
+              "viewName": "com.ct.client.mine.widget.MineInfoTopViewNew",
+              "index": -1,
+              "id": "view_info_top"
+            },
+            {
+              "parent": 4,
+              "viewName": "android.widget.FrameLayout",
+              "index": -1
+            }
+          ]
+        },
+        {
+          "viewName": "androidx.appcompat.widget.AppCompatImageView",
+          "id": "iv_icon",
+          "forceDark": true,
+          "usage": 103,
+          "conditions": [
+            {
+              "parent": 0,
+              "viewName": "android.widget.RelativeLayout",
+              "index": -1,
+              "id": "rl_content"
+            },
+            {
+              "parent": 1,
+              "viewName": "androidx.recyclerview.widget.RecyclerView",
+              "index": -1,
+              "id": "rv_mine_order"
+            },
+            {
+              "parent": 3,
+              "viewName": "androidx.recyclerview.widget.RecyclerView",
+              "index": -1,
+              "id": "rv_mine"
+            }
+          ]
+        },
+        {
+          "viewName": "androidx.appcompat.widget.AppCompatImageView",
+          "forceDark": true,
+          "usage": 105,
+          "id": "bg",
+          "backgroundUsage": 105,
+          "conditions": [
+            {
+              "parent": 0,
+              "viewName": "androidx.constraintlayout.widget.ConstraintLayout",
+              "index": -1,
+              "id": "container"
+            },
+            {
+              "parent": 1,
+              "viewName": "com.ct.client.widget.FollowPinBar",
+              "index": -1
+            },
+            {
+              "parent": 2,
+              "viewName": "android.widget.LinearLayout",
+              "index": -1,
+              "id": "llCard"
+            }
+          ]
+        },
+        {
+          "viewName": "com.google.android.material.imageview.ShapeableImageView",
+          "id": "iv_bg",
+          "forceDark": false,
+          "conditions": [
+            {
+              "parent": 0,
+              "viewName": "androidx.constraintlayout.widget.ConstraintLayout",
+              "index": -1
+            },
+            {
+              "parent": 1,
+              "viewName": "androidx.viewpager2.widget.ViewPager2$RecyclerViewImpl",
+              "index": -1
+            },
+            {
+              "parent": 2,
+              "viewName": "androidx.viewpager2.widget.ViewPager2",
+              "index": -1
+            }
+          ]
+        },
+        {
+          "viewName": "androidx.appcompat.widget.AppCompatTextView",
+          "id": "tvTitle",
+          "forceDark": false,
+          "conditions": [
+            {
+              "parent": 0,
+              "viewName": "androidx.constraintlayout.widget.ConstraintLayout",
+              "index": -1
+            },
+            {
+              "parent": 1,
+              "viewName": "android.widget.LinearLayout",
+              "index": -1,
+              "id": "llTitle"
+            },
+            {
+              "parent": 2,
+              "viewName": "com.ct.client.widget.RCRelativeLayout",
+              "index": -1,
+              "id": "cdCard"
+            }
+          ]
+        },
+        {
+          "viewName": "androidx.appcompat.widget.AppCompatImageView",
+          "id": "ivScan",
+          "forceDark": true,
+          "usage": 103,
+          "backgroundUsage": 103,
+          "conditions": [
+            {
+              "parent": 0,
+              "viewName": "android.widget.RelativeLayout",
+              "index": -1,
+              "id": "rlScan"
+            },
+            {
+              "parent": 1,
+              "viewName": "android.widget.LinearLayout",
+              "index": -1,
+              "id": "rlRight"
+            },
+            {
+              "parent": 3,
+              "viewName": "com.ct.client.homepage.widget.HomePageTitleBar",
+              "index": -1,
+              "id": "homePageTitleBar"
+            }
+          ]
+        },
+        {
+          "viewName": "androidx.appcompat.widget.AppCompatImageView",
+          "id": "ivAssistant",
+          "forceDark": true,
+          "usage": 103,
+          "backgroundUsage": 103,
+          "conditions": [
+            {
+              "parent": 0,
+              "viewName": "android.widget.RelativeLayout",
+              "index": -1,
+              "id": "rlAssistant"
+            },
+            {
+              "parent": 1,
+              "viewName": "android.widget.LinearLayout",
+              "index": -1,
+              "id": "rlRight"
+            },
+            {
+              "parent": 3,
+              "viewName": "com.ct.client.homepage.widget.HomePageTitleBar",
+              "index": -1,
+              "id": "homePageTitleBar"
+            }
+          ]
+        },
+        {
+          "viewName": "androidx.appcompat.widget.AppCompatImageView",
+          "id": "ivAdd",
+          "forceDark": true,
+          "usage": 103,
+          "backgroundUsage": 103,
+          "conditions": [
+            {
+              "parent": 0,
+              "viewName": "android.widget.RelativeLayout",
+              "index": -1,
+              "id": "rlAdd"
+            },
+            {
+              "parent": 1,
+              "viewName": "android.widget.LinearLayout",
+              "index": -1,
+              "id": "rlRight"
+            },
+            {
+              "parent": 3,
+              "viewName": "com.ct.client.homepage.widget.HomePageTitleBar",
+              "index": -1,
+              "id": "homePageTitleBar"
+            }
+          ]
+        },
+        {
+          "viewName": "androidx.appcompat.widget.AppCompatImageView",
+          "id": "iv_order1",
+          "forceDark": true,
+          "usage": 103,
+          "backgroundUsage": 103,
+          "conditions": [
+            {
+              "parent": 0,
+              "viewName": "android.widget.LinearLayout",
+              "index": -1,
+              "id": "ll_info"
+            },
+            {
+              "parent": 2,
+              "viewName": "com.ct.client.mine.widget.MineInfoTopViewNew",
+              "index": -1,
+              "id": "view_info_top"
+            },
+            {
+              "parent": 4,
+              "viewName": "android.widget.FrameLayout",
+              "index": -1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "activityName": "com.ct.client.common.webview.OnlineBusinessWebkitActivity",
+      "forceDark": true,
+      "forceDarkViewConfigList": [
+        {
+          "forceDark": false,
+          "viewName": "RelativeLayout",
+          "conditions": [
+            {
+              "viewName": "FrameLayout",
+              "parent": 0,
+              "index": -1,
+              "id": "content"
+            }
+          ]
+        },
+        {
+          "forceDark": false,
+          "blackMask": true,
+          "viewName": "WebView",
+          "id": "webview"
+        },
+        {
+          "forceDark": false,
+          "blackMask": true,
+          "viewName": "BackgroundMediaWebView",
+          "id": "mWebview"
+        }
+      ]
+    }
+  ]
+}

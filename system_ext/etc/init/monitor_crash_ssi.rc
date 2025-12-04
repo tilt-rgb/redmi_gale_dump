@@ -1,0 +1,7 @@
+#monitor_crash_ssi service
+service monitor_crash_ssi /system_ext/bin/monitor_crash_ssi
+  class late_start
+  user root
+  group root log system debuggerd
+  seclabel u:r:monitor_crash_ssi:s0
+

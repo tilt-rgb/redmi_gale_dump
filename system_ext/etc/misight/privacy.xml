@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<Pravicy>
+<Region name="eea" locale="en-GB" continent="" code="826" isoLang="en" isoCountry="EN" mcc="234" allowPrv="3-2" allowDevPrv="3" allowDevEvent="1" allowEvent="2"/>
+</Pravicy>

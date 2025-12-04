@@ -1,0 +1,12 @@
+#mtkdump_ssi service
+service mtkdump_ssi /system_ext/bin/mtkdump_ssi
+  class main
+  user root
+  disabled
+  oneshot
+  group root log system debuggerd
+  seclabel u:r:mtkdump_ssi:s0
+  
+
+on property:start.mtkdump.ssi=1
+  start mtkdump_ssi

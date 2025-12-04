@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<settings>
+  <ui>
+    <lifecycle>
+      <action type="onCreate">
+        <cmd name="read_cmd" cmd_type="at_cmd">AT+EANTFRCTUNER?;+EANTFRCTUNER:&lt;12&gt;[,lte_ii,],&lt;12&gt;[,nr_ii,]</cmd>
+      </action>
+    </lifecycle>
+    <element ui_type="GroupView" label="LTE">
+      <grid>outside</grid>
+      <sub_element batch_element="lte0~11" column="3"/>
+      <element ui_type="Spinner" label="ANT" >
+        <field>lte</field>
+        <default>0</default>
+        <options batch_range="0~5">
+          <option index="6" label="CLAT" value="6" />
+          <option index="7" label="Disable" value="-1" />
+          <option index="8" label="Initial" value="127" />
+        </options>
+      </element>
+    </element>
+    <element ui_type="GroupView" label="NR">
+      <slave_id>nr_group</slave_id>
+      <grid>outside</grid>
+      <sub_element batch_element="nr0~11" column="3"/>
+      <element ui_type="Spinner" label="ANT" >
+        <field>nr</field>
+        <default>0</default>
+        <options batch_range="0~5">
+          <option index="6" label="CLAT" value="6" />
+          <option index="7" label="Disable" value="-1" />
+          <option index="8" label="Initial" value="127" />
+        </options>
+      </element>
+      <dependence master="sync_rat" slave_attr="ui_status">
+          <if sync_rat="1">hide</if>
+          <if sync_rat="others">visible</if>
+      </dependence>
+    </element>
+    <element ui_type="CheckBox" label="NR set the same as LTE">
+      <field>sync_rat</field>
+      <default>false</default>
+      <options>
+        <option state="true" value="1"/>
+        <option state="false" value="0"/>
+      </options>
+      <slave>nr_group</slave>
+    </element>
+    <element ui_type="GroupView">
+      <sub_element column="2"/>
+      <element ui_type="Button" label="Read">
+        <action>
+          <cmd name="read_cmd" cmd_type="at_cmd">AT+EANTFRCTUNER?;+EANTFRCTUNER:&lt;12&gt;[,lte_ii,],&lt;12&gt;[,nr_ii,]</cmd>
+        </action>
+      </element>
+      <element ui_type="Button" label="Write">
+        <action batch_range="0~11">
+          <if condition="lte_ii&lt;0,1,2,3,4,5,6,-1">
+           <cmd name="init_ant_lte_cmd" cmd_type="at_cmd">AT+EANTFRCTUNER=_ii,127,0</cmd>
+           <cmd name="set_ant_lte_cmd" cmd_type="at_cmd">AT+EANTFRCTUNER=_ii,lte_ii,0</cmd>
+           <cmd name="init_ant_nr_cmd" cmd_type="at_cmd">AT+EANTFRCTUNER=_ii,127,1</cmd>
+           <if condition="sync_rat=1">
+             <cmd name="set_ant_nr_cmd" cmd_type="at_cmd">AT+EANTFRCTUNER=_ii,lte_ii,1</cmd>
+           </if>
+           <elif condition="nr_ii&lt;0,1,2,3,4,5,6,-1">
+             <cmd name="set_ant_nr_cmd" cmd_type="at_cmd">AT+EANTFRCTUNER=_ii,nr_ii,1</cmd>
+           </elif>
+          </if>
+        </action>
+      </element>
+    </element>
+    <element ui_type="GroupView">
+      <sub_element column="2"/>
+      <element ui_type="Spinner" label="ANT ALL" >
+        <field>conditionAll</field>
+        <default>0</default>
+        <options batch_range="0~5">
+          <option index="6" label="CLAT" value="6" />
+          <option index="7" label="Disable" value="-1" />
+          <option index="8" label="Initial" value="127" />
+        </options>
+      </element>
+      <element ui_type="Button" label="Write All">
+        <action batch_range="0~11">
+          <if condition="conditionAll&lt;0,1,2,3,4,5,6,-1">
+            <cmd cmd_type="at_cmd" name="init_ant_all_cmd">AT+EANTFRCTUNER=_ii,127,0</cmd>
+            <cmd cmd_type="at_cmd" name="set_ant_all_cmd">AT+EANTFRCTUNER=_ii,conditionAll,0</cmd>
+            <cmd cmd_type="at_cmd" name="init_ant_all_cmd">AT+EANTFRCTUNER=_ii,127,1</cmd>
+            <cmd cmd_type="at_cmd" name="set_ant_all_cmd">AT+EANTFRCTUNER=_ii,conditionAll,1</cmd>
+          </if>
+        </action>
+      </element>
+    </element>
+    <element ui_type="TextView">
+      <field>result</field>
+      <textmode>append</textmode>
+      <default>Result:</default>
+    </element>
+  </ui>
+</settings>

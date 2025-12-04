@@ -1,0 +1,1440 @@
+{
+  "packageName": "com.zhaopin.social",
+  "forceDark": true,
+  "mainRule": 1024,
+  "secondaryRule": 32,
+  "forceDarkActivityConfigList": [
+    {
+      "activityName": "com.zhaopin.social.app.position.recommend.campus.view.activity.fragment.CampusSecondPushJobRadarActivity",
+      "forceDark": true,
+      "forceDarkViewConfigList": [
+        {
+          "viewName": "android.widget.TextView",
+          "forceDark": false,
+          "conditions": [
+            {
+              "parent": 0,
+              "viewName": "android.widget.LinearLayout",
+              "index": -1
+            },
+            {
+              "parent": 2,
+              "viewName": "androidx.recyclerview.widget.RecyclerView",
+              "index": -1,
+              "id": "rv_radar_list"
+            },
+            {
+              "parent": 3,
+              "viewName": "android.widget.FrameLayout",
+              "index": -1,
+              "id": "fl_push_job_radar_root"
+            }
+          ]
+        },
+        {
+          "viewName": "android.widget.TextView",
+          "forceDark": false,
+          "conditions": [
+            {
+              "parent": 0,
+              "viewName": "androidx.viewpager2.widget.ViewPager2$RecyclerViewImpl",
+              "index": -1
+            },
+            {
+              "parent": 1,
+              "viewName": "androidx.viewpager2.widget.ViewPager2",
+              "index": -1,
+              "id": "viewPager"
+            },
+            {
+              "parent": 3,
+              "viewName": "com.zhaopin.common.widget.banner.BannerView",
+              "index": -1,
+              "id": "i_second_radar_banner"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "activityName": "com.zhaopin.social.passport.bindphone.InputBindPhoneActivity",
+      "forceDark": true,
+      "forceDarkViewConfigList": [
+        {
+          "viewName": "android.widget.TextView",
+          "id": "tv_title",
+          "forceDark": false,
+          "conditions": [
+            {
+              "parent": 0,
+              "viewName": "android.widget.LinearLayout",
+              "index": -1
+            },
+            {
+              "parent": 3,
+              "viewName": "android.widget.FrameLayout",
+              "index": -1,
+              "id": "content"
+            }
+          ]
+        },
+        {
+          "viewName": "android.widget.TextView",
+          "id": "tv_content",
+          "forceDark": false,
+          "conditions": [
+            {
+              "parent": 0,
+              "viewName": "android.widget.LinearLayout",
+              "index": -1
+            },
+            {
+              "parent": 3,
+              "viewName": "android.widget.FrameLayout",
+              "index": -1,
+              "id": "content"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "activityName": "com.zhaopin.social.message.imdetail.client.view.c2b.C2BMsgDetailActivity",
+      "forceDark": true,
+      "forceDarkViewConfigList": [
+        {
+          "viewName": "android.widget.ImageView",
+          "id": "ivEasyReply",
+          "forceDark": true,
+          "usage": 103,
+          "backgroundUsage": 103,
+          "conditions": [
+            {
+              "parent": 0,
+              "viewName": "android.widget.LinearLayout",
+              "index": -1,
+              "id": "textMessageLayout"
+            },
+            {
+              "parent": 1,
+              "viewName": "android.widget.LinearLayout",
+              "index": -1,
+              "id": "bottom_layout"
+            },
+            {
+              "parent": 2,
+              "viewName": "android.widget.FrameLayout",
+              "index": -1,
+              "id": "message_text_layout"
+            }
+          ]
+        },
+        {
+          "viewName": "android.widget.ImageView",
+          "id": "emoji_button",
+          "forceDark": true,
+          "usage": 103,
+          "backgroundUsage": 103,
+          "conditions": [
+            {
+              "parent": 0,
+              "viewName": "android.widget.LinearLayout",
+              "index": -1,
+              "id": "textMessageLayout"
+            },
+            {
+              "parent": 1,
+              "viewName": "android.widget.LinearLayout",
+              "index": -1,
+              "id": "bottom_layout"
+            },
+            {
+              "parent": 2,
+              "viewName": "android.widget.FrameLayout",
+              "index": -1,
+              "id": "message_text_layout"
+            }
+          ]
+        },
+        {
+          "viewName": "android.widget.ImageView",
+          "id": "buttonMoreFuntionInText",
+          "forceDark": true,
+          "usage": 103,
+          "backgroundUsage": 103,
+          "conditions": [
+            {
+              "parent": 0,
+              "viewName": "android.widget.FrameLayout",
+              "index": -1,
+              "id": "sendLayout"
+            },
+            {
+              "parent": 1,
+              "viewName": "android.widget.LinearLayout",
+              "index": -1,
+              "id": "textMessageLayout"
+            },
+            {
+              "parent": 2,
+              "viewName": "android.widget.LinearLayout",
+              "index": -1,
+              "id": "bottom_layout"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "activityName": "com.zhaopin.social.stash.bweex.ui.ZLWeexFragmentActivity",
+      "forceDark": false
+    },
+    {
+      "activityName": "com.zhaopin.social.main.MainActivity",
+      "forceDark": true,
+      "forceDarkViewConfigList": [
+        {
+          "viewName": "android.widget.ImageView",
+          "id": "iv_ic_settings",
+          "forceDark": true,
+          "usage": 103,
+          "backgroundUsage": 103,
+          "conditions": [
+            {
+              "parent": 0,
+              "viewName": "android.widget.FrameLayout",
+              "index": -1,
+              "id": "fl_ic_settings_ll"
+            },
+            {
+              "parent": 2,
+              "viewName": "android.widget.LinearLayout",
+              "index": -1,
+              "id": "in_navigation_bar"
+            },
+            {
+              "parent": 4,
+              "viewName": "android.widget.FrameLayout",
+              "index": -1,
+              "id": "fl_my_fragment"
+            }
+          ]
+        },
+        {
+          "viewName": "android.widget.RelativeLayout",
+          "id": "main_titlebar_view",
+          "forceDark": true,
+          "usage": 105,
+          "backgroundUsage": 105,
+          "conditions": [
+            {
+              "parent": 0,
+              "viewName": "android.widget.RelativeLayout",
+              "index": -1
+            },
+            {
+              "parent": 1,
+              "viewName": "com.zhaopin.social.main.view.tabviewpager.TabViewPager",
+              "index": -1,
+              "id": "fragment_container"
+            },
+            {
+              "parent": 3,
+              "viewName": "com.zhaopin.social.common.mvvm.widgets.pagestate.StateLayout",
+              "index": -1
+            }
+          ]
+        },
+        {
+          "viewName": "android.widget.ImageView",
+          "forceDark": true,
+          "usage": 105,
+          "backgroundUsage": 105,
+          "conditions": [
+            {
+              "parent": 0,
+              "viewName": "androidx.constraintlayout.widget.ConstraintLayout",
+              "index": -1,
+              "id": "cl_my_fragment"
+            },
+            {
+              "parent": 1,
+              "viewName": "com.zhaopin.social.common.mvvm.widgets.pagestate.StateLayout",
+              "index": -1
+            },
+            {
+              "parent": 2,
+              "viewName": "com.zhaopin.social.main.view.tabviewpager.TabViewPager",
+              "index": -1,
+              "id": "fragment_container"
+            }
+          ]
+        },
+        {
+          "viewName": "android.view.View",
+          "id": "v_close",
+          "forceDark": false,
+          "conditions": [
+            {
+              "parent": 0,
+              "viewName": "android.widget.RelativeLayout",
+              "index": -1
+            },
+            {
+              "parent": 1,
+              "viewName": "android.widget.FrameLayout",
+              "index": -1,
+              "id": "content"
+            }
+          ]
+        },
+        {
+          "viewName": "android.widget.LinearLayout",
+          "id": "in_navigation_bar",
+          "forceDark": true,
+          "usage": 105,
+          "backgroundUsage": 105,
+          "conditions": [
+            {
+              "parent": 0,
+              "viewName": "android.widget.LinearLayout",
+              "index": -1
+            },
+            {
+              "parent": 1,
+              "viewName": "android.widget.FrameLayout",
+              "index": -1,
+              "id": "fl_my_fragment"
+            },
+            {
+              "parent": 2,
+              "viewName": "com.zhaopin.social.common.mvvm.widgets.pagestate.StateLayout",
+              "index": -1
+            }
+          ]
+        },
+        {
+          "viewName": "android.widget.ImageView",
+          "forceDark": true,
+          "usage": 105,
+          "backgroundUsage": 105,
+          "conditions": [
+            {
+              "parent": 0,
+              "viewName": "android.widget.FrameLayout",
+              "index": -1
+            },
+            {
+              "parent": 1,
+              "viewName": "androidx.core.widget.NestedScrollView",
+              "index": -1
+            },
+            {
+              "parent": 3,
+              "viewName": "android.widget.FrameLayout",
+              "index": -1,
+              "id": "fl_my_fragment"
+            }
+          ]
+        },
+        {
+          "viewName": "android.widget.LinearLayout",
+          "id": "ll_content",
+          "forceDark": true,
+          "usage": 105,
+          "backgroundUsage": 105
+        },
+        {
+          "viewName": "android.widget.RelativeLayout",
+          "id": "rlTabBarRoot",
+          "forceDark": true,
+          "usage": 105,
+          "backgroundUsage": 105
+        },
+        {
+          "viewName": "com.zhaopin.common.widget.BitmapRecycledImageView",
+          "forceDark": true,
+          "usage": 103,
+          "backgroundUsage": 103,
+          "conditions": [
+            {
+              "parent": 0,
+              "viewName": "android.widget.LinearLayout",
+              "index": -1,
+              "id": "ll_operation_home_ship"
+            },
+            {
+              "parent": 2,
+              "viewName": "com.zhaopin.social.app.position.recommend.campus.viewmodel.PositionAppbarLayout",
+              "index": -1,
+              "id": "appbar_home_ship"
+            },
+            {
+              "parent": 3,
+              "viewName": "androidx.coordinatorlayout.widget.CoordinatorLayout",
+              "index": -1,
+              "id": "cl_home_ship"
+            }
+          ]
+        },
+        {
+          "viewName": "androidx.constraintlayout.widget.ConstraintLayout",
+          "id": "rlTabLayout",
+          "forceDark": true,
+          "usage": 105,
+          "backgroundUsage": 105
+        },
+        {
+          "viewName": "android.widget.ImageView",
+          "forceDark": true,
+          "usage": 105,
+          "backgroundUsage": 105,
+          "conditions": [
+            {
+              "parent": 0,
+              "viewName": "android.widget.FrameLayout",
+              "index": -1
+            },
+            {
+              "parent": 1,
+              "viewName": "androidx.core.widget.NestedScrollView",
+              "index": -1
+            },
+            {
+              "parent": 3,
+              "viewName": "android.widget.FrameLayout",
+              "index": -1,
+              "id": "fl_my_fragment"
+            }
+          ]
+        },
+        {
+          "viewName": "android.widget.TextView",
+          "id": "tv_campus_synergy_subTitle",
+          "forceDark": false,
+          "conditions": [
+            {
+              "parent": 0,
+              "viewName": "android.widget.LinearLayout",
+              "index": -1,
+              "id": "tv_campus_synergy_title_group"
+            },
+            {
+              "parent": 1,
+              "viewName": "android.widget.LinearLayout",
+              "index": -1,
+              "id": "tv_campus_synergy_group"
+            },
+            {
+              "parent": 2,
+              "viewName": "android.widget.LinearLayout",
+              "index": -1,
+              "id": "ll_campus_item_feed_synergy_root"
+            }
+          ]
+        },
+        {
+          "viewName": "android.view.View",
+          "id": "view3",
+          "forceDark": true,
+          "usage": 105,
+          "backgroundUsage": 105,
+          "conditions": [
+            {
+              "parent": 0,
+              "viewName": "android.widget.LinearLayout",
+              "index": -1,
+              "id": "view_bg"
+            },
+            {
+              "parent": 2,
+              "viewName": "com.zhaopin.social.main.view.tabviewpager.TabViewPager",
+              "index": -1,
+              "id": "fragment_container"
+            },
+            {
+              "parent": 4,
+              "viewName": "com.zhaopin.social.common.mvvm.widgets.pagestate.StateLayout",
+              "index": -1
+            }
+          ]
+        },
+        {
+          "viewName": "android.widget.RelativeLayout",
+          "id": "main_titlebar_view",
+          "forceDark": true,
+          "usage": 105,
+          "backgroundUsage": 105,
+          "conditions": [
+            {
+              "parent": 0,
+              "viewName": "android.widget.RelativeLayout",
+              "index": -1
+            },
+            {
+              "parent": 1,
+              "viewName": "com.zhaopin.social.main.view.tabviewpager.TabViewPager",
+              "index": -1,
+              "id": "fragment_container"
+            },
+            {
+              "parent": 3,
+              "viewName": "com.zhaopin.social.common.mvvm.widgets.pagestate.StateLayout",
+              "index": -1
+            }
+          ]
+        },
+        {
+          "viewName": "android.widget.LinearLayout",
+          "forceDark": true,
+          "usage": 105,
+          "backgroundUsage": 105,
+          "conditions": [
+            {
+              "parent": 0,
+              "viewName": "com.zhaopin.social.main.view.tabviewpager.TabViewPager",
+              "index": -1,
+              "id": "fragment_container"
+            },
+            {
+              "parent": 1,
+              "viewName": "androidx.constraintlayout.widget.ConstraintLayout",
+              "index": -1
+            },
+            {
+              "parent": 2,
+              "viewName": "com.zhaopin.social.common.mvvm.widgets.pagestate.StateLayout",
+              "index": -1
+            }
+          ]
+        },
+        {
+          "viewName": "android.widget.ImageView",
+          "id": "iv_fc_home_famous_title",
+          "forceDark": true,
+          "usage": 103,
+          "backgroundUsage": 103,
+          "conditions": [
+            {
+              "parent": 0,
+              "viewName": "com.zhaopin.common.widget.RCConstraintLayout",
+              "index": -1,
+              "id": "in_campus_net_delivery"
+            },
+            {
+              "parent": 2,
+              "viewName": "com.zhaopin.social.app.position.recommend.campus.viewmodel.PositionAppbarLayout",
+              "index": -1,
+              "id": "appbar_fc_home"
+            },
+            {
+              "parent": 3,
+              "viewName": "androidx.coordinatorlayout.widget.CoordinatorLayout",
+              "index": -1,
+              "id": "cl_fc_home_root"
+            }
+          ]
+        },
+        {
+          "viewName": "android.widget.ImageView",
+          "id": "iv_fc_home_rank_title",
+          "forceDark": true,
+          "usage": 103,
+          "backgroundUsage": 103,
+          "conditions": [
+            {
+              "parent": 0,
+              "viewName": "androidx.constraintlayout.widget.ConstraintLayout",
+              "index": -1
+            },
+            {
+              "parent": 1,
+              "viewName": "android.widget.FrameLayout",
+              "index": -1,
+              "id": "in_rank_left"
+            },
+            {
+              "parent": 2,
+              "viewName": "android.widget.LinearLayout",
+              "index": -1,
+              "id": "in_campus_multi_rank"
+            }
+          ]
+        },
+        {
+          "viewName": "android.widget.ImageView",
+          "id": "iv_fc_home_rank_title",
+          "forceDark": true,
+          "usage": 103,
+          "backgroundUsage": 103,
+          "conditions": [
+            {
+              "parent": 0,
+              "viewName": "androidx.constraintlayout.widget.ConstraintLayout",
+              "index": -1
+            },
+            {
+              "parent": 1,
+              "viewName": "android.widget.FrameLayout",
+              "index": -1,
+              "id": "in_rank_right"
+            },
+            {
+              "parent": 2,
+              "viewName": "android.widget.LinearLayout",
+              "index": -1,
+              "id": "in_campus_multi_rank"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "activityName": "com.zhaopin.social.homepage.ZSC_MainTabActivity",
+      "forceDark": true,
+      "forceDarkViewConfigList": [
+        {
+          "viewName": "android.view.View",
+          "forceDark": true,
+          "usage": 103,
+          "backgroundUsage": 103,
+          "conditions": [
+            {
+              "parent": 0,
+              "viewName": "android.widget.LinearLayout",
+              "index": -1,
+              "id": "view_bg"
+            }
+          ]
+        },
+        {
+          "viewName": "android.widget.ImageView",
+          "id": "ic_settings",
+          "forceDark": true,
+          "usage": 103
+        },
+        {
+          "viewName": "android.widget.LinearLayout",
+          "forceDark": true,
+          "backgroundUsage": 103,
+          "conditions": [
+            {
+              "parent": 0,
+              "viewName": "android.widget.LinearLayout",
+              "index": -1
+            },
+            {
+              "parent": 1,
+              "viewName": "android.widget.LinearLayout",
+              "index": -1,
+              "id": "message_list"
+            },
+            {
+              "parent": 2,
+              "viewName": "android.widget.LinearLayout",
+              "index": -1,
+              "id": "ScrollView_view"
+            }
+          ]
+        },
+        {
+          "viewName": "android.widget.RelativeLayout",
+          "id": "main_titlebar_view",
+          "forceDark": true,
+          "backgroundUsage": 103,
+          "conditions": [
+            {
+              "parent": 1,
+              "viewName": "android.widget.LinearLayout",
+              "index": -1,
+              "id": "content_layout"
+            }
+          ]
+        },
+        {
+          "viewName": "android.widget.ImageView",
+          "forceDark": true,
+          "usage": 103,
+          "conditions": [
+            {
+              "parent": 0,
+              "viewName": "android.widget.RelativeLayout",
+              "index": -1,
+              "id": "homeLayout"
+            },
+            {
+              "parent": 1,
+              "viewName": "android.widget.LinearLayout",
+              "index": -1,
+              "id": "content_layout"
+            }
+          ]
+        },
+        {
+          "viewName": "android.view.View",
+          "forceDark": true,
+          "backgroundUsage": 103,
+          "conditions": [
+            {
+              "parent": 0,
+              "viewName": "android.widget.RelativeLayout",
+              "index": -1
+            },
+            {
+              "parent": 1,
+              "viewName": "android.widget.RelativeLayout",
+              "index": -1,
+              "id": "main_titlebar_view"
+            },
+            {
+              "parent": 3,
+              "viewName": "android.widget.LinearLayout",
+              "index": -1,
+              "id": "content_layout"
+            }
+          ]
+        },
+        {
+          "viewName": "android.widget.ImageView",
+          "id": "msg_icon",
+          "forceDark": true,
+          "usage": 103,
+          "conditions": [
+            {
+              "parent": 1,
+              "viewName": "android.widget.LinearLayout",
+              "index": -1,
+              "id": "msg_btn"
+            },
+            {
+              "parent": 2,
+              "viewName": "android.widget.LinearLayout",
+              "index": -1,
+              "id": "title_view"
+            }
+          ]
+        },
+        {
+          "viewName": "android.widget.ImageView",
+          "forceDark": true,
+          "backgroundUsage": 2,
+          "conditions": [
+            {
+              "parent": 3,
+              "viewName": "android.widget.LinearLayout",
+              "index": -1,
+              "id": "content_layout"
+            },
+            {
+              "parent": 4,
+              "viewName": "android.widget.LinearLayout",
+              "index": -1,
+              "id": "content_parent"
+            }
+          ]
+        },
+        {
+          "viewName": "android.widget.TextView",
+          "forceDark": true,
+          "usage": 103,
+          "conditions": [
+            {
+              "parent": 3,
+              "viewName": "androidx.recyclerview.widget.RecyclerView",
+              "index": -1,
+              "id": "recyclerView"
+            },
+            {
+              "parent": 4,
+              "viewName": "com.zhaopin.social.my.views.OverScrollLayout",
+              "index": -1,
+              "id": "overlayout"
+            }
+          ]
+        },
+        {
+          "viewName": "android.widget.TextView",
+          "forceDark": true,
+          "usage": 103,
+          "conditions": [
+            {
+              "parent": 2,
+              "viewName": "androidx.recyclerview.widget.RecyclerView",
+              "index": -1,
+              "id": "recyclerView"
+            },
+            {
+              "parent": 3,
+              "viewName": "com.zhaopin.social.my.views.OverScrollLayout",
+              "index": -1,
+              "id": "overlayout"
+            }
+          ]
+        },
+        {
+          "viewName": "android.widget.LinearLayout",
+          "forceDark": true,
+          "backgroundUsage": 103,
+          "conditions": [
+            {
+              "parent": 0,
+              "viewName": "android.widget.LinearLayout",
+              "index": -1,
+              "id": "message_list"
+            },
+            {
+              "parent": 1,
+              "viewName": "android.widget.LinearLayout",
+              "index": -1,
+              "id": "ScrollView_view"
+            },
+            {
+              "parent": 3,
+              "viewName": "android.widget.LinearLayout",
+              "index": -1,
+              "id": "content_layout"
+            }
+          ]
+        },
+        {
+          "viewName": "android.widget.ImageView",
+          "id": "item_icon",
+          "forceDark": true,
+          "usage": 103,
+          "conditions": [
+            {
+              "parent": 1,
+              "viewName": "androidx.constraintlayout.widget.ConstraintLayout",
+              "index": -1
+            },
+            {
+              "parent": 3,
+              "viewName": "android.widget.ScrollView",
+              "index": -1,
+              "id": "scroll"
+            }
+          ]
+        },
+        {
+          "viewName": "androidx.constraintlayout.widget.ConstraintLayout",
+          "id": "my_navigation_bar",
+          "forceDark": true,
+          "usage": 103,
+          "backgroundUsage": 103
+        },
+        {
+          "viewName": "android.widget.ImageView",
+          "forceDark": true,
+          "usage": 103,
+          "backgroundUsage": 103,
+          "conditions": [
+            {
+              "parent": 0,
+              "viewName": "androidx.constraintlayout.widget.ConstraintLayout",
+              "index": -1,
+              "id": "my_header_user"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "activityName": "com.zhaopin.social.discover.activity.ZpdWxActivity",
+      "forceDark": true,
+      "forceDarkViewConfigList": [
+        {
+          "viewName": "com.taobao.weex.ui.view.WXImageView",
+          "forceDark": true,
+          "usage": 103,
+          "backgroundUsage": 103,
+          "conditions": [
+            {
+              "parent": 0,
+              "viewName": "android.widget.FrameLayout",
+              "index": -1
+            },
+            {
+              "parent": 1,
+              "viewName": "com.taobao.weex.ui.view.WXScrollView",
+              "index": -1
+            },
+            {
+              "parent": 2,
+              "viewName": "com.taobao.weex.ui.view.refresh.core.WXSwipeLayout",
+              "index": -1
+            }
+          ]
+        },
+        {
+          "viewName": "com.taobao.weex.ui.view.WXImageView",
+          "forceDark": true,
+          "usage": 103,
+          "backgroundUsage": 103,
+          "conditions": [
+            {
+              "parent": 0,
+              "viewName": "com.taobao.weex.ui.view.WXFrameLayout",
+              "index": -1
+            },
+            {
+              "parent": 1,
+              "viewName": "android.widget.FrameLayout",
+              "index": -1
+            },
+            {
+              "parent": 2,
+              "viewName": "com.taobao.weex.ui.view.WXHorizontalScrollView",
+              "index": -1
+            }
+          ]
+        },
+        {
+          "viewName": "com.taobao.weex.ui.view.WXImageView",
+          "forceDark": true,
+          "usage": 103,
+          "backgroundUsage": 103,
+          "conditions": [
+            {
+              "parent": 0,
+              "viewName": "com.taobao.weex.ui.view.WXFrameLayout",
+              "index": -1
+            },
+            {
+              "parent": 6,
+              "viewName": "android.widget.FrameLayout",
+              "index": -1
+            },
+            {
+              "parent": 7,
+              "viewName": "com.taobao.weex.ui.view.WXScrollView",
+              "index": -1
+            }
+          ]
+        },
+        {
+          "viewName": "com.taobao.weex.ui.view.WXImageView",
+          "forceDark": true,
+          "usage": 103,
+          "backgroundUsage": 103,
+          "conditions": [
+            {
+              "parent": 0,
+              "viewName": "com.taobao.weex.ui.view.WXFrameLayout",
+              "index": -1
+            },
+            {
+              "parent": 4,
+              "viewName": "com.taobao.weex.RenderContainer",
+              "index": -1
+            },
+            {
+              "parent": 5,
+              "viewName": "android.widget.FrameLayout",
+              "index": -1,
+              "id": "index_container"
+            }
+          ]
+        },
+        {
+          "viewName": "com.taobao.weex.ui.view.WXImageView",
+          "forceDark": true,
+          "usage": 103,
+          "conditions": [
+            {
+              "parent": 0,
+              "viewName": "com.taobao.weex.ui.view.WXFrameLayout",
+              "index": -1
+            },
+            {
+              "parent": 1,
+              "viewName": "com.taobao.weex.RenderContainer",
+              "index": -1
+            },
+            {
+              "parent": 2,
+              "viewName": "android.widget.FrameLayout",
+              "index": -1,
+              "id": "index_container"
+            }
+          ]
+        },
+        {
+          "viewName": "com.taobao.weex.ui.view.WXImageView",
+          "forceDark": true,
+          "usage": 103,
+          "conditions": [
+            {
+              "parent": 0,
+              "viewName": "com.taobao.weex.ui.view.WXFrameLayout",
+              "index": -1
+            },
+            {
+              "parent": 2,
+              "viewName": "com.taobao.weex.ui.view.listview.WXRecyclerView",
+              "index": -1
+            },
+            {
+              "parent": 3,
+              "viewName": "com.taobao.weex.ui.view.refresh.core.WXSwipeLayout",
+              "index": -1
+            }
+          ]
+        },
+        {
+          "viewName": "com.taobao.weex.ui.view.WXImageView",
+          "forceDark": true,
+          "usage": 103,
+          "conditions": [
+            {
+              "parent": 0,
+              "viewName": "com.taobao.weex.ui.view.WXFrameLayout",
+              "index": -1
+            },
+            {
+              "parent": 3,
+              "viewName": "com.taobao.weex.RenderContainer",
+              "index": -1
+            },
+            {
+              "parent": 4,
+              "viewName": "android.widget.FrameLayout",
+              "index": -1,
+              "id": "index_container"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "activityName": "com.zhaopin.social.my.activity.IdentityChoiceActivity",
+      "forceDark": true,
+      "forceDarkViewConfigList": [
+        {
+          "viewName": "android.widget.RelativeLayout",
+          "forceDark": true,
+          "backgroundUsage": 103,
+          "conditions": [
+            {
+              "parent": 0,
+              "viewName": "android.widget.FrameLayout",
+              "index": -1,
+              "id": "content"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "activityName": "com.zhaopin.social.passport.verifylogin.PWVerifyActivity",
+      "forceDark": true,
+      "forceDarkViewConfigList": [
+        {
+          "viewName": "android.widget.RelativeLayout",
+          "forceDark": true,
+          "usage": 105,
+          "backgroundUsage": 105,
+          "conditions": [
+            {
+              "parent": 0,
+              "viewName": "android.widget.FrameLayout",
+              "index": -1,
+              "id": "content"
+            },
+            {
+              "parent": 2,
+              "viewName": "com.android.internal.policy.DecorView",
+              "index": -1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "activityName": "com.zhaopin.social.passport.verifylogin.InputVerifyCodeActivity",
+      "forceDark": true,
+      "forceDarkViewConfigList": [
+        {
+          "viewName": "android.widget.LinearLayout",
+          "forceDark": true,
+          "backgroundUsage": 103,
+          "conditions": [
+            {
+              "parent": 0,
+              "viewName": "android.widget.FrameLayout",
+              "index": -1,
+              "id": "content"
+            }
+          ]
+        },
+        {
+          "viewName": "android.widget.TextView",
+          "forceDark": false,
+          "conditions": [
+            {
+              "parent": 0,
+              "viewName": "android.widget.LinearLayout",
+              "index": -1
+            },
+            {
+              "parent": 2,
+              "viewName": "android.widget.FrameLayout",
+              "index": -1,
+              "id": "content"
+            }
+          ]
+        },
+        {
+          "viewName": "android.widget.TextView",
+          "id": "tv_phone_number",
+          "forceDark": false,
+          "conditions": [
+            {
+              "parent": 0,
+              "viewName": "android.widget.LinearLayout",
+              "index": -1
+            },
+            {
+              "parent": 2,
+              "viewName": "android.widget.FrameLayout",
+              "index": -1,
+              "id": "content"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "activityName": "PositionListActivity",
+      "forceDark": true,
+      "forceDarkViewConfigList": [
+        {
+          "viewName": "android.widget.ImageView",
+          "id": "iv_filter_more",
+          "forceDark": true,
+          "usage": 103,
+          "backgroundUsage": 103
+        }
+      ]
+    },
+    {
+      "activityName": "com.zhaopin.social.scan.ScanQrcodeActivity",
+      "forceDark": false,
+      "blackMask": true
+    },
+    {
+      "activityName": "com.tt.miniapphost.placeholder.MiniAppHostStackActivity",
+      "forceDark": false,
+      "blackMask": true
+    },
+    {
+      "activityName": "com.zhaopin.social.app.position.detail.core.view.activity.PositionDetailActivity",
+      "forceDark": true,
+      "forceDarkViewConfigList": [
+        {
+          "viewName": "android.widget.ImageView",
+          "forceDark": true,
+          "usage": 103,
+          "conditions": [
+            {
+              "parent": 0,
+              "viewName": "android.widget.RelativeLayout",
+              "index": -1,
+              "id": "detail_radiogroup"
+            }
+          ]
+        },
+        {
+          "viewName": "com.zhaopin.common.widget.BitmapRecycledImageView",
+          "id": "ivBusinessImage",
+          "forceDark": true,
+          "usage": 103,
+          "backgroundUsage": 103
+        },
+        {
+          "viewName": "android.widget.TextView",
+          "id": "tv_street",
+          "forceDark": false,
+          "conditions": [
+            {
+              "parent": 0,
+              "viewName": "android.widget.LinearLayout",
+              "index": -1,
+              "id": "ll_map"
+            },
+            {
+              "parent": 1,
+              "viewName": "com.zhaopin.common.widget.RCConstraintLayout",
+              "index": -1,
+              "id": "rl_intro"
+            },
+            {
+              "parent": 2,
+              "viewName": "com.zhaopin.common.widget.RCConstraintLayout",
+              "index": -1
+            }
+          ]
+        },
+        {
+          "viewName": "android.widget.ImageView",
+          "forceDark": true,
+          "usage": 105,
+          "backgroundUsage": 105,
+          "conditions": [
+            {
+              "parent": 0,
+              "viewName": "androidx.constraintlayout.widget.ConstraintLayout",
+              "index": -1,
+              "id": "cl_root"
+            },
+            {
+              "parent": 1,
+              "viewName": "com.zhaopin.social.common.mvvm.widgets.pagestate.StateLayout",
+              "index": -1
+            },
+            {
+              "parent": 2,
+              "viewName": "com.zhaopin.social.app.position.detail.core.view.views.MyViewPager",
+              "index": -1,
+              "id": "vp_social"
+            }
+          ]
+        },
+        {
+          "viewName": "com.google.android.material.imageview.ShapeableImageView",
+          "id": "iv_ai_resume_view",
+          "forceDark": true,
+          "usage": 105,
+          "backgroundUsage": 105
+        },
+        {
+          "viewName": "androidx.appcompat.widget.AppCompatTextView",
+          "id": "tv_add_address_title",
+          "forceDark": false,
+          "conditions": [
+            {
+              "parent": 0,
+              "viewName": "android.widget.LinearLayout",
+              "index": -1,
+              "id": "ll_no_address_info_view"
+            },
+            {
+              "parent": 1,
+              "viewName": "androidx.constraintlayout.widget.ConstraintLayout",
+              "index": -1,
+              "id": "cl_distance_container"
+            },
+            {
+              "parent": 2,
+              "viewName": "com.zhaopin.social.app.position.detail.core.view.views.PositionLocationDistanceView",
+              "index": -1,
+              "id": "distance_view"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "activityName": "com.zhaopin.social.app.resume.edit.main.EditResumeActivity",
+      "forceDark": true,
+      "forceDarkViewConfigList": [
+        {
+          "viewName": "android.widget.ImageView",
+          "forceDark": true,
+          "usage": 103,
+          "conditions": [
+            {
+              "parent": 1,
+              "viewName": "android.widget.LinearLayout",
+              "index": -1,
+              "id": "ll_person_info"
+            }
+          ]
+        },
+        {
+          "viewName": "android.widget.ImageView",
+          "id": "iv_icon_right",
+          "forceDark": true,
+          "usage": 103,
+          "conditions": [
+            {
+              "parent": 0,
+              "viewName": "android.widget.RelativeLayout",
+              "index": -1,
+              "id": "ll_add"
+            }
+          ]
+        },
+        {
+          "viewName": "android.widget.ImageView",
+          "id": "iv_add",
+          "forceDark": true,
+          "usage": 103,
+          "backgroundUsage": 103,
+          "conditions": [
+            {
+              "parent": 0,
+              "viewName": "android.widget.RelativeLayout",
+              "index": -1,
+              "id": "rl_layout"
+            },
+            {
+              "parent": 1,
+              "viewName": "androidx.recyclerview.widget.RecyclerView",
+              "index": -1
+            },
+            {
+              "parent": 2,
+              "viewName": "android.widget.LinearLayout",
+              "index": -1,
+              "id": "ll_exp_content"
+            }
+          ]
+        },
+        {
+          "viewName": "android.widget.RelativeLayout",
+          "id": "head_container",
+          "forceDark": true,
+          "usage": 105,
+          "backgroundUsage": 105,
+          "conditions": [
+            {
+              "parent": 0,
+              "viewName": "android.widget.RelativeLayout",
+              "index": -1
+            },
+            {
+              "parent": 1,
+              "viewName": "androidx.recyclerview.widget.RecyclerView",
+              "index": -1,
+              "id": "prv_resume"
+            },
+            {
+              "parent": 2,
+              "viewName": "com.zhaopin.social.appcommon.c.views.refresh.ZpRefreshLayout",
+              "index": -1,
+              "id": "refreshlayout"
+            }
+          ]
+        },
+        {
+          "viewName": "android.widget.ImageView",
+          "id": "iv_more",
+          "forceDark": true,
+          "usage": 103,
+          "backgroundUsage": 103,
+          "conditions": [
+            {
+              "parent": 0,
+              "viewName": "android.widget.RelativeLayout",
+              "index": -1,
+              "id": "rl_refresh_more"
+            },
+            {
+              "parent": 1,
+              "viewName": "android.widget.RelativeLayout",
+              "index": -1,
+              "id": "ll_resume_top"
+            },
+            {
+              "parent": 2,
+              "viewName": "android.widget.RelativeLayout",
+              "index": -1,
+              "id": "rl_resume_fragment"
+            }
+          ]
+        },
+        {
+          "viewName": "android.widget.ImageView",
+          "forceDark": true,
+          "usage": 103,
+          "backgroundUsage": 103,
+          "conditions": [
+            {
+              "parent": 0,
+              "viewName": "android.widget.LinearLayout",
+              "index": -1,
+              "id": "ll_refresh"
+            },
+            {
+              "parent": 1,
+              "viewName": "android.widget.RelativeLayout",
+              "index": -1,
+              "id": "rl_refresh"
+            },
+            {
+              "parent": 2,
+              "viewName": "android.widget.RelativeLayout",
+              "index": -1,
+              "id": "rl_refresh_more"
+            }
+          ]
+        },
+        {
+          "viewName": "android.widget.ImageView",
+          "id": "iv_refresh",
+          "forceDark": true,
+          "usage": 103,
+          "backgroundUsage": 103,
+          "conditions": [
+            {
+              "parent": 0,
+              "viewName": "android.widget.RelativeLayout",
+              "index": -1,
+              "id": "rl_refresh"
+            },
+            {
+              "parent": 1,
+              "viewName": "android.widget.RelativeLayout",
+              "index": -1,
+              "id": "rl_refresh_more"
+            },
+            {
+              "parent": 2,
+              "viewName": "android.widget.RelativeLayout",
+              "index": -1,
+              "id": "ll_resume_top"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "activityName": "com.zhaopin.social.app.resume.edit.resumefill.createresume.magicBase.ContainerActivity",
+      "forceDark": true,
+      "forceDarkViewConfigList": [
+        {
+          "viewName": "android.widget.ImageView",
+          "forceDark": true,
+          "usage": 105,
+          "backgroundUsage": 105,
+          "conditions": [
+            {
+              "parent": 0,
+              "viewName": "android.widget.RelativeLayout",
+              "index": -1
+            },
+            {
+              "parent": 1,
+              "viewName": "androidx.recyclerview.widget.RecyclerView",
+              "index": -1,
+              "id": "recycler_view"
+            },
+            {
+              "parent": 5,
+              "viewName": "android.widget.FrameLayout",
+              "index": -1,
+              "id": "body_layout"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "forceDarkViewGlobalConfigList": [
+    {
+      "viewName": "FlutterView",
+      "forceDark": false,
+      "blackMask": true
+    }
+  ]
+}

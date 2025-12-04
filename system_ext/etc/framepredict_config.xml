@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<framepredict_whitelist_app_default>
+    <csched_level model="performance">csched_level</csched_level>
+    <gsched_level model="performance">gsched_level</gsched_level>
+
+    <!-- other way to config threshold -->
+    <!-- <gsched_level model="user" glevel1="0.3" glevel2="0.7">gsched_level</gsched_level> -->
+    
+    <whitelist>
+        <app config="default">com.miui.home</app>
+        <app config="default">com.android.systemui</app>
+        <app config="default">com.android.browser</app>
+        <app config="default">com.miui.gallery</app>
+        <app config="default">com.miui.notes</app>
+        <app config="default">com.android.settings</app>
+        <app config="default">com.miui.player</app>
+        <app config="default">com.xiaomi.market</app>
+        <app config="default">com.miui.securitycenter</app>
+        <app config="default">com.miui.calculator</app>
+        <app config="default">com.duokan.reader</app>
+        <app config="default">com.xiaomi.shop</app>
+        <app config="default">com.android.fileexplorer</app>
+        <app config="default">com.android.calendar</app>
+        <app config="default">com.android.quicksearchbox</app>
+        <app config="default">com.xiaomi.gamecenter</app>
+        <app config="default">com.miui.weather2</app>
+        <app config="default">com.android.thememanager</app>
+        <app config="default">com.miui.personalassistant</app>
+        <app config="default">com.ss.android.ugc.aweme</app>
+        <app config="default">com.tencent.mm</app>
+        <app config="default">com.alibaba.android.rimet</app>
+        <app config="default">com.smile.gifmaker</app>
+        <app config="default">com.kuaishou.nebula</app>
+        <app config="default">tv.danmaku.bilibilihd</app>
+        <app config="default">com.tencent.mobileqq</app>
+        <app config="default">com.baidu.netdisk</app>
+        <app config="default">com.baidu.BaiduMap</app>
+        <app config="default">tv.danmaku.bili</app>
+        <app config="default">com.ss.android.article.news</app>
+        <app config="default">com.baidu.searchbox</app>
+        <app config="default">com.xingin.xhs</app>
+        <app config="default">com.dragon.read</app>
+        <app config="default">com.tencent.qqlive</app>
+        <app config="default">com.ss.android.article.lite</app>
+        <app config="default">com.quark.browser</app>
+        <app config="default">air.tv.douyu.android</app>
+        <app config="default">com.qiyi.video</app>
+        <app config="default">com.netease.cloudmusic</app>
+        <app config="default">com.youku.phone</app>
+        <app config="default">com.chaoxing.mobile</app>
+        <app config="default">com.tencent.mtt</app>
+        <app config="default">com.UCMobile</app>
+        <app config="default">com.fenbi.android.servant</app>
+        <app config="default">com.xunmeng.pinduoduo</app>
+        <app config="default">com.meta.box</app>
+        <app config="default">com.taobao.taobao</app>
+        <app config="default">com.qiyi.video.pad</app>
+        <app config="default">com.kmxs.reader</app>
+        <app config="default">com.tencent.qqmusic</app>
+        <app config="default">com.baidu.homework</app>
+        <app config="default">com.kugou.android</app>
+        <app config="default">com.ss.android.ugc.live</app>
+        <app config="default">com.baidu.haokan</app>
+        <app config="default">com.sina.weibo</app>
+        <app config="default">com.le123.ysdq</app>
+        <app config="default">com.xunlei.downloadprovider</app>
+        <app config="default">com.baidu.searchbox.lite</app>
+        <app config="default">com.eduyun.app.factory.ykt</app>
+        <app config="default">com.zhongduomei.rrmj.society</app>
+        <app config="default">com.taobao.live</app>
+        <app config="default">com.qiyi.video.lite</app>
+        <app config="default">com.tencent.qqlivepad</app>
+        <app config="default">com.cmcc.cmvideo</app>
+        <app config="default">com.fenbi.android.zhaojiao</app>
+        <app config="default">com.ss.android.lark.kami</app>
+        <app config="default">com.miui.creation</app>
+
+        <!-- other way to config whitelist app -->
+        <!-- <app config="cpu" cdefault="performance">com.xiaomi.market</app> -->
+        <!-- <app config="cpu" clevel1="0.1" clevel2="0.2" clevel3="0.3">com.xiaomi.gamecenter</app> -->
+        <!-- <app config="all" clevel1="0.1" clevel2="0.2" clevel3="0.3" gdefault="power">com.xiaomi.gamecenter</app> -->
+        <!-- <app config="all" clevel1="0.1" clevel2="0.2" clevel3="0.3" gdefault="power">com.duokan.reader</app> -->
+    </whitelist>
+</framepredict_whitelist_app_default>

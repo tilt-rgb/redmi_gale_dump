@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+ ~ Copyright (C) 2024 Xiaomi Communications Co., Ltd.
+ ~ All rights, including trade secret rights, reserved
+ -->
+<permissions>
+    <library name="com.xiaomi.hardware.camera.companion-V1"
+             file="/system_ext/framework/com.xiaomi.hardware.camera.companion-V1.jar"/>
+</permissions>

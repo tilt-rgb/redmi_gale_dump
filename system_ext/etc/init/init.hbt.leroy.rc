@@ -1,0 +1,33 @@
+# HBT Leroy testing
+# This file is only for testing,
+# please clear the file before using, the file is not for production use!
+# Use echo "" > init.hbt.leroy.rc to clear the file
+
+# grant /dev/hbt
+on property:sys.boot_completed=1 && property:ro.vendor.mtk.app32_boost_support=* && property:persist.device_config.vendor_system_native.hbt_driver_grant=1
+    setprop persist.vendor.mtk.hbt_driver_grant 1
+    setprop persist.vendor.mtk.hbt_dyn_type 3
+
+on property:sys.boot_completed=1 && property:ro.vendor.mtk.app32_boost_support=* && property:persist.vendor.mtk.hbt_driver_grant=1
+    chmod 666 /dev/hbt
+
+# Uses when testing
+on zygote-start && property:ro.vendor.mtk.app32_boost_support=* && property:persist.vendor.mtk.hbt_driver_grant=1
+    write /proc/bootprof "HBT:zygote_HBT-start"
+    start zygote_HBT
+
+# Uses when testing
+on property:sys.boot_completed=1 && property:ro.vendor.mtk.app32_boost_support=* && property:persist.vendor.mtk.hbt_driver_grant=1
+    start zygote_HBT
+
+# Start with uffd
+on property:sys.boot_completed=1 && property:ro.vendor.mtk.app32_boost_support=* && property:persist.vendor.mtk.hbt_driver_grant=1 && property:persist.device_config.vendor_system_native.hbt_should_uffd=1
+    setprop hbt.enable_uffd 1
+    stop zygote_HBT
+    start zygote_HBT
+
+# Stop with uffd
+on property:sys.boot_completed=1 && property:ro.vendor.mtk.app32_boost_support=* && property:persist.vendor.mtk.hbt_driver_grant=1 && property:persist.device_config.vendor_system_native.hbt_should_uffd=0
+    setprop hbt.enable_uffd 0
+    stop zygote_HBT
+    start zygote_HBT

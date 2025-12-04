@@ -1,0 +1,11 @@
+persist.sys.timezone=America/Martinique
+ro.product.locale.language=mq
+ro.product.locale.region=MQ
+ro.miui.region=MQ
+ro.miui.mcc=3340
+ro.miui.mnc=9999
+ro.miui.cust_variant=mq
+ro.vendor.miui.region=MQ
+ro.vendor.miui.mcc=3340
+ro.vendor.miui.mnc=9999
+ro.vendor.miui.cust_variant=MQ

@@ -1,0 +1,94 @@
+# HBT binfmt_misc for 64-bit only devices
+on late-fs && property:ro.vendor.mtk.app32_boost_support=* && property:ro.vendor.mtk.hbt_binfmt_misc_support=1
+    mount binfmt_misc none /proc/sys/fs/binfmt_misc
+    write /proc/sys/fs/binfmt_misc/register ":hbt:M::\x7fELF\x01\x01\x01\x00\x00\x00\x00\x00\x00\x00\x00\x00\x02\x00\x28\x00:\xff\xff\xff\xff\xff\xff\xff\x00\x00\x00\x00\x00\x00\x00\x00\x00\xfe\xff\xff\xff:/system_ext/bin/hbt_translator:POC"
+
+# cerate empty 32b webview relro and dalvik-cache
+on property:sys.boot_completed=1 && property:ro.vendor.mtk.app32_boost_support=* && property:ro.vendor.mtk.hbt_binfmt_misc_support=1
+    write /data/misc/shared_relro/libwebviewchromium32.relro ""
+    chown shared_relro shared_relro /data/misc/shared_relro/libwebviewchromium32.relro
+    chmod 444 /data/misc/shared_relro/libwebviewchromium32.relro
+    mkdir /data/dalvik-cache/arm
+
+# HBT binfmt_misc for 64-bit only devices with 32bit cpu
+on boot && property:ro.vendor.mtk.app32_boost_support=* && property:ro.vendor.mtk.hbt_binfmt_misc_support=1 && property:ro.vendor.mtk.hbt_allow32=1
+    write /proc/sys/fs/binfmt_misc/hbt "0"
+
+service surfaceflinger /system/bin/surfaceflinger
+    override
+    class core animation
+    user system
+    group graphics drmrpc readproc
+    capabilities SYS_NICE
+    onrestart restart --only-if-running zygote_HBT
+    onrestart restart --only-if-running zygote
+    task_profiles HighPerformance
+    socket pdx/system/vr/display/client     stream 0666 system graphics u:object_r:pdx_display_client_endpoint_socket:s0
+    socket pdx/system/vr/display/manager    stream 0666 system graphics u:object_r:pdx_display_manager_endpoint_socket:s0
+    socket pdx/system/vr/display/vsync      stream 0666 system graphics u:object_r:pdx_display_vsync_endpoint_socket:s0
+    # MIUI ADD: Performance_UnfairMem
+    writepid /proc/mi_mem_engine/sf_pid
+    # END Performance_UnfairMem
+
+service zygote /system/bin/app_process -Xzygote /system/bin --zygote --start-system-server --socket-name=zygote
+    override
+    class main
+    priority -20
+    user root
+    group root readproc reserved_disk
+    socket zygote stream 660 root system
+    socket usap_pool_primary stream 660 root system
+    onrestart exec_background - system system -- /system/bin/vdc volume abort_fuse
+    onrestart write /sys/power/state on
+    # NOTE: If the wakelock name here is changed, then also
+    # update it in SystemSuspend.cpp
+    onrestart write /sys/power/wake_lock zygote_kwl
+    onrestart restart --only-if-running zygote_HBT
+    onrestart restart audioserver
+    onrestart restart cameraserver
+    onrestart restart media
+    onrestart restart media.tuner
+    onrestart restart netd
+    onrestart restart wificond
+    task_profiles ProcessCapacityHigh MaxPerformance
+    critical window=${zygote.critical_window.minute:-off} target=zygote-fatal
+
+# HBT zygote for 64/32-bit mixed devices
+on zygote-start && property:ro.vendor.mtk.app32_boost_support=* && property:persist.device_config.vendor_system_native.zygote_HBT=1
+    write /proc/bootprof "HBT:zygote_HBT-start"
+    start zygote_HBT
+
+# HBT zygote always on policy
+on zygote-start && property:ro.vendor.mtk.app32_boost_support=* && property:ro.vendor.mtk.hbt_dyn_type=3
+    write /proc/bootprof "HBT:zygote_HBT-start"
+    start zygote_HBT
+
+on zygote-start && property:ro.vendor.mtk.app32_boost_support=* && property:persist.vendor.mtk.hbt_dyn_type=3
+    write /proc/bootprof "HBT:zygote_HBT-start"
+    start zygote_HBT
+
+service zygote_HBT /system_ext/bin/hbt_translator /system/bin/app_process32 -Xzygote /system/bin --zygote --socket-name=zygote_tertiary
+    class main
+    priority -20
+    user root
+    group root readproc reserved_disk
+    socket zygote_tertiary stream 660 root system
+    socket usap_pool_tertiary stream 660 root system
+    oneshot
+    task_profiles ProcessCapacityHigh MaxPerformance
+    disabled
+
+on property:sys.boot_completed=1 && property:ro.vendor.mtk.app32_boost_support=* && property:persist.device_config.vendor_system_native.zygote_HBT=0
+    stop zygote_HBT
+
+on property:sys.boot_completed=1 && property:sys.system_server.start_count=1 && property:ro.vendor.mtk.app32_boost_support=* && property:persist.device_config.vendor_system_native.zygote_HBT=1
+    start zygote_HBT
+
+on property:sys.boot_completed=1 && property:ro.vendor.mtk.app32_boost_support=* && property:persist.device_config.vendor_system_native.zygote_HBT_dyn=1
+    start zygote_HBT
+
+# MIUI ADD: Kernel_TestSuitSpecific
+on property:ro.product.device=duchamp
+import /vendor/etc/init/hw/init.clear_abi32.rc
+# END Kernel_TestSuitSpecific
+

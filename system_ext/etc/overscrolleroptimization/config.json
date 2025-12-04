@@ -1,0 +1,37 @@
+{
+  "version": 1,
+  "common": {
+    "isOptimizeEnable": 1,
+    "isReverseOptimizeEnable": 1,
+    "friction": -2.15,
+    "velocityThreshold": 50,
+    "flywheel": 1,
+    "flywheelTimeIntervalThreshold": 500,
+    "flywheelVelocityThreshold1": 3000,
+    "flywheelVelocityThreshold2": 1000,
+    "flywheelParam1": 0.0005,
+    "flywheelParam2": 1.8,
+    "flywheelParam3": 15000,
+    "flingVelocityThreshold": 500,
+    "flingVelocityScaled": 1,
+    "flingVelocityMaximum": 21000,
+    "appList": [
+      {
+        "packageName": "com.sina.weibo",
+        "friction": -2.08,
+        "flingVelocityScaled": 1.6
+      },
+      {
+        "packageName": "com.tencent.mm",
+        "activityBlackList": [
+          "com.tencent.mm.plugin.record.ui.RecordMsgDetailUI",
+          "com.tencent.mm.plugin.record.ui.FavRecordDetailUI"
+        ]
+      },
+      {
+        "packageName": "com.mi.car.mobile",
+        "isReverseOptimizeEnable": 0
+      }
+    ]
+  }
+}

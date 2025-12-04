@@ -1,0 +1,1 @@
+am start-service -a com.xiaomi.trustservice.ota.SocidProvision
