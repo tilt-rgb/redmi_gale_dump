@@ -1,0 +1,9 @@
+# Soft dependencies extracted from modules themselves.
+softdep mtk_afe_external post: mediatek-drm
+softdep mtk_sec_heap pre: apusys
+softdep gf_fingerprint pre:mtk_spi
+softdep mt6768_dcm pre:mtk_dcm.ko
+softdep sil_fingerprint pre:gf_fingerprint
+softdep mali_kbase_mt6768_r49 pre: memory_group_manager
+softdep gz_tz_system pre: gz_virtio_mod.ko
+softdep gz_tz_system pre: gz_irq_mod.ko
