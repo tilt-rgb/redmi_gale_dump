@@ -10,8 +10,8 @@
 - Incremental: OS2.0.204.0.VGPMIXM
 - Tags: release-keys
 - CPU Abilist: arm64-v8a,armeabi-v7a,armeabi
-- A/B Device: true
-- Treble Device: true
+- A/B Device: false 
+- Treble Device: false
 - Locale: en-GB
 - Screen Density: undefined
 - Fingerprint: Redmi/gale_global/gale:15/AP3A.240905.015.A2/OS2.0.204.0.VGPMIXM:user/release-keys
